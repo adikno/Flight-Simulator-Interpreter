@@ -12,7 +12,7 @@ class VarCommand: public Command{
 
 
 public:
-    int diCommand(string x[]){
+    int doCommand(string x[]){
 
 
     }
