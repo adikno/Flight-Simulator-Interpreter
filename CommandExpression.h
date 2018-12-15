@@ -9,12 +9,15 @@
 #include "Command.h"
 class CommandExpression: public Expression{
     Command* command;
+    string* arr;
 public:
-    CommandExpression(Command *a){
+
+    CommandExpression(Command *a , string x[]){
         this->command = a;
+        this->arr = x;
     }
     double Calculate(){
-        command->doCommand();
+        command->doCommand(arr);
     }
 
 };

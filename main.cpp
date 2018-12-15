@@ -10,6 +10,7 @@
 #include "Expression.h"
 #include "Number.h"
 #include <map>
+#include "Command.h"
 #include "Plus.cpp"
 #include "Minus.cpp"
 #include "Div.cpp"
@@ -34,6 +35,7 @@ void lexer() {
 
     }
 }
+
 const vector<string> explode(const string& s, const char& c) {
     string buff{""};
     vector<string> v;
@@ -47,6 +49,23 @@ const vector<string> explode(const string& s, const char& c) {
         }
     }
     return v;
+}
+void pharser(vector<string> vector){
+    map<string , Command*> temp;
+    string key = vector.at(0);
+    string* arr;
+    for (int i =1; i < vector.size(); i++){
+        arr[i] = vector.at(i);
+    }
+    std::map<string,Command*>::iterator it;
+    it = temp.find(key);
+    if(it == temp.end()){
+        //erorr
+    } else{
+        Command * command1 = it.operator*().second;
+        command1->doCommand(arr);
+    }
+
 }
 queue<string> shuntingYard(char* x) {
     vector<string> vector1;
@@ -152,6 +171,8 @@ Expression* postfixEvaluate(queue<string> que) {
         Expression *number = new Number(value);
         stack1.push(number);
     }
+    Expression *final = stack1.top();
+    return final;
 
 }
 

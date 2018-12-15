@@ -7,7 +7,7 @@
 //michal learning git
 class VarCommand: public Command{
     map<string, string> adreeses;
-    map<string, double >var;
+    map<string, double >symbolTable;
 
 
 
