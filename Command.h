@@ -11,10 +11,8 @@ using namespace std;
 
 class Command {
 
-    int doCommand(string x[]){
-
-    }
-
+public:
+    virtual int doCommand(string x[]);
 };
 
 

@@ -19,7 +19,7 @@
 
 class ConnectCommand: public Command{
 
-    int doCommand(string x[]){
+    int doCommand(string x[]) override {
 
         int num0 , num1;
         vector<string> ve = explode(x[0], '.');

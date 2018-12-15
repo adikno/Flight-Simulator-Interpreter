@@ -8,7 +8,7 @@
 #include "DataReaderServer.cpp"
 class OpenServerCommand : public Command{
 
-    int doCommand(string x[]){
+    int doCommand(string x[]) override {
         int num0;
         int num1;
 
