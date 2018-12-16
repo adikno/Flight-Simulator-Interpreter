@@ -4,17 +4,24 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/michal/CLionProjects/untitled9/BindCommand.cpp" "/home/michal/CLionProjects/untitled9/cmake-build-debug/CMakeFiles/untitled9.dir/BindCommand.cpp.o"
   "/home/michal/CLionProjects/untitled9/Client.cpp" "/home/michal/CLionProjects/untitled9/cmake-build-debug/CMakeFiles/untitled9.dir/Client.cpp.o"
-  "/home/michal/CLionProjects/untitled9/Command.cpp" "/home/michal/CLionProjects/untitled9/cmake-build-debug/CMakeFiles/untitled9.dir/Command.cpp.o"
   "/home/michal/CLionProjects/untitled9/CommandExpression.cpp" "/home/michal/CLionProjects/untitled9/cmake-build-debug/CMakeFiles/untitled9.dir/CommandExpression.cpp.o"
+  "/home/michal/CLionProjects/untitled9/ConditionParser.cpp" "/home/michal/CLionProjects/untitled9/cmake-build-debug/CMakeFiles/untitled9.dir/ConditionParser.cpp.o"
   "/home/michal/CLionProjects/untitled9/ConnectCommand.cpp" "/home/michal/CLionProjects/untitled9/cmake-build-debug/CMakeFiles/untitled9.dir/ConnectCommand.cpp.o"
   "/home/michal/CLionProjects/untitled9/DataReaderServer.cpp" "/home/michal/CLionProjects/untitled9/cmake-build-debug/CMakeFiles/untitled9.dir/DataReaderServer.cpp.o"
   "/home/michal/CLionProjects/untitled9/Div.cpp" "/home/michal/CLionProjects/untitled9/cmake-build-debug/CMakeFiles/untitled9.dir/Div.cpp.o"
+  "/home/michal/CLionProjects/untitled9/EqualCommand.cpp" "/home/michal/CLionProjects/untitled9/cmake-build-debug/CMakeFiles/untitled9.dir/EqualCommand.cpp.o"
+  "/home/michal/CLionProjects/untitled9/IfCommand.cpp" "/home/michal/CLionProjects/untitled9/cmake-build-debug/CMakeFiles/untitled9.dir/IfCommand.cpp.o"
+  "/home/michal/CLionProjects/untitled9/Interpreter.cpp" "/home/michal/CLionProjects/untitled9/cmake-build-debug/CMakeFiles/untitled9.dir/Interpreter.cpp.o"
+  "/home/michal/CLionProjects/untitled9/LoopCommand.cpp" "/home/michal/CLionProjects/untitled9/cmake-build-debug/CMakeFiles/untitled9.dir/LoopCommand.cpp.o"
   "/home/michal/CLionProjects/untitled9/Minus.cpp" "/home/michal/CLionProjects/untitled9/cmake-build-debug/CMakeFiles/untitled9.dir/Minus.cpp.o"
   "/home/michal/CLionProjects/untitled9/Mult.cpp" "/home/michal/CLionProjects/untitled9/cmake-build-debug/CMakeFiles/untitled9.dir/Mult.cpp.o"
   "/home/michal/CLionProjects/untitled9/OpenServerCommand.cpp" "/home/michal/CLionProjects/untitled9/cmake-build-debug/CMakeFiles/untitled9.dir/OpenServerCommand.cpp.o"
   "/home/michal/CLionProjects/untitled9/Plus.cpp" "/home/michal/CLionProjects/untitled9/cmake-build-debug/CMakeFiles/untitled9.dir/Plus.cpp.o"
-  "/home/michal/CLionProjects/untitled9/VarCommand.cpp" "/home/michal/CLionProjects/untitled9/cmake-build-debug/CMakeFiles/untitled9.dir/VarCommand.cpp.o"
+  "/home/michal/CLionProjects/untitled9/PrintCommand.cpp" "/home/michal/CLionProjects/untitled9/cmake-build-debug/CMakeFiles/untitled9.dir/PrintCommand.cpp.o"
+  "/home/michal/CLionProjects/untitled9/ShuntingYard.cpp" "/home/michal/CLionProjects/untitled9/cmake-build-debug/CMakeFiles/untitled9.dir/ShuntingYard.cpp.o"
+  "/home/michal/CLionProjects/untitled9/SleepCommand.cpp" "/home/michal/CLionProjects/untitled9/cmake-build-debug/CMakeFiles/untitled9.dir/SleepCommand.cpp.o"
   "/home/michal/CLionProjects/untitled9/main.cpp" "/home/michal/CLionProjects/untitled9/cmake-build-debug/CMakeFiles/untitled9.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

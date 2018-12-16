@@ -87,10 +87,10 @@
 		<Unit filename="/home/michal/CLionProjects/untitled9/BinaryExpression.h">
 			<Option target="untitled9"/>
 		</Unit>
-		<Unit filename="/home/michal/CLionProjects/untitled9/Client.cpp">
+		<Unit filename="/home/michal/CLionProjects/untitled9/BindCommand.cpp">
 			<Option target="untitled9"/>
 		</Unit>
-		<Unit filename="/home/michal/CLionProjects/untitled9/Command.cpp">
+		<Unit filename="/home/michal/CLionProjects/untitled9/Client.cpp">
 			<Option target="untitled9"/>
 		</Unit>
 		<Unit filename="/home/michal/CLionProjects/untitled9/Command.h">
@@ -102,6 +102,12 @@
 		<Unit filename="/home/michal/CLionProjects/untitled9/CommandExpression.h">
 			<Option target="untitled9"/>
 		</Unit>
+		<Unit filename="/home/michal/CLionProjects/untitled9/ConditionParser.cpp">
+			<Option target="untitled9"/>
+		</Unit>
+		<Unit filename="/home/michal/CLionProjects/untitled9/ConditionParser.h">
+			<Option target="untitled9"/>
+		</Unit>
 		<Unit filename="/home/michal/CLionProjects/untitled9/ConnectCommand.cpp">
 			<Option target="untitled9"/>
 		</Unit>
@@ -111,7 +117,25 @@
 		<Unit filename="/home/michal/CLionProjects/untitled9/Div.cpp">
 			<Option target="untitled9"/>
 		</Unit>
+		<Unit filename="/home/michal/CLionProjects/untitled9/EqualCommand.cpp">
+			<Option target="untitled9"/>
+		</Unit>
+		<Unit filename="/home/michal/CLionProjects/untitled9/EqualCommand.h">
+			<Option target="untitled9"/>
+		</Unit>
 		<Unit filename="/home/michal/CLionProjects/untitled9/Expression.h">
+			<Option target="untitled9"/>
+		</Unit>
+		<Unit filename="/home/michal/CLionProjects/untitled9/IfCommand.cpp">
+			<Option target="untitled9"/>
+		</Unit>
+		<Unit filename="/home/michal/CLionProjects/untitled9/Interpreter.cpp">
+			<Option target="untitled9"/>
+		</Unit>
+		<Unit filename="/home/michal/CLionProjects/untitled9/Interpreter.h">
+			<Option target="untitled9"/>
+		</Unit>
+		<Unit filename="/home/michal/CLionProjects/untitled9/LoopCommand.cpp">
 			<Option target="untitled9"/>
 		</Unit>
 		<Unit filename="/home/michal/CLionProjects/untitled9/Minus.cpp">
@@ -129,7 +153,16 @@
 		<Unit filename="/home/michal/CLionProjects/untitled9/Plus.cpp">
 			<Option target="untitled9"/>
 		</Unit>
-		<Unit filename="/home/michal/CLionProjects/untitled9/VarCommand.cpp">
+		<Unit filename="/home/michal/CLionProjects/untitled9/PrintCommand.cpp">
+			<Option target="untitled9"/>
+		</Unit>
+		<Unit filename="/home/michal/CLionProjects/untitled9/ShuntingYard.cpp">
+			<Option target="untitled9"/>
+		</Unit>
+		<Unit filename="/home/michal/CLionProjects/untitled9/ShuntingYard.h">
+			<Option target="untitled9"/>
+		</Unit>
+		<Unit filename="/home/michal/CLionProjects/untitled9/SleepCommand.cpp">
 			<Option target="untitled9"/>
 		</Unit>
 		<Unit filename="/home/michal/CLionProjects/untitled9/main.cpp">

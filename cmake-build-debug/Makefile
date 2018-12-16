@@ -123,6 +123,33 @@ untitled9/fast:
 	$(MAKE) -f CMakeFiles/untitled9.dir/build.make CMakeFiles/untitled9.dir/build
 .PHONY : untitled9/fast
 
+BindCommand.o: BindCommand.cpp.o
+
+.PHONY : BindCommand.o
+
+# target to build an object file
+BindCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/untitled9.dir/build.make CMakeFiles/untitled9.dir/BindCommand.cpp.o
+.PHONY : BindCommand.cpp.o
+
+BindCommand.i: BindCommand.cpp.i
+
+.PHONY : BindCommand.i
+
+# target to preprocess a source file
+BindCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/untitled9.dir/build.make CMakeFiles/untitled9.dir/BindCommand.cpp.i
+.PHONY : BindCommand.cpp.i
+
+BindCommand.s: BindCommand.cpp.s
+
+.PHONY : BindCommand.s
+
+# target to generate assembly for a file
+BindCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/untitled9.dir/build.make CMakeFiles/untitled9.dir/BindCommand.cpp.s
+.PHONY : BindCommand.cpp.s
+
 Client.o: Client.cpp.o
 
 .PHONY : Client.o
@@ -150,33 +177,6 @@ Client.cpp.s:
 	$(MAKE) -f CMakeFiles/untitled9.dir/build.make CMakeFiles/untitled9.dir/Client.cpp.s
 .PHONY : Client.cpp.s
 
-Command.o: Command.cpp.o
-
-.PHONY : Command.o
-
-# target to build an object file
-Command.cpp.o:
-	$(MAKE) -f CMakeFiles/untitled9.dir/build.make CMakeFiles/untitled9.dir/Command.cpp.o
-.PHONY : Command.cpp.o
-
-Command.i: Command.cpp.i
-
-.PHONY : Command.i
-
-# target to preprocess a source file
-Command.cpp.i:
-	$(MAKE) -f CMakeFiles/untitled9.dir/build.make CMakeFiles/untitled9.dir/Command.cpp.i
-.PHONY : Command.cpp.i
-
-Command.s: Command.cpp.s
-
-.PHONY : Command.s
-
-# target to generate assembly for a file
-Command.cpp.s:
-	$(MAKE) -f CMakeFiles/untitled9.dir/build.make CMakeFiles/untitled9.dir/Command.cpp.s
-.PHONY : Command.cpp.s
-
 CommandExpression.o: CommandExpression.cpp.o
 
 .PHONY : CommandExpression.o
@@ -203,6 +203,33 @@ CommandExpression.s: CommandExpression.cpp.s
 CommandExpression.cpp.s:
 	$(MAKE) -f CMakeFiles/untitled9.dir/build.make CMakeFiles/untitled9.dir/CommandExpression.cpp.s
 .PHONY : CommandExpression.cpp.s
+
+ConditionParser.o: ConditionParser.cpp.o
+
+.PHONY : ConditionParser.o
+
+# target to build an object file
+ConditionParser.cpp.o:
+	$(MAKE) -f CMakeFiles/untitled9.dir/build.make CMakeFiles/untitled9.dir/ConditionParser.cpp.o
+.PHONY : ConditionParser.cpp.o
+
+ConditionParser.i: ConditionParser.cpp.i
+
+.PHONY : ConditionParser.i
+
+# target to preprocess a source file
+ConditionParser.cpp.i:
+	$(MAKE) -f CMakeFiles/untitled9.dir/build.make CMakeFiles/untitled9.dir/ConditionParser.cpp.i
+.PHONY : ConditionParser.cpp.i
+
+ConditionParser.s: ConditionParser.cpp.s
+
+.PHONY : ConditionParser.s
+
+# target to generate assembly for a file
+ConditionParser.cpp.s:
+	$(MAKE) -f CMakeFiles/untitled9.dir/build.make CMakeFiles/untitled9.dir/ConditionParser.cpp.s
+.PHONY : ConditionParser.cpp.s
 
 ConnectCommand.o: ConnectCommand.cpp.o
 
@@ -284,6 +311,114 @@ Div.s: Div.cpp.s
 Div.cpp.s:
 	$(MAKE) -f CMakeFiles/untitled9.dir/build.make CMakeFiles/untitled9.dir/Div.cpp.s
 .PHONY : Div.cpp.s
+
+EqualCommand.o: EqualCommand.cpp.o
+
+.PHONY : EqualCommand.o
+
+# target to build an object file
+EqualCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/untitled9.dir/build.make CMakeFiles/untitled9.dir/EqualCommand.cpp.o
+.PHONY : EqualCommand.cpp.o
+
+EqualCommand.i: EqualCommand.cpp.i
+
+.PHONY : EqualCommand.i
+
+# target to preprocess a source file
+EqualCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/untitled9.dir/build.make CMakeFiles/untitled9.dir/EqualCommand.cpp.i
+.PHONY : EqualCommand.cpp.i
+
+EqualCommand.s: EqualCommand.cpp.s
+
+.PHONY : EqualCommand.s
+
+# target to generate assembly for a file
+EqualCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/untitled9.dir/build.make CMakeFiles/untitled9.dir/EqualCommand.cpp.s
+.PHONY : EqualCommand.cpp.s
+
+IfCommand.o: IfCommand.cpp.o
+
+.PHONY : IfCommand.o
+
+# target to build an object file
+IfCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/untitled9.dir/build.make CMakeFiles/untitled9.dir/IfCommand.cpp.o
+.PHONY : IfCommand.cpp.o
+
+IfCommand.i: IfCommand.cpp.i
+
+.PHONY : IfCommand.i
+
+# target to preprocess a source file
+IfCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/untitled9.dir/build.make CMakeFiles/untitled9.dir/IfCommand.cpp.i
+.PHONY : IfCommand.cpp.i
+
+IfCommand.s: IfCommand.cpp.s
+
+.PHONY : IfCommand.s
+
+# target to generate assembly for a file
+IfCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/untitled9.dir/build.make CMakeFiles/untitled9.dir/IfCommand.cpp.s
+.PHONY : IfCommand.cpp.s
+
+Interpreter.o: Interpreter.cpp.o
+
+.PHONY : Interpreter.o
+
+# target to build an object file
+Interpreter.cpp.o:
+	$(MAKE) -f CMakeFiles/untitled9.dir/build.make CMakeFiles/untitled9.dir/Interpreter.cpp.o
+.PHONY : Interpreter.cpp.o
+
+Interpreter.i: Interpreter.cpp.i
+
+.PHONY : Interpreter.i
+
+# target to preprocess a source file
+Interpreter.cpp.i:
+	$(MAKE) -f CMakeFiles/untitled9.dir/build.make CMakeFiles/untitled9.dir/Interpreter.cpp.i
+.PHONY : Interpreter.cpp.i
+
+Interpreter.s: Interpreter.cpp.s
+
+.PHONY : Interpreter.s
+
+# target to generate assembly for a file
+Interpreter.cpp.s:
+	$(MAKE) -f CMakeFiles/untitled9.dir/build.make CMakeFiles/untitled9.dir/Interpreter.cpp.s
+.PHONY : Interpreter.cpp.s
+
+LoopCommand.o: LoopCommand.cpp.o
+
+.PHONY : LoopCommand.o
+
+# target to build an object file
+LoopCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/untitled9.dir/build.make CMakeFiles/untitled9.dir/LoopCommand.cpp.o
+.PHONY : LoopCommand.cpp.o
+
+LoopCommand.i: LoopCommand.cpp.i
+
+.PHONY : LoopCommand.i
+
+# target to preprocess a source file
+LoopCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/untitled9.dir/build.make CMakeFiles/untitled9.dir/LoopCommand.cpp.i
+.PHONY : LoopCommand.cpp.i
+
+LoopCommand.s: LoopCommand.cpp.s
+
+.PHONY : LoopCommand.s
+
+# target to generate assembly for a file
+LoopCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/untitled9.dir/build.make CMakeFiles/untitled9.dir/LoopCommand.cpp.s
+.PHONY : LoopCommand.cpp.s
 
 Minus.o: Minus.cpp.o
 
@@ -393,32 +528,86 @@ Plus.cpp.s:
 	$(MAKE) -f CMakeFiles/untitled9.dir/build.make CMakeFiles/untitled9.dir/Plus.cpp.s
 .PHONY : Plus.cpp.s
 
-VarCommand.o: VarCommand.cpp.o
+PrintCommand.o: PrintCommand.cpp.o
 
-.PHONY : VarCommand.o
+.PHONY : PrintCommand.o
 
 # target to build an object file
-VarCommand.cpp.o:
-	$(MAKE) -f CMakeFiles/untitled9.dir/build.make CMakeFiles/untitled9.dir/VarCommand.cpp.o
-.PHONY : VarCommand.cpp.o
+PrintCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/untitled9.dir/build.make CMakeFiles/untitled9.dir/PrintCommand.cpp.o
+.PHONY : PrintCommand.cpp.o
 
-VarCommand.i: VarCommand.cpp.i
+PrintCommand.i: PrintCommand.cpp.i
 
-.PHONY : VarCommand.i
+.PHONY : PrintCommand.i
 
 # target to preprocess a source file
-VarCommand.cpp.i:
-	$(MAKE) -f CMakeFiles/untitled9.dir/build.make CMakeFiles/untitled9.dir/VarCommand.cpp.i
-.PHONY : VarCommand.cpp.i
+PrintCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/untitled9.dir/build.make CMakeFiles/untitled9.dir/PrintCommand.cpp.i
+.PHONY : PrintCommand.cpp.i
 
-VarCommand.s: VarCommand.cpp.s
+PrintCommand.s: PrintCommand.cpp.s
 
-.PHONY : VarCommand.s
+.PHONY : PrintCommand.s
 
 # target to generate assembly for a file
-VarCommand.cpp.s:
-	$(MAKE) -f CMakeFiles/untitled9.dir/build.make CMakeFiles/untitled9.dir/VarCommand.cpp.s
-.PHONY : VarCommand.cpp.s
+PrintCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/untitled9.dir/build.make CMakeFiles/untitled9.dir/PrintCommand.cpp.s
+.PHONY : PrintCommand.cpp.s
+
+ShuntingYard.o: ShuntingYard.cpp.o
+
+.PHONY : ShuntingYard.o
+
+# target to build an object file
+ShuntingYard.cpp.o:
+	$(MAKE) -f CMakeFiles/untitled9.dir/build.make CMakeFiles/untitled9.dir/ShuntingYard.cpp.o
+.PHONY : ShuntingYard.cpp.o
+
+ShuntingYard.i: ShuntingYard.cpp.i
+
+.PHONY : ShuntingYard.i
+
+# target to preprocess a source file
+ShuntingYard.cpp.i:
+	$(MAKE) -f CMakeFiles/untitled9.dir/build.make CMakeFiles/untitled9.dir/ShuntingYard.cpp.i
+.PHONY : ShuntingYard.cpp.i
+
+ShuntingYard.s: ShuntingYard.cpp.s
+
+.PHONY : ShuntingYard.s
+
+# target to generate assembly for a file
+ShuntingYard.cpp.s:
+	$(MAKE) -f CMakeFiles/untitled9.dir/build.make CMakeFiles/untitled9.dir/ShuntingYard.cpp.s
+.PHONY : ShuntingYard.cpp.s
+
+SleepCommand.o: SleepCommand.cpp.o
+
+.PHONY : SleepCommand.o
+
+# target to build an object file
+SleepCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/untitled9.dir/build.make CMakeFiles/untitled9.dir/SleepCommand.cpp.o
+.PHONY : SleepCommand.cpp.o
+
+SleepCommand.i: SleepCommand.cpp.i
+
+.PHONY : SleepCommand.i
+
+# target to preprocess a source file
+SleepCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/untitled9.dir/build.make CMakeFiles/untitled9.dir/SleepCommand.cpp.i
+.PHONY : SleepCommand.cpp.i
+
+SleepCommand.s: SleepCommand.cpp.s
+
+.PHONY : SleepCommand.s
+
+# target to generate assembly for a file
+SleepCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/untitled9.dir/build.make CMakeFiles/untitled9.dir/SleepCommand.cpp.s
+.PHONY : SleepCommand.cpp.s
 
 main.o: main.cpp.o
 
@@ -456,15 +645,18 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... untitled9"
+	@echo "... BindCommand.o"
+	@echo "... BindCommand.i"
+	@echo "... BindCommand.s"
 	@echo "... Client.o"
 	@echo "... Client.i"
 	@echo "... Client.s"
-	@echo "... Command.o"
-	@echo "... Command.i"
-	@echo "... Command.s"
 	@echo "... CommandExpression.o"
 	@echo "... CommandExpression.i"
 	@echo "... CommandExpression.s"
+	@echo "... ConditionParser.o"
+	@echo "... ConditionParser.i"
+	@echo "... ConditionParser.s"
 	@echo "... ConnectCommand.o"
 	@echo "... ConnectCommand.i"
 	@echo "... ConnectCommand.s"
@@ -474,6 +666,18 @@ help:
 	@echo "... Div.o"
 	@echo "... Div.i"
 	@echo "... Div.s"
+	@echo "... EqualCommand.o"
+	@echo "... EqualCommand.i"
+	@echo "... EqualCommand.s"
+	@echo "... IfCommand.o"
+	@echo "... IfCommand.i"
+	@echo "... IfCommand.s"
+	@echo "... Interpreter.o"
+	@echo "... Interpreter.i"
+	@echo "... Interpreter.s"
+	@echo "... LoopCommand.o"
+	@echo "... LoopCommand.i"
+	@echo "... LoopCommand.s"
 	@echo "... Minus.o"
 	@echo "... Minus.i"
 	@echo "... Minus.s"
@@ -486,9 +690,15 @@ help:
 	@echo "... Plus.o"
 	@echo "... Plus.i"
 	@echo "... Plus.s"
-	@echo "... VarCommand.o"
-	@echo "... VarCommand.i"
-	@echo "... VarCommand.s"
+	@echo "... PrintCommand.o"
+	@echo "... PrintCommand.i"
+	@echo "... PrintCommand.s"
+	@echo "... ShuntingYard.o"
+	@echo "... ShuntingYard.i"
+	@echo "... ShuntingYard.s"
+	@echo "... SleepCommand.o"
+	@echo "... SleepCommand.i"
+	@echo "... SleepCommand.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

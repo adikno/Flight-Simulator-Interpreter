@@ -30,9 +30,6 @@ struct Client {
         struct hostent *server;
 
         char buffer[256];
-
-
-
         portno = this->port;
 
         /* Create a socket point */
@@ -68,7 +65,7 @@ struct Client {
             printf("Please enter the message: ");
             bzero(buffer, 256);
             fgets(buffer, 255, stdin);
-            n = write(sockfd, buffer, strlen(buffer));
+            n = write(sockfd,buffer,strlen(buffer));
         }
         /* Send message to the server */
 

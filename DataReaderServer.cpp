@@ -61,9 +61,9 @@ struct DataReaderServer{
             exit(1);
         }
         /* If connection is established then start communicating */
-        while (true){
+        while (true) {
             bzero(buffer,256);
-            n = read( newsockfd,buffer,255 );
+            n = read(newsockfd, buffer, 255);
             if (n < 0) {
                 perror("ERROR reading from socket");
                 exit(1);

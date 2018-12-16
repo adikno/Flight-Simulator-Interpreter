@@ -4,8 +4,8 @@
 
 #ifndef UNTITLED9_NUMBET_H
 #define UNTITLED9_NUMBET_H
-
 #include "Expression.h"
+
 class Number: public Expression{
     double num;
 public:
