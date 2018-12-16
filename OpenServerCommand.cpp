@@ -13,7 +13,7 @@ class OpenServerCommand : public Command{
         int num1;
 
         try {
-             num0 = stoi(x[0]);
+            num0 = stoi(x[0]);
             num1 = stoi(x[1]);
         } catch (out_of_range &exception1){
            throw "illegal arguments";

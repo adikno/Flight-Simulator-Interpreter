@@ -42,8 +42,8 @@ class ConnectCommand: public Command{
             throw "illegal arguments";
         }
         const char *p_data  = x[0].data();
-        thread thread1(Client(num1, p_data));
-        thread1.join();
+        client = thread(Client(num1, p_data));
+        client.join();
         return 2;
 
     }
