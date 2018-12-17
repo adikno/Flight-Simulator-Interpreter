@@ -17,7 +17,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/untitled9.dir/ShuntingYard.cpp.o"
   "CMakeFiles/untitled9.dir/SleepCommand.cpp.o"
   "CMakeFiles/untitled9.dir/BindCommand.cpp.o"
-  "CMakeFiles/untitled9.dir/EqualCommand.cpp.o"
+  "CMakeFiles/untitled9.dir/EqualsCommand.cpp.o"
+  "CMakeFiles/untitled9.dir/BooleanExpression.cpp.o"
   "untitled9.pdb"
   "untitled9"
 )

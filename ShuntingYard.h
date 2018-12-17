@@ -7,9 +7,8 @@
 
 #include "Expression.h"
 #include "Command.h"
-#include "OpenServerCommand.cpp"
-#include "ConnectCommand.cpp"
 #include "Expression.h"
+#include "Interpreter.h"
 #include "queue"
 #include <map>
 #include <iostream>
@@ -25,16 +24,17 @@
 #include "Div.cpp"
 #include "Mult.cpp"
 
-extern map<string, Command*> commands;
-extern map<string, double> symbolTable;
+
 
 class ShuntingYard {
 public:
-    queue<string> shuntingYard(char* x);
+    queue<string> shuntingYard(string x);
 
     Expression* postfixEvaluate(queue<string> que);
 
-    char* removeSpaces(string x);
+    string removeSpaces(string x);
+    const vector<string> explode(const string& s, const char& a,const char& b,const char& c,const char& d,const char& e,
+                                                const char& f, const char& g);
 };
 
 #endif //UNTITLED9_SHUNTINGYARD_H

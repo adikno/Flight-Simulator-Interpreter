@@ -7,12 +7,11 @@
 
 
 #include <map>
+#include <cstring>
 #include "Command.h"
 #include "ShuntingYard.h"
 
-extern map<string, string> pathTable;
-extern map<string, double> symbolTable;
-extern map<string, double> xmlTable;
+
 class EqualsCommand : public Command {
 
 public:
@@ -23,7 +22,10 @@ public:
             return 0;
         }
         if (x[0] == "var") {
+
             symbolTable[x[1]] = symbolTable[x[3]];
+
+            //client
             //instruction!!!
             return 0;
         }
@@ -32,7 +34,7 @@ public:
         ShuntingYard *shuntingYard = new ShuntingYard();
         queue<string> queue1 = shuntingYard->shuntingYard(data);
         Expression *exp = shuntingYard->postfixEvaluate(queue1);
-        symbolTable[x[0]] = exp->clculate();
+        symbolTable[x[0]] = exp->calculate();
         //instruction!!!
     }
 

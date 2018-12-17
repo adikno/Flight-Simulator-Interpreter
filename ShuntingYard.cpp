@@ -2,28 +2,23 @@
 // Created by michal on 12/16/18.
 //
 
+#include <cstring>
 #include "ShuntingYard.h"
 
-queue<string> ShuntingYard::shuntingYard(char* x) {
+queue<string>ShuntingYard::shuntingYard(string x) {
     string expression = x;
     x = removeSpaces(expression);
     vector<string> vector1;
     queue<string> queue1;
     stack<string> stack1;
-    char *token;
-    token = strtok(x, "+/()*-");
-    while (token != NULL) {
-        vector1.emplace_back(token);
-        token = strtok(x, "+/()*-");
-
-    }
+    vector1 = explode(x, '+','-','(',')','*','/','-');
     for (auto &token1: vector1) {
         try {
             int num = stoi(token1);
             queue1.push(token1);
             continue;
-        } catch (out_of_range &e) {}
-        if ((token1.size() == 1) && (token1.at(0) == '+' || token1.at(0) == '-')) {
+        } catch (invalid_argument &e) {}
+        if ((token1.size() == 1) && (token1.compare("+") == 0 || token1.compare("-") == 0 )) {
             if (stack1.top().compare("*") == 0 || stack1.top().compare("/") == 0) {
                 string temp = stack1.top();
                 stack1.pop();
@@ -33,11 +28,11 @@ queue<string> ShuntingYard::shuntingYard(char* x) {
             stack1.push(token1);
             continue;
         }
-        if ((token1.size() == 1) && (token1.at(0) == '*' || token1.at(0) == '/' || token1.at(0) == '(')) {
+        if ((token1.size() == 1) && (token1.compare("*") == 0  || token1.compare("/") == 0  || token1.compare("(") == 0 )) {
             stack1.push(token1);
             continue;
         }
-        if ((token1.size() == 1) && (token1.at(0) == ')')) {
+        if ((token1.size() == 1) && (token1.compare(")") == 0 )) {
             while (stack1.top().compare("(") != 0) {
                 string temp = stack1.top();
                 stack1.pop();
@@ -56,17 +51,41 @@ queue<string> ShuntingYard::shuntingYard(char* x) {
     return queue1;
 }
 
-Expression* ShuntingYard:: postfixEvaluate(queue<string> que) {
+const vector<string> ShuntingYard:: explode(const string& s, const char& a,const char& b,const char& c,const char& d,const char& e,
+                             const char& f, const char& g) {
+    string buff{""};
+    vector<string> v;
+    for(auto n:s) {
+        if(n != a && n != b && n != c &&n != d && n != e &&n != f &&n != g ) {
+            buff += n;
+        }
+        else {
+            v.push_back(buff);
+            string a ="";
+            a = a + n;
+            v.push_back(a);
+            buff="";
+        }
+    }
+    v.push_back(buff);
+    return v;
+}
+Expression* ShuntingYard::postfixEvaluate(queue<string> que) {
     stack<Expression*> stack1;
     while (!que.empty()) {
         // If the scanned character is an operand (number here),
         // push it to the stack.
+        if (que.front() == ""){
+            que.pop();
+            continue;
+        }
         try {
             int num = stoi(que.front());
             Expression *number = new Number(num);
             stack1.push(number);
+            que.pop();
             continue;
-        } catch (out_of_range &e) {}
+        } catch (invalid_argument &e) {}
         // If the scanned character is an operator, pop two
         // elements from stack apply the operator
 
@@ -79,60 +98,63 @@ Expression* ShuntingYard:: postfixEvaluate(queue<string> que) {
             Expression *val2 = stack1.top();
             stack1.pop();
             string a = que.front();
+            que.pop();
             Expression *exp;
             switch (a.at(0)) {
                 case '+':
-                    exp = new Plus(val1, val2);
+                    exp = new Plus(val2, val1);
                     stack1.push(exp);
                     break;
                 case '-':
-                    exp = new Minus(val1, val2);
+                    exp = new Minus(val2, val1);
                     stack1.push(exp);
+                    break;
                 case '*':
-                    exp = new Mult(val1, val2);
+                    exp = new Mult(val2, val1);
                     stack1.push(exp);
                     break;
                 case '/':
-                    exp = new Div(val1, val2);
+                    exp = new Div(val2, val1);
                     stack1.push(exp);
-                    break;
             }
+            continue;
         }
         double value;
-        std::map<string,double >::iterator it;
-        it = symbolTable.find(que.front());
-        if (it == symbolTable.end()) {
-            //handle the error
-        } else {
-            value = it->second;
-
+        try {
+            value = symbolTable.at(que.front());
+        } catch (out_of_range &e) {
+            throw "No matching variable";
         }
         Expression *number = new Number(value);
         stack1.push(number);
+        que.pop();
+
+
+
     }
     Expression *final = stack1.top();
     return final;
 
 }
 
-char *ShuntingYard::removeSpaces(string x) {
+
+string ShuntingYard::removeSpaces(string x) {
+
     for (int i = 0; i < x.length(); i ++) {
         if (x[i] == ' ') {
             if (i == 0) {
                 x = x.substr(i + 1, x.length() - 1);
             } else {
-                x = x.substr(0, i - 1) + x.substr(i + 1, x.length() - 1);
+                x = x.substr(0, i) + x.substr(i + 1, x.length());
             }
         }
         if (x[i] == '-' && (i != 0 && (x[i - 1] == '+'  || x[i - 1] == '/'  || x[i - 1] == '*' || x[i - 1] == '(' || x[i - 1] == ')'))) {
-            x = x.substr(0, i - 1) + '0' + x.substr(i, x.length() - 1);
+            x = x.substr(0, i) + '0' + x.substr(i, x.length());
         } else if (i == 0 && x[i] == '-') {
             x = '0' + x;
         }
     }
 
-    char char_array[x.length()+1];
-    strcpy(char_array, x.c_str());
 
-    return char_array;
+    return x;
 }

@@ -15,21 +15,17 @@
 #include <stack>
 #include <string>
 #include "Expression.h"
-#include "Number.h"
 #include <map>
 #include "Command.h"
-#include "Plus.cpp"
-#include "Minus.cpp"
-#include "Div.cpp"
-#include "Mult.cpp"
 #include "OpenServerCommand.cpp"
-#include "ConnectCommand.cpp"
+#include "ConditionParser.h"
 
 using namespace std;
-extern map<string, Command*> commands;
-extern map<string, double> symbolTable;
-extern map<string, string> pathTable;
-extern map<string, double> xmlTable;
+map<string, Command*> commands;
+map<string, double> symbolTable;
+map<string, string> pathTable;
+map<string, double> xmlTable;
+
 class Interpreter {
 
     map<string, double> varsPath;
@@ -47,14 +43,11 @@ public:
 
 
     }
-    void lexer() ;
+    void lexer(string fileName);
 
-    const vector<string> explode(const string& s, const char& c);
+    const vector<string> explode(const string& s, const char& c1, const char& c2);
     void parser(vector<string> vector);
-    queue<string> shuntingYard(char* x);
-    Expression* postfixEvaluate(queue<string> que);
 
-     char *removeSpaces(string x);
 };
 
 

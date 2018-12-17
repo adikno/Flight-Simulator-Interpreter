@@ -5,13 +5,14 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/michal/CLionProjects/untitled9/BindCommand.cpp" "/home/michal/CLionProjects/untitled9/cmake-build-debug/CMakeFiles/untitled9.dir/BindCommand.cpp.o"
+  "/home/michal/CLionProjects/untitled9/BooleanExpression.cpp" "/home/michal/CLionProjects/untitled9/cmake-build-debug/CMakeFiles/untitled9.dir/BooleanExpression.cpp.o"
   "/home/michal/CLionProjects/untitled9/Client.cpp" "/home/michal/CLionProjects/untitled9/cmake-build-debug/CMakeFiles/untitled9.dir/Client.cpp.o"
   "/home/michal/CLionProjects/untitled9/CommandExpression.cpp" "/home/michal/CLionProjects/untitled9/cmake-build-debug/CMakeFiles/untitled9.dir/CommandExpression.cpp.o"
   "/home/michal/CLionProjects/untitled9/ConditionParser.cpp" "/home/michal/CLionProjects/untitled9/cmake-build-debug/CMakeFiles/untitled9.dir/ConditionParser.cpp.o"
   "/home/michal/CLionProjects/untitled9/ConnectCommand.cpp" "/home/michal/CLionProjects/untitled9/cmake-build-debug/CMakeFiles/untitled9.dir/ConnectCommand.cpp.o"
   "/home/michal/CLionProjects/untitled9/DataReaderServer.cpp" "/home/michal/CLionProjects/untitled9/cmake-build-debug/CMakeFiles/untitled9.dir/DataReaderServer.cpp.o"
   "/home/michal/CLionProjects/untitled9/Div.cpp" "/home/michal/CLionProjects/untitled9/cmake-build-debug/CMakeFiles/untitled9.dir/Div.cpp.o"
-  "/home/michal/CLionProjects/untitled9/EqualCommand.cpp" "/home/michal/CLionProjects/untitled9/cmake-build-debug/CMakeFiles/untitled9.dir/EqualCommand.cpp.o"
+  "/home/michal/CLionProjects/untitled9/EqualsCommand.cpp" "/home/michal/CLionProjects/untitled9/cmake-build-debug/CMakeFiles/untitled9.dir/EqualsCommand.cpp.o"
   "/home/michal/CLionProjects/untitled9/IfCommand.cpp" "/home/michal/CLionProjects/untitled9/cmake-build-debug/CMakeFiles/untitled9.dir/IfCommand.cpp.o"
   "/home/michal/CLionProjects/untitled9/Interpreter.cpp" "/home/michal/CLionProjects/untitled9/cmake-build-debug/CMakeFiles/untitled9.dir/Interpreter.cpp.o"
   "/home/michal/CLionProjects/untitled9/LoopCommand.cpp" "/home/michal/CLionProjects/untitled9/cmake-build-debug/CMakeFiles/untitled9.dir/LoopCommand.cpp.o"

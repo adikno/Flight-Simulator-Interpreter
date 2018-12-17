@@ -12,7 +12,7 @@ public:
     Number(double x){
         this->num = x;
     }
-    double clculate(){
+    double calculate(){
         return this->num;
     }
 

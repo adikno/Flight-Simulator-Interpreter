@@ -2,6 +2,7 @@
 // Created by michal on 12/16/18.
 //
 
+#include <cstring>
 #include "Command.h"
 #include "ShuntingYard.h"
 
@@ -20,7 +21,7 @@ class printCommand: public Command{
             ShuntingYard *shuntingYard = new ShuntingYard();
             queue<string> queue1 = shuntingYard->shuntingYard(data);
             Expression *exp = shuntingYard->postfixEvaluate(queue1);
-            cout << exp->clculate();
+            cout << exp->calculate();
         }
         cout << endl;
     }

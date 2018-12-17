@@ -15,7 +15,7 @@ class OpenServerCommand : public Command{
         try {
             num0 = stoi(x[0]);
             num1 = stoi(x[1]);
-        } catch (out_of_range &exception1){
+        } catch (invalid_argument &exception1){
            throw "illegal arguments";
         }
         thread thread1(DataReaderServer(num0,num1));

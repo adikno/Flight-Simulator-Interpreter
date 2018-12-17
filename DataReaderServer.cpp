@@ -12,6 +12,9 @@
 #include <unistd.h>
 #include <netinet/in.h>
 #include <vector>
+#include "Interpreter.h"
+#include <time.h>
+
 using namespace std;
 
 struct DataReaderServer{
@@ -23,7 +26,30 @@ struct DataReaderServer{
 
     }
     void operator()() const{
-        vector<string> ve;
+        xmlTable["/instrumentation/airspeed-indicator/indicated-speed-kt"];
+        xmlTable["/instrumentation/altimeter/indicated-altitude-ft"];
+        xmlTable["/instrumentation/altimeter/pressure-alt-ft"];
+        xmlTable["/instrumentation/attitude-indicator/indicated-pitch-deg"];
+        xmlTable["/instrumentation/attitude-indicator/indicated-roll-deg"];
+        xmlTable["/instrumentation/attitude-indicator/internal-pitch-deg"];
+        xmlTable["/instrumentation/attitude-indicator/internal-roll-deg"];
+        xmlTable["/instrumentation/encoder/indicated-altitude-ft"];
+        xmlTable["/instrumentation/encoder/pressure-alt-ft"];
+        xmlTable["/instrumentation/gps/indicated-altitude-ft"];
+        xmlTable["/instrumentation/gps/indicated-ground-speed-kt"];
+        xmlTable["/instrumentation/gps/indicated-vertical-speed</node>"];
+        xmlTable["/instrumentation/heading-indicator/indicated-heading-deg"];
+        xmlTable["/instrumentation/magnetic-compass/indicated-heading-deg"];
+        xmlTable["/instrumentation/slip-skid-ball/indicated-slip-skid"];
+        xmlTable["/instrumentation/turn-indicator/indicated-turn-rate"];
+        xmlTable["/instrumentation/vertical-speed-indicator/indicated-speed-fpm"];
+        xmlTable["/controls/flight/aileron"];
+        xmlTable["controls/flight/rudder"];
+        xmlTable["controls/flight/flaps"];
+        xmlTable["controls/engines/engine/throttle"];
+        xmlTable["/engines/engine/rpm"];
+
+        vector<double > ve;
         int sockfd, newsockfd, portno, clilen;
         char buffer[256];
         struct sockaddr_in serv_addr, cli_addr;
@@ -50,7 +76,7 @@ struct DataReaderServer{
            * go in sleep mode and will wait for the incoming connection
         */
 
-        listen(sockfd,this->rate);
+        listen(sockfd, 5);
         clilen = sizeof(cli_addr);
 
         /* Accept actual connection from the client */
@@ -62,15 +88,44 @@ struct DataReaderServer{
         }
         /* If connection is established then start communicating */
         while (true) {
+            clock_t time_start;
+            time_start = clock();
+
             bzero(buffer,256);
             n = read(newsockfd, buffer, 255);
             if (n < 0) {
                 perror("ERROR reading from socket");
                 exit(1);
             }
-            ve.emplace_back(buffer);
+            string buf = buffer;
+            ve = explode(buf,',');
+            int i = 0;
+            for (auto it=xmlTable.begin(); it != xmlTable.end(); ++it){
+                it.operator*().second = ve.at(i);
+                i++;
+            }
 
+            clock_t time_end;
+            time_end = time_start + 10*this->rate *CLOCKS_PER_SEC/1000;
+            while (clock() < time_end) {}
         }
 
     }
+      vector<double > explode(string& s, const char& c) const {
+        string buff{""};
+        vector<double > v;
+        for(auto n:s) {
+            if(n != c) {
+                buff += n;
+            }
+            else {
+                double num;
+                num = stod(buff);
+                v.push_back(num);
+                buff="";
+            }
+        }
+        return v;
+    }
+
 };

@@ -90,6 +90,9 @@
 		<Unit filename="/home/michal/CLionProjects/untitled9/BindCommand.cpp">
 			<Option target="untitled9"/>
 		</Unit>
+		<Unit filename="/home/michal/CLionProjects/untitled9/BooleanExpression.cpp">
+			<Option target="untitled9"/>
+		</Unit>
 		<Unit filename="/home/michal/CLionProjects/untitled9/Client.cpp">
 			<Option target="untitled9"/>
 		</Unit>
@@ -117,10 +120,10 @@
 		<Unit filename="/home/michal/CLionProjects/untitled9/Div.cpp">
 			<Option target="untitled9"/>
 		</Unit>
-		<Unit filename="/home/michal/CLionProjects/untitled9/EqualCommand.cpp">
+		<Unit filename="/home/michal/CLionProjects/untitled9/EqualsCommand.cpp">
 			<Option target="untitled9"/>
 		</Unit>
-		<Unit filename="/home/michal/CLionProjects/untitled9/EqualCommand.h">
+		<Unit filename="/home/michal/CLionProjects/untitled9/EqualsCommand.h">
 			<Option target="untitled9"/>
 		</Unit>
 		<Unit filename="/home/michal/CLionProjects/untitled9/Expression.h">

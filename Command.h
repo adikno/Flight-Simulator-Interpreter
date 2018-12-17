@@ -11,12 +11,12 @@
 
 using namespace std;
 
-extern thread client;
+thread client;
 
 class Command {
 
 public:
-    virtual int doCommand(string x[]);
+    virtual int doCommand(string x[]) = 0;
 };
 
 
