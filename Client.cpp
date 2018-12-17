@@ -14,14 +14,20 @@
 #include <vector>
 #include <cstring>
 
+using namespace std;
+
 struct Client {
     int port;
     const char *IP;
+    char *instruction;
 
     Client(int a, const char *b) {
         this->port = a;
         this->IP = b;
+    }
 
+    void setInstruction(char* &instruction) {
+        this->instruction = instruction;
     }
 
     void operator()() const {
@@ -60,13 +66,8 @@ struct Client {
            * will be read by server
         */
 
+        n = write(sockfd, this->instruction, strlen(buffer));
 
-        while (buffer != "") {
-            printf("Please enter the message: ");
-            bzero(buffer, 256);
-            fgets(buffer, 255, stdin);
-            n = write(sockfd,buffer,strlen(buffer));
-        }
         /* Send message to the server */
 
 

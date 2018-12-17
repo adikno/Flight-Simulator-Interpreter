@@ -150,6 +150,33 @@ BindCommand.cpp.s:
 	$(MAKE) -f CMakeFiles/untitled9.dir/build.make CMakeFiles/untitled9.dir/BindCommand.cpp.s
 .PHONY : BindCommand.cpp.s
 
+BooleanExpression.o: BooleanExpression.cpp.o
+
+.PHONY : BooleanExpression.o
+
+# target to build an object file
+BooleanExpression.cpp.o:
+	$(MAKE) -f CMakeFiles/untitled9.dir/build.make CMakeFiles/untitled9.dir/BooleanExpression.cpp.o
+.PHONY : BooleanExpression.cpp.o
+
+BooleanExpression.i: BooleanExpression.cpp.i
+
+.PHONY : BooleanExpression.i
+
+# target to preprocess a source file
+BooleanExpression.cpp.i:
+	$(MAKE) -f CMakeFiles/untitled9.dir/build.make CMakeFiles/untitled9.dir/BooleanExpression.cpp.i
+.PHONY : BooleanExpression.cpp.i
+
+BooleanExpression.s: BooleanExpression.cpp.s
+
+.PHONY : BooleanExpression.s
+
+# target to generate assembly for a file
+BooleanExpression.cpp.s:
+	$(MAKE) -f CMakeFiles/untitled9.dir/build.make CMakeFiles/untitled9.dir/BooleanExpression.cpp.s
+.PHONY : BooleanExpression.cpp.s
+
 Client.o: Client.cpp.o
 
 .PHONY : Client.o
@@ -312,32 +339,32 @@ Div.cpp.s:
 	$(MAKE) -f CMakeFiles/untitled9.dir/build.make CMakeFiles/untitled9.dir/Div.cpp.s
 .PHONY : Div.cpp.s
 
-EqualCommand.o: EqualCommand.cpp.o
+EqualsCommand.o: EqualsCommand.cpp.o
 
-.PHONY : EqualCommand.o
+.PHONY : EqualsCommand.o
 
 # target to build an object file
-EqualCommand.cpp.o:
-	$(MAKE) -f CMakeFiles/untitled9.dir/build.make CMakeFiles/untitled9.dir/EqualCommand.cpp.o
-.PHONY : EqualCommand.cpp.o
+EqualsCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/untitled9.dir/build.make CMakeFiles/untitled9.dir/EqualsCommand.cpp.o
+.PHONY : EqualsCommand.cpp.o
 
-EqualCommand.i: EqualCommand.cpp.i
+EqualsCommand.i: EqualsCommand.cpp.i
 
-.PHONY : EqualCommand.i
+.PHONY : EqualsCommand.i
 
 # target to preprocess a source file
-EqualCommand.cpp.i:
-	$(MAKE) -f CMakeFiles/untitled9.dir/build.make CMakeFiles/untitled9.dir/EqualCommand.cpp.i
-.PHONY : EqualCommand.cpp.i
+EqualsCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/untitled9.dir/build.make CMakeFiles/untitled9.dir/EqualsCommand.cpp.i
+.PHONY : EqualsCommand.cpp.i
 
-EqualCommand.s: EqualCommand.cpp.s
+EqualsCommand.s: EqualsCommand.cpp.s
 
-.PHONY : EqualCommand.s
+.PHONY : EqualsCommand.s
 
 # target to generate assembly for a file
-EqualCommand.cpp.s:
-	$(MAKE) -f CMakeFiles/untitled9.dir/build.make CMakeFiles/untitled9.dir/EqualCommand.cpp.s
-.PHONY : EqualCommand.cpp.s
+EqualsCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/untitled9.dir/build.make CMakeFiles/untitled9.dir/EqualsCommand.cpp.s
+.PHONY : EqualsCommand.cpp.s
 
 IfCommand.o: IfCommand.cpp.o
 
@@ -648,6 +675,9 @@ help:
 	@echo "... BindCommand.o"
 	@echo "... BindCommand.i"
 	@echo "... BindCommand.s"
+	@echo "... BooleanExpression.o"
+	@echo "... BooleanExpression.i"
+	@echo "... BooleanExpression.s"
 	@echo "... Client.o"
 	@echo "... Client.i"
 	@echo "... Client.s"
@@ -666,9 +696,9 @@ help:
 	@echo "... Div.o"
 	@echo "... Div.i"
 	@echo "... Div.s"
-	@echo "... EqualCommand.o"
-	@echo "... EqualCommand.i"
-	@echo "... EqualCommand.s"
+	@echo "... EqualsCommand.o"
+	@echo "... EqualsCommand.i"
+	@echo "... EqualsCommand.s"
 	@echo "... IfCommand.o"
 	@echo "... IfCommand.i"
 	@echo "... IfCommand.s"

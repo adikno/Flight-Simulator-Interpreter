@@ -13,7 +13,7 @@ public:
     }
 
     double calculate(){
-        return (this->left.clculate() * this->right.clculate());
+        return (this->left->calculate()* this->right->calculate());
 
     }
 };

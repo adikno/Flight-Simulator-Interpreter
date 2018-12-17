@@ -6,7 +6,6 @@
 #define UNTITLED9_CONDITIONPARSER_H
 
 #include "Command.h"
-#include "OpenServerCommand.cpp"
 #include "ConnectCommand.cpp"
 #include "Expression.h"
 #include "queue"
@@ -20,10 +19,7 @@
 #include "Expression.h"
 #include "Number.h"
 #include <map>
-#include "Plus.cpp"
-#include "Minus.cpp"
-#include "Div.cpp"
-#include "Mult.cpp"
+
 
 
 

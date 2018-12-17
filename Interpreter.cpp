@@ -18,17 +18,16 @@
 #include "Div.cpp"
 #include "Mult.cpp"
 #include "ConditionParser.h"
-
 #include "Interpreter.h"
 
-void Interpreter::lexer() {
+void Interpreter::lexer(string fileName) {
     vector<string> v;
     string line;
-    ifstream myFile("bob.txt");
+    ifstream myFile(fileName);
     if (myFile.is_open()) {
         while (getline(myFile, line)) {
             if (line[line.length() - 1] == '{') {
-                v = explode(line, ' ');
+                v = explode(line, ' ', ',');
                 Command *condition = commands[v.at(0)];
                 string args[v.size()-1];
                 for (int i =1, j=0; i < v.size(); i++, j++){
@@ -36,31 +35,44 @@ void Interpreter::lexer() {
                 }
                 vector<vector<string>> paragraph;
                 while (getline(myFile, line)) {
-                    v = explode(line, ' ');
+                    v = explode(line, ' ', ',');
                     paragraph.push_back(v);
                 }
                 ConditionParser *conditionParser = new ConditionParser(condition, paragraph);
                 conditionParser->doCommand(args);
             } else {
-                v = explode(line, ' ');
+                v = explode(line, ' ', ',');
                 parser(v);
             }
         }
     }
 }
 
-const vector<string> Interpreter::explode(const string& s, const char& c) {
-    string buff{""};
+const vector<string> Interpreter::explode(const string& s, const char& c1, const char& c2) {
+    string buff{s[0]};
     vector<string> v;
-    for(auto n:s) {
-        if(n != c) {
-            buff += n;
+    for(int i = 1; i < s.length(); i++) {
+        if (s[i] == '=' && buff != "") {
+            v.push_back(buff);
+            buff = "=";
+            v.push_back(buff);
+            buff = "";
+            continue;
+        }
+        if(s[i] != c1 && s[i] != c2) {
+            buff += s[i];
         }
         else {
-            v.push_back(buff);
-            buff="";
+            if (s[i] == ' ' && (s[i - 1] == '/' || s[i - 1] == '*' || s[i - 1] == '-' || s[i - 1] == '+' ||
+                    s[i + 1] == '/' || s[i + 1] == '*' || s[i + 1] == '-' || s[i + 1] == '+' )) {
+                buff += s[i];
+            } else {
+                v.push_back(buff);
+                buff = "";
+            }
         }
     }
+    v.push_back(buff);
     return v;
 }
 void Interpreter::parser(vector<string> vector){
