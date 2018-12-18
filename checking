@@ -1,0 +1,5 @@
+openDataServer 5400 1
+while 10 > 7 {
+openDataServer 5600 1
+
+}
