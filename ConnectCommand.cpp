@@ -2,27 +2,63 @@
 // Created by michal on 12/12/18.
 //
 
-#include "Command.h"
-#include "Client.cpp"
-#include <thread>
-#include <sys/socket.h>
-#include <netinet/in.h>
-#include <strings.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <netdb.h>
-#include <unistd.h>
-#include <netinet/in.h>
-#include <vector>
-#include <cstring>
+#include "ConnectCommand.h"
 
 
-class ConnectCommand: public Command{
+void* clientThread(void* arg) {
+    ClientParams* params = (ClientParams*) arg;
 
-    int doCommand(string x[]) override {
+    int sockfd, portno, n;
+    struct sockaddr_in serv_addr;
+    struct hostent *server;
+
+    char buffer[256];
+    portno = params->getPort();
+
+    /* Create a socket point */
+    sockfd = socket(AF_INET, SOCK_STREAM, 0);
+
+    if (sockfd < 0) {
+        perror("ERROR opening socket");
+        exit(1);
+    }
+
+    server = gethostbyname(params->getIP());
+    if (server == NULL) {
+        fprintf(stderr, "ERROR, no such host\n");
+        exit(0);
+    }
+    bzero((char *) &serv_addr, sizeof(serv_addr));
+    serv_addr.sin_family = AF_INET;
+    bcopy((char *) server->h_addr, (char *) &serv_addr.sin_addr.s_addr, server->h_length);
+    serv_addr.sin_port = htons(portno);
+
+    /* Now connect to the server */
+    if (connect(sockfd, (struct sockaddr *) &serv_addr, sizeof(serv_addr)) < 0) {
+        perror("ERROR connecting");
+        exit(1);
+    }
+
+    /* Now ask for a message from the user, this message
+       * will be read by server
+    */
+    while (true) {
+        if (params->getInstruction() != "") {
+            n = write(sockfd, params->getInstruction(), strlen(buffer));
+            params->setInstruction("");
+            /* Send message to the server */
+            if (n < 0) {
+                perror("ERROR writing to socket");
+                exit(1);
+            }
+        }
+    }
+}
+
+int ConnectCommand:: doCommand(string x[]){
 
         int num0 , num1;
-        vector<string> ve = explode(x[0], '.');
+        vector<string> ve = split(x[0], '.');
         if(ve.size() !=4){
             throw "illegal arguments";
         }
@@ -42,26 +78,26 @@ class ConnectCommand: public Command{
             throw "illegal arguments";
         }
         const char *p_data  = x[0].data();
-        client = thread(Client(num1, p_data));
-        client.join();
+        params->setIp(p_data);
+        params->setPort(num1);
+        pthread_t trid;
+        pthread_create(&trid, nullptr, clientThread, &params);
+
         return 2;
 
-    }
-    const vector<string> explode(const string& s, const char& c) {
-        string buff{""};
-        vector<string> v;
-        for(auto n:s) {
-            if(n != c) {
-                buff += n;
-            }
-            else {
-                v.push_back(buff);
-                buff="";
-            }
+}
+const vector<string> ConnectCommand:: split(const string& s, const char& c) {
+    string buff{""};
+    vector<string> v;
+    for(auto n:s) {
+        if(n != c) {
+            buff += n;
         }
-        return v;
+        else {
+            v.push_back(buff);
+            buff="";
+        }
     }
+    return v;
+}
 
-
-
-};

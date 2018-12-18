@@ -6,6 +6,7 @@
 #include "Command.h"
 #include <thread>
 #include "DataReaderServer.cpp"
+
 class OpenServerCommand : public Command{
 
     int doCommand(string x[]) override {
@@ -19,7 +20,6 @@ class OpenServerCommand : public Command{
            throw "illegal arguments";
         }
         thread thread1(DataReaderServer(num0,num1));
-        thread1.join();
         return 2;
 
 

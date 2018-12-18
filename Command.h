@@ -11,8 +11,6 @@
 
 using namespace std;
 
-thread client;
-
 class Command {
 
 public:

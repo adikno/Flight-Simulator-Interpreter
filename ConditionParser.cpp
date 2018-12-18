@@ -10,6 +10,7 @@
 
 
 void ConditionParser::execute() {
+
     for (int i = 0 ; i < paragraph.size(); i++) {
         vector<string> line = paragraph.at(i);
         string key = line.at(0);

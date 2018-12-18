@@ -121,7 +121,9 @@ Expression* ShuntingYard::postfixEvaluate(queue<string> que) {
         }
         double value;
         try {
-            value = symbolTable.at(que.front());
+            string path = pathTable.at(que.front());
+            value = xmlTable.at(path);
+            symbolTable.at(que.front()) =  value;
         } catch (out_of_range &e) {
             throw "No matching variable";
         }
