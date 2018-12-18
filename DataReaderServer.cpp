@@ -12,7 +12,7 @@
 #include <unistd.h>
 #include <netinet/in.h>
 #include <vector>
-#include "Interpreter.h"
+#include "Maps.h"
 #include <time.h>
 
 using namespace std;
@@ -26,6 +26,8 @@ struct DataReaderServer{
 
     }
     void operator()() const{
+
+
         xmlTable["/instrumentation/airspeed-indicator/indicated-speed-kt"];
         xmlTable["/instrumentation/altimeter/indicated-altitude-ft"];
         xmlTable["/instrumentation/altimeter/pressure-alt-ft"];
@@ -100,10 +102,10 @@ struct DataReaderServer{
             string buf = buffer;
             ve = explode(buf,',');
             int i = 0;
-            for (auto it=xmlTable.begin(); it != xmlTable.end(); ++it){
-                it.operator*().second = ve.at(i);
-                i++;
-            }
+           // for (auto it=xmlTable.begin(); it != xmlTable.end(); ++it){
+             //   it.operator*().second = ve.at(i);
+               // i++;
+            //}
 
             clock_t time_end;
             time_end = time_start + 10*this->rate *CLOCKS_PER_SEC/1000;

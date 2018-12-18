@@ -22,20 +22,26 @@ public:
             return 0;
         }
         if (x[0] == "var") {
-
-            symbolTable[x[1]] = symbolTable[x[3]];
-
-            //client
-            //instruction!!!
+            ShuntingYard *shuntingYard = new ShuntingYard();
+            queue<string> queue1 = shuntingYard->shuntingYard(x[3]);
+            Expression *exp = shuntingYard->postfixEvaluate(queue1);
+            symbolTable[x[1]] = exp->calculate();
+            char *value = (char*)(&symbolTable[x[1]]);
+            char *instruction;
+            strcpy(instruction, pathTable[x[1]].data());
+            strcat(instruction, value);
+            params->setInstruction(instruction);
             return 0;
         }
-        char data[x[2].size()];
-        strcpy(data, x[2].data());
         ShuntingYard *shuntingYard = new ShuntingYard();
-        queue<string> queue1 = shuntingYard->shuntingYard(data);
+        queue<string> queue1 = shuntingYard->shuntingYard(x[2]);
         Expression *exp = shuntingYard->postfixEvaluate(queue1);
         symbolTable[x[0]] = exp->calculate();
-        //instruction!!!
+        char *instruction;
+        strcpy(instruction, pathTable[x[0]].data());
+        char *value = (char*)(&symbolTable[x[0]]);
+        strcat(instruction, value);
+        params->setInstruction(instruction);
     }
 
 };

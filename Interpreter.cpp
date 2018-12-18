@@ -1,12 +1,7 @@
 //
 // Created by michal on 12/16/18.
 //
-#include <iostream>
-#include <string>
-#include <vector>
-#include <fstream>
-#include <string>
-#include <queue>
+
 #include <stack>
 #include <string.h>
 #include "Expression.h"
@@ -33,19 +28,38 @@ void Interpreter::lexer(string fileName) {
                 for (int i =1, j=0; i < v.size(); i++, j++){
                     args[j] = v.at(i);
                 }
-                vector<vector<string>> paragraph;
-                while (getline(myFile, line)) {
-                    v = explode(line, ' ', ',');
-                    paragraph.push_back(v);
-                }
-                ConditionParser *conditionParser = new ConditionParser(condition, paragraph);
-                conditionParser->doCommand(args);
+                ParagraphLexer(fileName, condition, args);
             } else {
                 v = explode(line, ' ', ',');
                 parser(v);
             }
         }
     }
+}
+
+void Interpreter::ParagraphLexer(string fileName, Command *condition, string args[]) {
+    vector<string> v;
+    string line;
+    ifstream myFile(fileName);
+
+    vector<vector<string>> paragraph;
+    getline(myFile, line);
+    while (line[line.length() - 1] != '}') {
+        if (line[line.length() - 1] == '{') {
+            v = explode(line, ' ', ',');
+            Command *condition2 = commands[v.at(0)];
+            string args2[v.size() - 1];
+            for (int i = 1, j = 0; i < v.size(); i++, j++) {
+                args2[j] = v.at(i);
+            }
+            ParagraphLexer(fileName, condition2, args2);
+        }
+        v = explode(line, ' ', ',');
+        paragraph.push_back(v);
+        getline(myFile, line);
+    }
+    ConditionParser *conditionParser = new ConditionParser(condition, paragraph, commands);
+    conditionParser->doCommand(args);
 }
 
 const vector<string> Interpreter::explode(const string& s, const char& c1, const char& c2) {

@@ -19,17 +19,17 @@
 #include "Command.h"
 #include "OpenServerCommand.cpp"
 #include "ConditionParser.h"
+#include "ConnectCommand.h"
 
 using namespace std;
-map<string, Command*> commands;
-map<string, double> symbolTable;
-map<string, string> pathTable;
-map<string, double> xmlTable;
+//map<string, Command*> commands;
+//map<string, double> symbolTable;
+//map<string, string> pathTable;
+//map<string, double> xmlTable;
 
 class Interpreter {
 
-    map<string, double> varsPath;
-
+    map<string, Command*> commands;
 public:
     Interpreter(){
         commands["openDataServer"] = new OpenServerCommand();
@@ -39,14 +39,14 @@ public:
         commands["equals"];
         commands["functions"];
 
-
-
+        params = new ClientParams();
 
     }
     void lexer(string fileName);
 
     const vector<string> explode(const string& s, const char& c1, const char& c2);
     void parser(vector<string> vector);
+    void ParagraphLexer(string fileName, Command *condition, string args[]);
 
 };
 

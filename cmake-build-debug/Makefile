@@ -177,32 +177,59 @@ BooleanExpression.cpp.s:
 	$(MAKE) -f CMakeFiles/untitled9.dir/build.make CMakeFiles/untitled9.dir/BooleanExpression.cpp.s
 .PHONY : BooleanExpression.cpp.s
 
-Client.o: Client.cpp.o
+ClientParams.o: ClientParams.cpp.o
 
-.PHONY : Client.o
+.PHONY : ClientParams.o
 
 # target to build an object file
-Client.cpp.o:
-	$(MAKE) -f CMakeFiles/untitled9.dir/build.make CMakeFiles/untitled9.dir/Client.cpp.o
-.PHONY : Client.cpp.o
+ClientParams.cpp.o:
+	$(MAKE) -f CMakeFiles/untitled9.dir/build.make CMakeFiles/untitled9.dir/ClientParams.cpp.o
+.PHONY : ClientParams.cpp.o
 
-Client.i: Client.cpp.i
+ClientParams.i: ClientParams.cpp.i
 
-.PHONY : Client.i
+.PHONY : ClientParams.i
 
 # target to preprocess a source file
-Client.cpp.i:
-	$(MAKE) -f CMakeFiles/untitled9.dir/build.make CMakeFiles/untitled9.dir/Client.cpp.i
-.PHONY : Client.cpp.i
+ClientParams.cpp.i:
+	$(MAKE) -f CMakeFiles/untitled9.dir/build.make CMakeFiles/untitled9.dir/ClientParams.cpp.i
+.PHONY : ClientParams.cpp.i
 
-Client.s: Client.cpp.s
+ClientParams.s: ClientParams.cpp.s
 
-.PHONY : Client.s
+.PHONY : ClientParams.s
 
 # target to generate assembly for a file
-Client.cpp.s:
-	$(MAKE) -f CMakeFiles/untitled9.dir/build.make CMakeFiles/untitled9.dir/Client.cpp.s
-.PHONY : Client.cpp.s
+ClientParams.cpp.s:
+	$(MAKE) -f CMakeFiles/untitled9.dir/build.make CMakeFiles/untitled9.dir/ClientParams.cpp.s
+.PHONY : ClientParams.cpp.s
+
+ClientThread.o: ClientThread.cpp.o
+
+.PHONY : ClientThread.o
+
+# target to build an object file
+ClientThread.cpp.o:
+	$(MAKE) -f CMakeFiles/untitled9.dir/build.make CMakeFiles/untitled9.dir/ClientThread.cpp.o
+.PHONY : ClientThread.cpp.o
+
+ClientThread.i: ClientThread.cpp.i
+
+.PHONY : ClientThread.i
+
+# target to preprocess a source file
+ClientThread.cpp.i:
+	$(MAKE) -f CMakeFiles/untitled9.dir/build.make CMakeFiles/untitled9.dir/ClientThread.cpp.i
+.PHONY : ClientThread.cpp.i
+
+ClientThread.s: ClientThread.cpp.s
+
+.PHONY : ClientThread.s
+
+# target to generate assembly for a file
+ClientThread.cpp.s:
+	$(MAKE) -f CMakeFiles/untitled9.dir/build.make CMakeFiles/untitled9.dir/ClientThread.cpp.s
+.PHONY : ClientThread.cpp.s
 
 CommandExpression.o: CommandExpression.cpp.o
 
@@ -678,9 +705,12 @@ help:
 	@echo "... BooleanExpression.o"
 	@echo "... BooleanExpression.i"
 	@echo "... BooleanExpression.s"
-	@echo "... Client.o"
-	@echo "... Client.i"
-	@echo "... Client.s"
+	@echo "... ClientParams.o"
+	@echo "... ClientParams.i"
+	@echo "... ClientParams.s"
+	@echo "... ClientThread.o"
+	@echo "... ClientThread.i"
+	@echo "... ClientThread.s"
 	@echo "... CommandExpression.o"
 	@echo "... CommandExpression.i"
 	@echo "... CommandExpression.s"

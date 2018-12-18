@@ -93,7 +93,13 @@
 		<Unit filename="/home/michal/CLionProjects/untitled9/BooleanExpression.cpp">
 			<Option target="untitled9"/>
 		</Unit>
-		<Unit filename="/home/michal/CLionProjects/untitled9/Client.cpp">
+		<Unit filename="/home/michal/CLionProjects/untitled9/ClientParams.cpp">
+			<Option target="untitled9"/>
+		</Unit>
+		<Unit filename="/home/michal/CLionProjects/untitled9/ClientThread.cpp">
+			<Option target="untitled9"/>
+		</Unit>
+		<Unit filename="/home/michal/CLionProjects/untitled9/ClientThread.h">
 			<Option target="untitled9"/>
 		</Unit>
 		<Unit filename="/home/michal/CLionProjects/untitled9/Command.h">
@@ -112,6 +118,9 @@
 			<Option target="untitled9"/>
 		</Unit>
 		<Unit filename="/home/michal/CLionProjects/untitled9/ConnectCommand.cpp">
+			<Option target="untitled9"/>
+		</Unit>
+		<Unit filename="/home/michal/CLionProjects/untitled9/ConnectCommand.h">
 			<Option target="untitled9"/>
 		</Unit>
 		<Unit filename="/home/michal/CLionProjects/untitled9/DataReaderServer.cpp">
@@ -139,6 +148,9 @@
 			<Option target="untitled9"/>
 		</Unit>
 		<Unit filename="/home/michal/CLionProjects/untitled9/LoopCommand.cpp">
+			<Option target="untitled9"/>
+		</Unit>
+		<Unit filename="/home/michal/CLionProjects/untitled9/Maps.h">
 			<Option target="untitled9"/>
 		</Unit>
 		<Unit filename="/home/michal/CLionProjects/untitled9/Minus.cpp">

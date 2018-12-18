@@ -3,7 +3,6 @@
 //
 
 #include "ConditionParser.h"
-#include "ShuntingYard.h"
 #include "BooleanExpression.cpp"
 
 class LoopCommand: public ConditionParser {

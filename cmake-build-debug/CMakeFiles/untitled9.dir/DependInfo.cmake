@@ -6,7 +6,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/michal/CLionProjects/untitled9/BindCommand.cpp" "/home/michal/CLionProjects/untitled9/cmake-build-debug/CMakeFiles/untitled9.dir/BindCommand.cpp.o"
   "/home/michal/CLionProjects/untitled9/BooleanExpression.cpp" "/home/michal/CLionProjects/untitled9/cmake-build-debug/CMakeFiles/untitled9.dir/BooleanExpression.cpp.o"
-  "/home/michal/CLionProjects/untitled9/Client.cpp" "/home/michal/CLionProjects/untitled9/cmake-build-debug/CMakeFiles/untitled9.dir/Client.cpp.o"
+  "/home/michal/CLionProjects/untitled9/ClientParams.cpp" "/home/michal/CLionProjects/untitled9/cmake-build-debug/CMakeFiles/untitled9.dir/ClientParams.cpp.o"
+  "/home/michal/CLionProjects/untitled9/ClientThread.cpp" "/home/michal/CLionProjects/untitled9/cmake-build-debug/CMakeFiles/untitled9.dir/ClientThread.cpp.o"
   "/home/michal/CLionProjects/untitled9/CommandExpression.cpp" "/home/michal/CLionProjects/untitled9/cmake-build-debug/CMakeFiles/untitled9.dir/CommandExpression.cpp.o"
   "/home/michal/CLionProjects/untitled9/ConditionParser.cpp" "/home/michal/CLionProjects/untitled9/cmake-build-debug/CMakeFiles/untitled9.dir/ConditionParser.cpp.o"
   "/home/michal/CLionProjects/untitled9/ConnectCommand.cpp" "/home/michal/CLionProjects/untitled9/cmake-build-debug/CMakeFiles/untitled9.dir/ConnectCommand.cpp.o"

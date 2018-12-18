@@ -12,10 +12,17 @@
 #include "Command.h"
 #include "ShuntingYard.h"
 
+map<string, double> symbolTable;
+map<string, string> pathTable;
+map<string, double> xmlTable;
+ClientParams* params;
 
 using namespace std;
-const vector<string> explode(const string& s, const char& c);
 int main() {
+    map<string, double> symbolTable;
+    map<string, string> pathTable;
+    map<string, double> xmlTable;
+    params = new ClientParams();
     string x = "2/(1-5)";
     ShuntingYard *shuntingYard = new ShuntingYard();
     queue<string> queue1 = shuntingYard->shuntingYard(x);
