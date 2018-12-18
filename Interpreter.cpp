@@ -90,14 +90,24 @@ const vector<string> Interpreter::explode(const string& s, const char& c1, const
     return v;
 }
 void Interpreter::parser(vector<string> vector){
-    string key = vector.at(0);
-    string args[vector.size()-1];
-    for (int i =1, j=0; i < vector.size(); i++, j++){
-        args[j] = vector.at(i);
+    string key;
+    string args[vector.size()];
+    if(vector.at(1) == "=" ||vector.at(2) == "="){
+        string args[vector.size()-1];
+        for (int i =0; i < vector.size(); i++){
+            args[i] = vector.at(i);
+            key = "equals";
+
+
+        }
+    } else{
+        key = vector.at(0);
+        for (int i =1, j=0; i < vector.size(); i++, j++) {
+            args[j] = vector.at(i);
+        }
     }
     Command *command = commands[key];
     command->doCommand(args);
-
 }
 
 

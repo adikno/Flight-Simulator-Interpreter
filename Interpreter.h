@@ -20,6 +20,7 @@
 #include "OpenServerCommand.cpp"
 #include "ConditionParser.h"
 #include "ConnectCommand.h"
+#include "EqualsCommand.h"
 
 using namespace std;
 //map<string, Command*> commands;
@@ -34,9 +35,9 @@ public:
     Interpreter(){
         commands["openDataServer"] = new OpenServerCommand();
         commands["connect"] = new ConnectCommand();
-        commands["ifCommnand"];
-        commands["while"];
-        commands["equals"];
+        commands["if"];
+        commands["while"] ;
+        commands["equals"] = new EqualsCommand();
         commands["functions"];
 
         params = new ClientParams();
