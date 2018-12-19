@@ -20,7 +20,7 @@ ClientParams* params;
 
 using namespace std;
 int main() {
-    string file_name = "checking";
+    string file_name = "FILE.txt";
     map<string, double> symbolTable;
     map<string, string> pathTable;
     map<string, double> xmlTable;

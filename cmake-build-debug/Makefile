@@ -123,33 +123,6 @@ untitled9/fast:
 	$(MAKE) -f CMakeFiles/untitled9.dir/build.make CMakeFiles/untitled9.dir/build
 .PHONY : untitled9/fast
 
-BindCommand.o: BindCommand.cpp.o
-
-.PHONY : BindCommand.o
-
-# target to build an object file
-BindCommand.cpp.o:
-	$(MAKE) -f CMakeFiles/untitled9.dir/build.make CMakeFiles/untitled9.dir/BindCommand.cpp.o
-.PHONY : BindCommand.cpp.o
-
-BindCommand.i: BindCommand.cpp.i
-
-.PHONY : BindCommand.i
-
-# target to preprocess a source file
-BindCommand.cpp.i:
-	$(MAKE) -f CMakeFiles/untitled9.dir/build.make CMakeFiles/untitled9.dir/BindCommand.cpp.i
-.PHONY : BindCommand.cpp.i
-
-BindCommand.s: BindCommand.cpp.s
-
-.PHONY : BindCommand.s
-
-# target to generate assembly for a file
-BindCommand.cpp.s:
-	$(MAKE) -f CMakeFiles/untitled9.dir/build.make CMakeFiles/untitled9.dir/BindCommand.cpp.s
-.PHONY : BindCommand.cpp.s
-
 BooleanExpression.o: BooleanExpression.cpp.o
 
 .PHONY : BooleanExpression.o
@@ -257,33 +230,6 @@ CommandExpression.s: CommandExpression.cpp.s
 CommandExpression.cpp.s:
 	$(MAKE) -f CMakeFiles/untitled9.dir/build.make CMakeFiles/untitled9.dir/CommandExpression.cpp.s
 .PHONY : CommandExpression.cpp.s
-
-ConditionParser.o: ConditionParser.cpp.o
-
-.PHONY : ConditionParser.o
-
-# target to build an object file
-ConditionParser.cpp.o:
-	$(MAKE) -f CMakeFiles/untitled9.dir/build.make CMakeFiles/untitled9.dir/ConditionParser.cpp.o
-.PHONY : ConditionParser.cpp.o
-
-ConditionParser.i: ConditionParser.cpp.i
-
-.PHONY : ConditionParser.i
-
-# target to preprocess a source file
-ConditionParser.cpp.i:
-	$(MAKE) -f CMakeFiles/untitled9.dir/build.make CMakeFiles/untitled9.dir/ConditionParser.cpp.i
-.PHONY : ConditionParser.cpp.i
-
-ConditionParser.s: ConditionParser.cpp.s
-
-.PHONY : ConditionParser.s
-
-# target to generate assembly for a file
-ConditionParser.cpp.s:
-	$(MAKE) -f CMakeFiles/untitled9.dir/build.make CMakeFiles/untitled9.dir/ConditionParser.cpp.s
-.PHONY : ConditionParser.cpp.s
 
 ConnectCommand.o: ConnectCommand.cpp.o
 
@@ -555,6 +501,33 @@ OpenServerCommand.cpp.s:
 	$(MAKE) -f CMakeFiles/untitled9.dir/build.make CMakeFiles/untitled9.dir/OpenServerCommand.cpp.s
 .PHONY : OpenServerCommand.cpp.s
 
+ParamsCommand.o: ParamsCommand.cpp.o
+
+.PHONY : ParamsCommand.o
+
+# target to build an object file
+ParamsCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/untitled9.dir/build.make CMakeFiles/untitled9.dir/ParamsCommand.cpp.o
+.PHONY : ParamsCommand.cpp.o
+
+ParamsCommand.i: ParamsCommand.cpp.i
+
+.PHONY : ParamsCommand.i
+
+# target to preprocess a source file
+ParamsCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/untitled9.dir/build.make CMakeFiles/untitled9.dir/ParamsCommand.cpp.i
+.PHONY : ParamsCommand.cpp.i
+
+ParamsCommand.s: ParamsCommand.cpp.s
+
+.PHONY : ParamsCommand.s
+
+# target to generate assembly for a file
+ParamsCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/untitled9.dir/build.make CMakeFiles/untitled9.dir/ParamsCommand.cpp.s
+.PHONY : ParamsCommand.cpp.s
+
 Plus.o: Plus.cpp.o
 
 .PHONY : Plus.o
@@ -699,9 +672,6 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... untitled9"
-	@echo "... BindCommand.o"
-	@echo "... BindCommand.i"
-	@echo "... BindCommand.s"
 	@echo "... BooleanExpression.o"
 	@echo "... BooleanExpression.i"
 	@echo "... BooleanExpression.s"
@@ -714,9 +684,6 @@ help:
 	@echo "... CommandExpression.o"
 	@echo "... CommandExpression.i"
 	@echo "... CommandExpression.s"
-	@echo "... ConditionParser.o"
-	@echo "... ConditionParser.i"
-	@echo "... ConditionParser.s"
 	@echo "... ConnectCommand.o"
 	@echo "... ConnectCommand.i"
 	@echo "... ConnectCommand.s"
@@ -747,6 +714,9 @@ help:
 	@echo "... OpenServerCommand.o"
 	@echo "... OpenServerCommand.i"
 	@echo "... OpenServerCommand.s"
+	@echo "... ParamsCommand.o"
+	@echo "... ParamsCommand.i"
+	@echo "... ParamsCommand.s"
 	@echo "... Plus.o"
 	@echo "... Plus.i"
 	@echo "... Plus.s"

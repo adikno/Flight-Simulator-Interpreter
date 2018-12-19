@@ -16,17 +16,21 @@
 #include <string>
 #include "Expression.h"
 #include <map>
+#include <unordered_map>
 #include "Command.h"
 #include "OpenServerCommand.cpp"
 #include "ConditionParser.h"
 #include "ConnectCommand.h"
 #include "EqualsCommand.h"
+#include "IfCommand.cpp"
+#include "LoopCommand.cpp"
+#include "PrintCommand.cpp"
+#include "SleepCommand.cpp"
+
+#include <list>
 
 using namespace std;
-//map<string, Command*> commands;
-//map<string, double> symbolTable;
-//map<string, string> pathTable;
-//map<string, double> xmlTable;
+
 
 class Interpreter {
 
@@ -35,10 +39,9 @@ public:
     Interpreter(){
         commands["openDataServer"] = new OpenServerCommand();
         commands["connect"] = new ConnectCommand();
-        commands["if"];
-        commands["while"] ;
         commands["equals"] = new EqualsCommand();
-        commands["functions"];
+        commands["print"] = new PrintCommand();
+        commands["sleep"] = new SleepCommand();
 
         params = new ClientParams();
 
@@ -47,8 +50,7 @@ public:
 
     const vector<string> explode(const string& s, const char& c1, const char& c2);
     void parser(vector<string> vector);
-    void ParagraphLexer(string fileName, Command *condition, string args[]);
-
+    list<ParamsCommand*> ParagraphLexer(ifstream &file, string condition, vector<string> args);
 };
 
 

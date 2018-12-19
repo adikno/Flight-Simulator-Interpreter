@@ -3,16 +3,21 @@
 //
 
 #include "ConditionParser.h"
-#include "BooleanExpression.cpp"
 
 class LoopCommand: public ConditionParser {
 
 public:
-    int doCommand(string x[]) {
+    LoopCommand(map<string,Command*> &commands, list<ParamsCommand*> &innerCommands) :
+    ConditionParser(commands, innerCommands) {     }
+
+    int doCommand(vector<string> x) {
         try {
             Expression *boolean = new BooleanExpression(x);
             while (boolean->calculate()) {
-                execute();
+                for (auto &command: innerCommands) {
+                    Command *command1 = command->getCommand();
+                    command1->doCommand(command->getParams());
+                }
             }
         } catch (string &str){
             throw "Illegal condition";

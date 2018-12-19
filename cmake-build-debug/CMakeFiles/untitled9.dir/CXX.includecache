@@ -44,10 +44,6 @@ vector
 cstring
 -
 
-/home/michal/CLionProjects/untitled9/ClientThread.cpp
-ClientThread.h
-/home/michal/CLionProjects/untitled9/ClientThread.h
-
 /home/michal/CLionProjects/untitled9/ClientThread.h
 Maps.h
 /home/michal/CLionProjects/untitled9/Maps.h
@@ -63,10 +59,10 @@ thread
 -
 
 /home/michal/CLionProjects/untitled9/ConditionParser.h
+BooleanExpression.cpp
+/home/michal/CLionProjects/untitled9/BooleanExpression.cpp
 Command.h
 /home/michal/CLionProjects/untitled9/Command.h
-Expression.h
-/home/michal/CLionProjects/untitled9/Expression.h
 queue
 /home/michal/CLionProjects/untitled9/queue
 map
@@ -89,10 +85,12 @@ Number.h
 /home/michal/CLionProjects/untitled9/Number.h
 map
 -
-
-/home/michal/CLionProjects/untitled9/ConnectCommand.cpp
-ConnectCommand.h
-/home/michal/CLionProjects/untitled9/ConnectCommand.h
+unordered_map
+-
+list
+-
+ParamsCommand.cpp
+/home/michal/CLionProjects/untitled9/ParamsCommand.cpp
 
 /home/michal/CLionProjects/untitled9/ConnectCommand.h
 Command.h
@@ -156,10 +154,6 @@ BinaryExpression.h
 iostream
 -
 
-/home/michal/CLionProjects/untitled9/EqualsCommand.cpp
-EqualsCommand.h
-/home/michal/CLionProjects/untitled9/EqualsCommand.h
-
 /home/michal/CLionProjects/untitled9/EqualsCommand.h
 map
 -
@@ -175,8 +169,6 @@ ShuntingYard.h
 /home/michal/CLionProjects/untitled9/IfCommand.cpp
 ConditionParser.h
 /home/michal/CLionProjects/untitled9/ConditionParser.h
-BooleanExpression.cpp
-/home/michal/CLionProjects/untitled9/BooleanExpression.cpp
 
 /home/michal/CLionProjects/untitled9/Interpreter.cpp
 stack
@@ -185,20 +177,10 @@ string.h
 -
 Expression.h
 /home/michal/CLionProjects/untitled9/Expression.h
-Number.h
-/home/michal/CLionProjects/untitled9/Number.h
 map
 -
 Command.h
 /home/michal/CLionProjects/untitled9/Command.h
-Plus.cpp
-/home/michal/CLionProjects/untitled9/Plus.cpp
-Minus.cpp
-/home/michal/CLionProjects/untitled9/Minus.cpp
-Div.cpp
-/home/michal/CLionProjects/untitled9/Div.cpp
-Mult.cpp
-/home/michal/CLionProjects/untitled9/Mult.cpp
 ConditionParser.h
 /home/michal/CLionProjects/untitled9/ConditionParser.h
 Interpreter.h
@@ -225,6 +207,8 @@ Expression.h
 /home/michal/CLionProjects/untitled9/Expression.h
 map
 -
+unordered_map
+-
 Command.h
 /home/michal/CLionProjects/untitled9/Command.h
 OpenServerCommand.cpp
@@ -233,12 +217,22 @@ ConditionParser.h
 /home/michal/CLionProjects/untitled9/ConditionParser.h
 ConnectCommand.h
 /home/michal/CLionProjects/untitled9/ConnectCommand.h
+EqualsCommand.h
+/home/michal/CLionProjects/untitled9/EqualsCommand.h
+IfCommand.cpp
+/home/michal/CLionProjects/untitled9/IfCommand.cpp
+LoopCommand.cpp
+/home/michal/CLionProjects/untitled9/LoopCommand.cpp
+PrintCommand.cpp
+/home/michal/CLionProjects/untitled9/PrintCommand.cpp
+SleepCommand.cpp
+/home/michal/CLionProjects/untitled9/SleepCommand.cpp
+list
+-
 
 /home/michal/CLionProjects/untitled9/LoopCommand.cpp
 ConditionParser.h
 /home/michal/CLionProjects/untitled9/ConditionParser.h
-BooleanExpression.cpp
-/home/michal/CLionProjects/untitled9/BooleanExpression.cpp
 
 /home/michal/CLionProjects/untitled9/Maps.h
 string
@@ -278,6 +272,10 @@ thread
 DataReaderServer.cpp
 /home/michal/CLionProjects/untitled9/DataReaderServer.cpp
 
+/home/michal/CLionProjects/untitled9/ParamsCommand.cpp
+Command.h
+/home/michal/CLionProjects/untitled9/Command.h
+
 /home/michal/CLionProjects/untitled9/Plus.cpp
 Expression.h
 /home/michal/CLionProjects/untitled9/Expression.h
@@ -289,12 +287,6 @@ cstring
 -
 Command.h
 /home/michal/CLionProjects/untitled9/Command.h
-ShuntingYard.h
-/home/michal/CLionProjects/untitled9/ShuntingYard.h
-
-/home/michal/CLionProjects/untitled9/ShuntingYard.cpp
-cstring
--
 ShuntingYard.h
 /home/michal/CLionProjects/untitled9/ShuntingYard.h
 
@@ -367,4 +359,6 @@ Command.h
 /home/michal/CLionProjects/untitled9/Command.h
 ShuntingYard.h
 /home/michal/CLionProjects/untitled9/ShuntingYard.h
+Interpreter.h
+/home/michal/CLionProjects/untitled9/Interpreter.h
 

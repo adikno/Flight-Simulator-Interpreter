@@ -55,10 +55,10 @@ void* clientThread(void* arg) {
     }
 }
 
-int ConnectCommand:: doCommand(string x[]){
+int ConnectCommand:: doCommand(vector<string> x){
 
         int num0 , num1;
-        vector<string> ve = split(x[0], '.');
+        vector<string> ve = split(x.at(0), '.');
         if(ve.size() !=4){
             throw "illegal arguments";
         }
@@ -71,13 +71,13 @@ int ConnectCommand:: doCommand(string x[]){
                     throw 1;
                 }
             }
-            num1 = stoi(x[1]);
+            num1 = stoi(x.at(1));
         } catch (out_of_range &exception1){
             throw "illegal arguments";
         } catch (int x){
             throw "illegal arguments";
         }
-        const char *p_data  = x[0].data();
+        const char *p_data  = x.at(0).data();
         params->setIp(p_data);
         params->setPort(num1);
         pthread_t trid;

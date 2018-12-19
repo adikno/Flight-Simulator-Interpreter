@@ -22,7 +22,7 @@ class ConnectCommand: public Command{
 
 
 public:
-    int doCommand(string x[]) override;
+    int doCommand(vector<string> x) override;
     const vector<string> split(const string& s, const char& c);
 
 };

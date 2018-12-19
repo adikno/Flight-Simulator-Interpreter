@@ -13,23 +13,26 @@ class BooleanExpression: public Expression {
     Expression *second;
     string oper;
 public:
-    BooleanExpression(string x[]) {
-        if (x->size() != 3) {
+    BooleanExpression(vector<string> &x) {
+        if (x.at(x.size() - 1) == "{") {
+            x.erase(x.begin() + x.size() - 1);
+        }
+        if (x.size() != 3) {
             throw "Illegal condition";
         }
-        if (x[1] != ">" && x[1] != "<" && x[1] != ">=" && x[1] != "<=" && x[1] != "==" && x[1] != "!=") {
+        if (x.at(1) != ">" && x.at(1) != "<" && x.at(1) != ">=" && x.at(1) != "<=" && x.at(1) != "==" && x.at(1) != "!=") {
             throw "Illegal condition";
         }
-        char data[x[0].size()];
-        strcpy(data, x[0].data());
+        char data[x.at(0).size()];
+        strcpy(data, x.at(0).data());
         ShuntingYard *shuntingYard = new ShuntingYard();
         queue<string> queue1 = shuntingYard->shuntingYard(data);
         first = shuntingYard->postfixEvaluate(queue1);
-        data[x[2].size()];
-        strcpy(data, x[2].data());
+        data[x.at(2).size()];
+        strcpy(data, x.at(2).data());
         queue1 = shuntingYard->shuntingYard(data);
         second = shuntingYard->postfixEvaluate(queue1);
-        oper = x[1];
+        oper = x.at(1);
     }
 
     double calculate() {
@@ -37,19 +40,19 @@ public:
             return first->calculate() < second->calculate();
         }
         if (oper == ">") {
-            return first->calculate() < second->calculate();
+            return first->calculate() > second->calculate();
         }
         if (oper == "<=") {
-            return first->calculate() < second->calculate();
+            return first->calculate() <= second->calculate();
         }
-        if (oper == "<=") {
-            return first->calculate() < second->calculate();
+        if (oper == ">=") {
+            return first->calculate() >= second->calculate();
         }
         if (oper == "==") {
-            return first->calculate() < second->calculate();
+            return first->calculate() == second->calculate();
         }
         if (oper == "!=") {
-            return first->calculate() < second->calculate();
+            return first->calculate() != second->calculate();
         }
     }
 };
