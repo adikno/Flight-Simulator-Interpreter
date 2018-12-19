@@ -87,9 +87,6 @@
 		<Unit filename="/home/michal/CLionProjects/untitled9/BinaryExpression.h">
 			<Option target="untitled9"/>
 		</Unit>
-		<Unit filename="/home/michal/CLionProjects/untitled9/BindCommand.cpp">
-			<Option target="untitled9"/>
-		</Unit>
 		<Unit filename="/home/michal/CLionProjects/untitled9/BooleanExpression.cpp">
 			<Option target="untitled9"/>
 		</Unit>
@@ -109,9 +106,6 @@
 			<Option target="untitled9"/>
 		</Unit>
 		<Unit filename="/home/michal/CLionProjects/untitled9/CommandExpression.h">
-			<Option target="untitled9"/>
-		</Unit>
-		<Unit filename="/home/michal/CLionProjects/untitled9/ConditionParser.cpp">
 			<Option target="untitled9"/>
 		</Unit>
 		<Unit filename="/home/michal/CLionProjects/untitled9/ConditionParser.h">
@@ -163,6 +157,9 @@
 			<Option target="untitled9"/>
 		</Unit>
 		<Unit filename="/home/michal/CLionProjects/untitled9/OpenServerCommand.cpp">
+			<Option target="untitled9"/>
+		</Unit>
+		<Unit filename="/home/michal/CLionProjects/untitled9/ParamsCommand.cpp">
 			<Option target="untitled9"/>
 		</Unit>
 		<Unit filename="/home/michal/CLionProjects/untitled9/Plus.cpp">

@@ -5,13 +5,8 @@
 #include <stack>
 #include <string.h>
 #include "Expression.h"
-#include "Number.h"
 #include <map>
 #include "Command.h"
-#include "Plus.cpp"
-#include "Minus.cpp"
-#include "Div.cpp"
-#include "Mult.cpp"
 #include "ConditionParser.h"
 #include "Interpreter.h"
 
@@ -23,12 +18,13 @@ void Interpreter::lexer(string fileName) {
         while (getline(myFile, line)) {
             if (line[line.length() - 1] == '{') {
                 v = explode(line, ' ', ',');
-                Command *condition = commands[v.at(0)];
-                string args[v.size()-1];
-                for (int i =1, j=0; i < v.size(); i++, j++){
-                    args[j] = v.at(i);
+                string condition = v.at(0);
+                v.erase(v.begin());
+                list<ParamsCommand*> block = ParagraphLexer(myFile, condition, v);
+                for (auto &command: block) {
+                    Command *command1 = command->getCommand();
+                    command1->doCommand(command->getParams());
                 }
-                ParagraphLexer(fileName, condition, args);
             } else {
                 v = explode(line, ' ', ',');
                 parser(v);
@@ -37,35 +33,70 @@ void Interpreter::lexer(string fileName) {
     }
 }
 
-void Interpreter::ParagraphLexer(string fileName, Command *condition, string args[]) {
-    vector<string> v;
+list<ParamsCommand*> Interpreter::ParagraphLexer(ifstream &file, string condition, vector<string> args) {
+    list<ParamsCommand*> commandMap;
+    vector<string> vector;
     string line;
-    ifstream myFile(fileName);
-
-    vector<vector<string>> paragraph;
-    getline(myFile, line);
+    getline(file, line);
     while (line[line.length() - 1] != '}') {
+        //inner block
         if (line[line.length() - 1] == '{') {
-            v = explode(line, ' ', ',');
-            Command *condition2 = commands[v.at(0)];
-            string args2[v.size() - 1];
-            for (int i = 1, j = 0; i < v.size(); i++, j++) {
-                args2[j] = v.at(i);
+            vector = explode(line, ' ', ',');
+            string condition2 = vector.at(0);
+            vector.erase(vector.begin());
+            list<ParamsCommand*> block = ParagraphLexer(file, condition2, vector);
+            for (auto &node: block) {
+                commandMap.push_back(node);
             }
-            ParagraphLexer(fileName, condition2, args2);
+            getline(file, line);
+            continue;
         }
-        v = explode(line, ' ', ',');
-        paragraph.push_back(v);
-        getline(myFile, line);
+        //inner commands
+        vector = explode(line, ' ', ',');
+        bool flag = false;
+        string key;
+        for (auto &str: vector) {
+            if (str == "=") {
+                key = "equals";
+                flag = true;
+            }
+        }
+        if (!flag) {
+            key = vector.at(0);
+            vector.erase(vector.begin());
+        }
+        Command *command = commands[key];
+        ParamsCommand *paramsCommand = new ParamsCommand(command, vector);
+        commandMap.push_back(paramsCommand);
+        getline(file, line);
     }
-    ConditionParser *conditionParser = new ConditionParser(condition, paragraph, commands);
-    conditionParser->doCommand(args);
+    if (condition == "if") {
+        Command *conditionParser = new IfCommand(commands, commandMap);
+        commandMap.clear();
+        ParamsCommand *paramsCommand = new ParamsCommand(conditionParser, args);
+        commandMap.push_back(paramsCommand);
+        return commandMap;
+    } else {
+        Command *conditionParser = new LoopCommand(commands, commandMap);
+        commandMap.clear();
+        ParamsCommand *paramsCommand = new ParamsCommand(conditionParser, args);
+        commandMap.push_back(paramsCommand);
+        return commandMap;
+    }
 }
 
-const vector<string> Interpreter::explode(const string& s, const char& c1, const char& c2) {
+const vector<string> Interpreter::explode(const string &s, const char &c1, const char &c2) {
     string buff{s[0]};
     vector<string> v;
-    for(int i = 1; i < s.length(); i++) {
+    for (int i = 1; i < s.length(); i++) {
+        if ((s[i] == '<' || s[i] == '>' || s[i] == '=') && buff == "" && (s[i + 1] == '=')) {
+            buff = s[i];
+            buff += s[i + 1];
+            v.push_back(buff);
+            buff = "";
+            i++;
+            continue;
+        }
         if (s[i] == '=' && buff != "") {
             v.push_back(buff);
             buff = "=";
@@ -73,14 +104,20 @@ const vector<string> Interpreter::explode(const string& s, const char& c1, const
             buff = "";
             continue;
         }
-        if(s[i] != c1 && s[i] != c2) {
-            buff += s[i];
-        }
-        else {
+        if (s[i] != c1 && s[i] != c2) {
+            if (s[i] == '\"') {
+                buff += '\"';
+            } else {
+                buff += s[i];
+            }
+        } else {
             if (s[i] == ' ' && (s[i - 1] == '/' || s[i - 1] == '*' || s[i - 1] == '-' || s[i - 1] == '+' ||
-                    s[i + 1] == '/' || s[i + 1] == '*' || s[i + 1] == '-' || s[i + 1] == '+' )) {
+                                s[i + 1] == '/' || s[i + 1] == '*' || s[i + 1] == '-' || s[i + 1] == '+')) {
                 buff += s[i];
             } else {
+                if(buff == ""){
+                    continue;
+                }
                 v.push_back(buff);
                 buff = "";
             }
@@ -89,25 +126,22 @@ const vector<string> Interpreter::explode(const string& s, const char& c1, const
     v.push_back(buff);
     return v;
 }
-void Interpreter::parser(vector<string> vector){
+
+void Interpreter::parser(vector<string> vector) {
+    bool flag = false;
     string key;
-    string args[vector.size()];
-    if(vector.at(1) == "=" ||vector.at(2) == "="){
-        string args[vector.size()-1];
-        for (int i =0; i < vector.size(); i++){
-            args[i] = vector.at(i);
+    for (auto &str: vector) {
+        if (str == "=") {
             key = "equals";
-
-
-        }
-    } else{
-        key = vector.at(0);
-        for (int i =1, j=0; i < vector.size(); i++, j++) {
-            args[j] = vector.at(i);
+            flag = true;
         }
     }
+    if (!flag) {
+        key = vector.at(0);
+        vector.erase(vector.begin());
+    }
     Command *command = commands[key];
-    command->doCommand(args);
+    command->doCommand(vector);
 }
 
 

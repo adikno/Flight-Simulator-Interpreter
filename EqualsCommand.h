@@ -15,31 +15,38 @@
 class EqualsCommand : public Command {
 
 public:
-    int doCommand(string x[]){
-        if(x[3] == "bind"){
-            pathTable[x[4]] = x[1];
-            symbolTable[x[1]] = xmlTable[x[4]];
-            return 0;
+    int doCommand(vector<string> x) {
+        if (x.at(3) == "bind") {
+            if (x.at(1)[0] == '\"') {
+                pathTable[x.at(4).substr(1, x.at(4).length() - 1)] = x.at(1);
+                symbolTable[x.at(1)] = xmlTable[x.at(4).substr(1, x.at(4).length() - 1)];
+                return 0;
+            } else {
+                //pathTable[x.at(4).substr(1, x.at(4).length() - 1)] = x.at(1).substr(1, x.at(1).length() - 1);
+
+                symbolTable[x.at(1)] = xmlTable[x.at(4)];
+                return 0;
+            }
         }
-        if (x[0] == "var") {
+        if (x.at(0) == "var") {
             ShuntingYard *shuntingYard = new ShuntingYard();
-            queue<string> queue1 = shuntingYard->shuntingYard(x[3]);
+            queue<string> queue1 = shuntingYard->shuntingYard(x.at(3));
             Expression *exp = shuntingYard->postfixEvaluate(queue1);
-            symbolTable[x[1]] = exp->calculate();
-            char *value = (char*)(&symbolTable[x[1]]);
+            symbolTable[x.at(1)] = exp->calculate();
+            char *value = (char *) (&symbolTable[x.at(1)]);
             char *instruction;
-            strcpy(instruction, pathTable[x[1]].data());
+            strcpy(instruction, pathTable[x.at(1)].data());
             strcat(instruction, value);
             params->setInstruction(instruction);
             return 0;
         }
         ShuntingYard *shuntingYard = new ShuntingYard();
-        queue<string> queue1 = shuntingYard->shuntingYard(x[2]);
+        queue<string> queue1 = shuntingYard->shuntingYard(x.at(2));
         Expression *exp = shuntingYard->postfixEvaluate(queue1);
-        symbolTable[x[0]] = exp->calculate();
+        symbolTable[x.at(0)] = exp->calculate();
         char *instruction;
-        strcpy(instruction, pathTable[x[0]].data());
-        char *value = (char*)(&symbolTable[x[0]]);
+        strcpy(instruction, pathTable[x.at(0)].data());
+        char *value = (char *) (&symbolTable[x.at(0)]);
         strcat(instruction, value);
         params->setInstruction(instruction);
     }

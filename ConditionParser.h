@@ -5,8 +5,8 @@
 #ifndef UNTITLED9_CONDITIONPARSER_H
 #define UNTITLED9_CONDITIONPARSER_H
 
+#include "BooleanExpression.cpp"
 #include "Command.h"
-#include "Expression.h"
 #include "queue"
 #include <map>
 #include <iostream>
@@ -18,6 +18,9 @@
 #include "Expression.h"
 #include "Number.h"
 #include <map>
+#include <unordered_map>
+#include <list>
+#include "ParamsCommand.cpp"
 
 
 extern map<string, Command*> commands;
@@ -25,19 +28,18 @@ extern map<string, double> symbolTable;
 
 class ConditionParser: public Command {
 private:
-    Command* condition;
+    Command *command;
 protected:
     map<string,Command*> commands;
-    vector<vector<string>> paragraph;
+    list<ParamsCommand*> innerCommands;
+
 public:
-     ConditionParser(Command *condition, vector<vector<string>> &commands ,map<string,Command*> &map1) :
-     condition(condition), paragraph(commands) {}
+     ConditionParser(map<string,Command*> &commands, list<ParamsCommand*> &innerCommands) :
+     commands(commands), innerCommands(innerCommands){}
 
-     int doCommand(string x[]) {
-         condition->doCommand(x);
+     int doCommand(vector<string> x) {
+         command->doCommand(x);
      }
-
-    void execute();
 
 
 };

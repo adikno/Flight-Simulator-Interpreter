@@ -4,12 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/michal/CLionProjects/untitled9/BindCommand.cpp" "/home/michal/CLionProjects/untitled9/cmake-build-debug/CMakeFiles/untitled9.dir/BindCommand.cpp.o"
   "/home/michal/CLionProjects/untitled9/BooleanExpression.cpp" "/home/michal/CLionProjects/untitled9/cmake-build-debug/CMakeFiles/untitled9.dir/BooleanExpression.cpp.o"
   "/home/michal/CLionProjects/untitled9/ClientParams.cpp" "/home/michal/CLionProjects/untitled9/cmake-build-debug/CMakeFiles/untitled9.dir/ClientParams.cpp.o"
   "/home/michal/CLionProjects/untitled9/ClientThread.cpp" "/home/michal/CLionProjects/untitled9/cmake-build-debug/CMakeFiles/untitled9.dir/ClientThread.cpp.o"
   "/home/michal/CLionProjects/untitled9/CommandExpression.cpp" "/home/michal/CLionProjects/untitled9/cmake-build-debug/CMakeFiles/untitled9.dir/CommandExpression.cpp.o"
-  "/home/michal/CLionProjects/untitled9/ConditionParser.cpp" "/home/michal/CLionProjects/untitled9/cmake-build-debug/CMakeFiles/untitled9.dir/ConditionParser.cpp.o"
   "/home/michal/CLionProjects/untitled9/ConnectCommand.cpp" "/home/michal/CLionProjects/untitled9/cmake-build-debug/CMakeFiles/untitled9.dir/ConnectCommand.cpp.o"
   "/home/michal/CLionProjects/untitled9/DataReaderServer.cpp" "/home/michal/CLionProjects/untitled9/cmake-build-debug/CMakeFiles/untitled9.dir/DataReaderServer.cpp.o"
   "/home/michal/CLionProjects/untitled9/Div.cpp" "/home/michal/CLionProjects/untitled9/cmake-build-debug/CMakeFiles/untitled9.dir/Div.cpp.o"
@@ -20,6 +18,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/michal/CLionProjects/untitled9/Minus.cpp" "/home/michal/CLionProjects/untitled9/cmake-build-debug/CMakeFiles/untitled9.dir/Minus.cpp.o"
   "/home/michal/CLionProjects/untitled9/Mult.cpp" "/home/michal/CLionProjects/untitled9/cmake-build-debug/CMakeFiles/untitled9.dir/Mult.cpp.o"
   "/home/michal/CLionProjects/untitled9/OpenServerCommand.cpp" "/home/michal/CLionProjects/untitled9/cmake-build-debug/CMakeFiles/untitled9.dir/OpenServerCommand.cpp.o"
+  "/home/michal/CLionProjects/untitled9/ParamsCommand.cpp" "/home/michal/CLionProjects/untitled9/cmake-build-debug/CMakeFiles/untitled9.dir/ParamsCommand.cpp.o"
   "/home/michal/CLionProjects/untitled9/Plus.cpp" "/home/michal/CLionProjects/untitled9/cmake-build-debug/CMakeFiles/untitled9.dir/Plus.cpp.o"
   "/home/michal/CLionProjects/untitled9/PrintCommand.cpp" "/home/michal/CLionProjects/untitled9/cmake-build-debug/CMakeFiles/untitled9.dir/PrintCommand.cpp.o"
   "/home/michal/CLionProjects/untitled9/ShuntingYard.cpp" "/home/michal/CLionProjects/untitled9/cmake-build-debug/CMakeFiles/untitled9.dir/ShuntingYard.cpp.o"

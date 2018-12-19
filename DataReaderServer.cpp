@@ -102,10 +102,10 @@ struct DataReaderServer{
             string buf = buffer;
             ve = explode(buf,',');
             int i = 0;
-           // for (auto it=xmlTable.begin(); it != xmlTable.end(); ++it){
-             //   it.operator*().second = ve.at(i);
-               // i++;
-            //}
+           for (auto it=xmlTable.begin(); it != xmlTable.end(); ++it){
+                it.operator*().second = ve.at(i);
+                i++;
+            }
 
             clock_t time_end;
             time_end = time_start + 10*this->rate *CLOCKS_PER_SEC/1000;

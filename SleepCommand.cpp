@@ -8,13 +8,13 @@
 
 class SleepCommand: public Command {
 
-    int doCommand(string x[]) {
-        if (x->length() != 1) {
+    int doCommand(vector<string> x) {
+        if (x.size() != 1) {
             throw "Illegal time";
         }
         int milliseconds;
         try {
-            milliseconds = stoi(x[0]);
+            milliseconds = stoi(x.at(0));
         } catch (out_of_range &e) {
             throw "Illegal time";
         }
