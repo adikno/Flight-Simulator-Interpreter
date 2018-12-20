@@ -1,6 +1,4 @@
-//
-// Created by michal on 12/18/18.
-//
+
 
 #ifndef UNTITLED9_CONNECTCOMMAND_H
 #define UNTITLED9_CONNECTCOMMAND_H

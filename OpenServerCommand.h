@@ -1,6 +1,3 @@
-//
-// Created by michal on 12/20/18.
-//
 
 #ifndef UNTITLED9_OPENDATACOMMAND_H
 #define UNTITLED9_OPENDATACOMMAND_H

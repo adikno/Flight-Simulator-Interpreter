@@ -1,6 +1,4 @@
-//
-// Created by michal on 12/20/18.
-//
+
 
 #ifndef UNTITLED9_SEREVERPARAMS_H
 #define UNTITLED9_SEREVERPARAMS_H
