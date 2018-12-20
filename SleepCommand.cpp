@@ -8,7 +8,7 @@
 
 class SleepCommand: public Command {
 
-    int doCommand(vector<string> x) {
+    int doCommand(vector<string> &x) {
         if (x.size() != 1) {
             throw "Illegal time";
         }

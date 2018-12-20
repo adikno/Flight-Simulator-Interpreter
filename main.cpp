@@ -16,22 +16,23 @@
 map<string, double> symbolTable;
 map<string, string> pathTable;
 map<string, double> xmlTable;
-ClientParams* params;
+ClientParams* clientParams;
+ServerParams* serverParams;
+pthread_mutex_t mutex;
 
 using namespace std;
 int main() {
+    pthread_mutex_init(&mutex, nullptr);
     string file_name = "FILE.txt";
-    map<string, double> symbolTable;
-    map<string, string> pathTable;
-    map<string, double> xmlTable;
-    params = new ClientParams();
+    //map<string, double> symbolTable;
+    //map<string, string> pathTable;
+    //map<string, double> xmlTable;
+    clientParams = new ClientParams();
+    serverParams = new ServerParams();
+
     Interpreter *interpreter = new Interpreter();
     interpreter->lexer(file_name);
-    string x = "2/(1-5)";
-    ShuntingYard *shuntingYard = new ShuntingYard();
-    queue<string> queue1 = shuntingYard->shuntingYard(x);
-    Expression *expression = shuntingYard->postfixEvaluate(queue1);
-    cout<< expression->calculate() << endl;
+    pthread_mutex_destroy(&mutex);
     return 0;
 
 

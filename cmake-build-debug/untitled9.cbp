@@ -93,12 +93,6 @@
 		<Unit filename="/home/michal/CLionProjects/untitled9/ClientParams.cpp">
 			<Option target="untitled9"/>
 		</Unit>
-		<Unit filename="/home/michal/CLionProjects/untitled9/ClientThread.cpp">
-			<Option target="untitled9"/>
-		</Unit>
-		<Unit filename="/home/michal/CLionProjects/untitled9/ClientThread.h">
-			<Option target="untitled9"/>
-		</Unit>
 		<Unit filename="/home/michal/CLionProjects/untitled9/Command.h">
 			<Option target="untitled9"/>
 		</Unit>
@@ -115,9 +109,6 @@
 			<Option target="untitled9"/>
 		</Unit>
 		<Unit filename="/home/michal/CLionProjects/untitled9/ConnectCommand.h">
-			<Option target="untitled9"/>
-		</Unit>
-		<Unit filename="/home/michal/CLionProjects/untitled9/DataReaderServer.cpp">
 			<Option target="untitled9"/>
 		</Unit>
 		<Unit filename="/home/michal/CLionProjects/untitled9/Div.cpp">
@@ -159,6 +150,9 @@
 		<Unit filename="/home/michal/CLionProjects/untitled9/OpenServerCommand.cpp">
 			<Option target="untitled9"/>
 		</Unit>
+		<Unit filename="/home/michal/CLionProjects/untitled9/OpenServerCommand.h">
+			<Option target="untitled9"/>
+		</Unit>
 		<Unit filename="/home/michal/CLionProjects/untitled9/ParamsCommand.cpp">
 			<Option target="untitled9"/>
 		</Unit>
@@ -166,6 +160,9 @@
 			<Option target="untitled9"/>
 		</Unit>
 		<Unit filename="/home/michal/CLionProjects/untitled9/PrintCommand.cpp">
+			<Option target="untitled9"/>
+		</Unit>
+		<Unit filename="/home/michal/CLionProjects/untitled9/SereverParams.h">
 			<Option target="untitled9"/>
 		</Unit>
 		<Unit filename="/home/michal/CLionProjects/untitled9/ShuntingYard.cpp">

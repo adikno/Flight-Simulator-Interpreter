@@ -177,33 +177,6 @@ ClientParams.cpp.s:
 	$(MAKE) -f CMakeFiles/untitled9.dir/build.make CMakeFiles/untitled9.dir/ClientParams.cpp.s
 .PHONY : ClientParams.cpp.s
 
-ClientThread.o: ClientThread.cpp.o
-
-.PHONY : ClientThread.o
-
-# target to build an object file
-ClientThread.cpp.o:
-	$(MAKE) -f CMakeFiles/untitled9.dir/build.make CMakeFiles/untitled9.dir/ClientThread.cpp.o
-.PHONY : ClientThread.cpp.o
-
-ClientThread.i: ClientThread.cpp.i
-
-.PHONY : ClientThread.i
-
-# target to preprocess a source file
-ClientThread.cpp.i:
-	$(MAKE) -f CMakeFiles/untitled9.dir/build.make CMakeFiles/untitled9.dir/ClientThread.cpp.i
-.PHONY : ClientThread.cpp.i
-
-ClientThread.s: ClientThread.cpp.s
-
-.PHONY : ClientThread.s
-
-# target to generate assembly for a file
-ClientThread.cpp.s:
-	$(MAKE) -f CMakeFiles/untitled9.dir/build.make CMakeFiles/untitled9.dir/ClientThread.cpp.s
-.PHONY : ClientThread.cpp.s
-
 CommandExpression.o: CommandExpression.cpp.o
 
 .PHONY : CommandExpression.o
@@ -257,33 +230,6 @@ ConnectCommand.s: ConnectCommand.cpp.s
 ConnectCommand.cpp.s:
 	$(MAKE) -f CMakeFiles/untitled9.dir/build.make CMakeFiles/untitled9.dir/ConnectCommand.cpp.s
 .PHONY : ConnectCommand.cpp.s
-
-DataReaderServer.o: DataReaderServer.cpp.o
-
-.PHONY : DataReaderServer.o
-
-# target to build an object file
-DataReaderServer.cpp.o:
-	$(MAKE) -f CMakeFiles/untitled9.dir/build.make CMakeFiles/untitled9.dir/DataReaderServer.cpp.o
-.PHONY : DataReaderServer.cpp.o
-
-DataReaderServer.i: DataReaderServer.cpp.i
-
-.PHONY : DataReaderServer.i
-
-# target to preprocess a source file
-DataReaderServer.cpp.i:
-	$(MAKE) -f CMakeFiles/untitled9.dir/build.make CMakeFiles/untitled9.dir/DataReaderServer.cpp.i
-.PHONY : DataReaderServer.cpp.i
-
-DataReaderServer.s: DataReaderServer.cpp.s
-
-.PHONY : DataReaderServer.s
-
-# target to generate assembly for a file
-DataReaderServer.cpp.s:
-	$(MAKE) -f CMakeFiles/untitled9.dir/build.make CMakeFiles/untitled9.dir/DataReaderServer.cpp.s
-.PHONY : DataReaderServer.cpp.s
 
 Div.o: Div.cpp.o
 
@@ -678,18 +624,12 @@ help:
 	@echo "... ClientParams.o"
 	@echo "... ClientParams.i"
 	@echo "... ClientParams.s"
-	@echo "... ClientThread.o"
-	@echo "... ClientThread.i"
-	@echo "... ClientThread.s"
 	@echo "... CommandExpression.o"
 	@echo "... CommandExpression.i"
 	@echo "... CommandExpression.s"
 	@echo "... ConnectCommand.o"
 	@echo "... ConnectCommand.i"
 	@echo "... ConnectCommand.s"
-	@echo "... DataReaderServer.o"
-	@echo "... DataReaderServer.i"
-	@echo "... DataReaderServer.s"
 	@echo "... Div.o"
 	@echo "... Div.i"
 	@echo "... Div.s"

@@ -18,39 +18,34 @@ using namespace std;
 
 class ClientParams {
     int port;
-    char *IP;
-    char* instruction;
+    string ip;
+    string instruction;
 public:
     ClientParams() {
-        string a = "";
-        this->instruction= (char *) malloc(a.size());
-        const char* b = a.data();
-        strcpy(this->instruction, b);
+        this->instruction = "";
     }
 
-    void setIp(const char* ip) {
-        strcpy(this->IP, ip);
+    void setIp(string ip) {
+        this->ip = ip;
     }
 
     void setPort(int port) {
         this->port = port;
     }
 
-    void setInstruction(const char *instruction) {
-        int length = sizeof(instruction)/sizeof(char);
-        this->instruction= (char *) malloc(length);
-        strcpy(this->instruction, instruction);
+    void setInstruction(string instruction) {
+        this->instruction = instruction;
     }
 
     int getPort() const {
         return this->port;
     }
 
-    char* getIP() const {
-        return this->IP;
+    string getIP() const {
+        return this->ip;
     }
 
-    char* getInstruction() const {
+    string getInstruction() const {
         return this->instruction;
     }
 };

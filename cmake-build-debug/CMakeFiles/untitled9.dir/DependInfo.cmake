@@ -6,10 +6,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/michal/CLionProjects/untitled9/BooleanExpression.cpp" "/home/michal/CLionProjects/untitled9/cmake-build-debug/CMakeFiles/untitled9.dir/BooleanExpression.cpp.o"
   "/home/michal/CLionProjects/untitled9/ClientParams.cpp" "/home/michal/CLionProjects/untitled9/cmake-build-debug/CMakeFiles/untitled9.dir/ClientParams.cpp.o"
-  "/home/michal/CLionProjects/untitled9/ClientThread.cpp" "/home/michal/CLionProjects/untitled9/cmake-build-debug/CMakeFiles/untitled9.dir/ClientThread.cpp.o"
   "/home/michal/CLionProjects/untitled9/CommandExpression.cpp" "/home/michal/CLionProjects/untitled9/cmake-build-debug/CMakeFiles/untitled9.dir/CommandExpression.cpp.o"
   "/home/michal/CLionProjects/untitled9/ConnectCommand.cpp" "/home/michal/CLionProjects/untitled9/cmake-build-debug/CMakeFiles/untitled9.dir/ConnectCommand.cpp.o"
-  "/home/michal/CLionProjects/untitled9/DataReaderServer.cpp" "/home/michal/CLionProjects/untitled9/cmake-build-debug/CMakeFiles/untitled9.dir/DataReaderServer.cpp.o"
   "/home/michal/CLionProjects/untitled9/Div.cpp" "/home/michal/CLionProjects/untitled9/cmake-build-debug/CMakeFiles/untitled9.dir/Div.cpp.o"
   "/home/michal/CLionProjects/untitled9/EqualsCommand.cpp" "/home/michal/CLionProjects/untitled9/cmake-build-debug/CMakeFiles/untitled9.dir/EqualsCommand.cpp.o"
   "/home/michal/CLionProjects/untitled9/IfCommand.cpp" "/home/michal/CLionProjects/untitled9/cmake-build-debug/CMakeFiles/untitled9.dir/IfCommand.cpp.o"

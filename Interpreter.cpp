@@ -23,7 +23,8 @@ void Interpreter::lexer(string fileName) {
                 list<ParamsCommand*> block = ParagraphLexer(myFile, condition, v);
                 for (auto &command: block) {
                     Command *command1 = command->getCommand();
-                    command1->doCommand(command->getParams());
+                    vector<string> temp = command->getParams();
+                    command1->doCommand(temp);
                 }
             } else {
                 v = explode(line, ' ', ',');
@@ -115,7 +116,11 @@ const vector<string> Interpreter::explode(const string &s, const char &c1, const
                                 s[i + 1] == '/' || s[i + 1] == '*' || s[i + 1] == '-' || s[i + 1] == '+')) {
                 buff += s[i];
             } else {
-                if(buff == ""){
+                if(buff == "") {
+                    continue;
+                }
+                if (buff == " ") {
+                    buff = "";
                     continue;
                 }
                 v.push_back(buff);

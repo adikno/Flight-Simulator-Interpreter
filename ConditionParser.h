@@ -37,7 +37,7 @@ public:
      ConditionParser(map<string,Command*> &commands, list<ParamsCommand*> &innerCommands) :
      commands(commands), innerCommands(innerCommands){}
 
-     int doCommand(vector<string> x) {
+     int doCommand(vector<string> &x) {
          command->doCommand(x);
      }
 
