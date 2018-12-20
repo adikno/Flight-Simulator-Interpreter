@@ -12,13 +12,14 @@ public:
 
     }
 
-    int doCommand(vector<string> x) {
+    int doCommand(vector<string> &x) {
         try {
             Expression *boolean = new BooleanExpression(x);
             if (boolean->calculate()) {
                 for (auto &command: innerCommands) {
                     Command *command1 = command->getCommand();
-                    command1->doCommand(command->getParams());
+                    vector<string> temp = command->getParams();
+                    command1->doCommand(temp);
                 }
             }
         } catch (string &str){

@@ -17,8 +17,7 @@
 #include "Expression.h"
 #include <map>
 #include <unordered_map>
-#include "Command.h"
-#include "OpenServerCommand.cpp"
+#include "OpenServerCommand.h"
 #include "ConditionParser.h"
 #include "ConnectCommand.h"
 #include "EqualsCommand.h"
@@ -31,7 +30,6 @@
 
 using namespace std;
 
-
 class Interpreter {
 
     map<string, Command*> commands;
@@ -42,9 +40,6 @@ public:
         commands["equals"] = new EqualsCommand();
         commands["print"] = new PrintCommand();
         commands["sleep"] = new SleepCommand();
-
-        params = new ClientParams();
-
     }
     void lexer(string fileName);
 

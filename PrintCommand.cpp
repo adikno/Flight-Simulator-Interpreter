@@ -8,7 +8,7 @@
 
 class PrintCommand: public Command{
 
-    int doCommand(vector<string> x){
+    int doCommand(vector<string> &x){
         for (int i = 0; i < x.size(); i++) {
             if (x.at(i)[0] == '\"') {
                 cout << x.at(i).substr(1, x.at(i).length() - 2);

@@ -1,7 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/untitled9.dir/main.cpp.o"
   "CMakeFiles/untitled9.dir/OpenServerCommand.cpp.o"
-  "CMakeFiles/untitled9.dir/DataReaderServer.cpp.o"
   "CMakeFiles/untitled9.dir/ConnectCommand.cpp.o"
   "CMakeFiles/untitled9.dir/ClientParams.cpp.o"
   "CMakeFiles/untitled9.dir/Plus.cpp.o"
@@ -17,7 +16,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/untitled9.dir/SleepCommand.cpp.o"
   "CMakeFiles/untitled9.dir/EqualsCommand.cpp.o"
   "CMakeFiles/untitled9.dir/BooleanExpression.cpp.o"
-  "CMakeFiles/untitled9.dir/ClientThread.cpp.o"
   "CMakeFiles/untitled9.dir/ParamsCommand.cpp.o"
   "untitled9.pdb"
   "untitled9"

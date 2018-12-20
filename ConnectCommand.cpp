@@ -5,6 +5,7 @@
 #include "ConnectCommand.h"
 
 
+
 void* clientThread(void* arg) {
     ClientParams* params = (ClientParams*) arg;
 
@@ -23,7 +24,7 @@ void* clientThread(void* arg) {
         exit(1);
     }
 
-    server = gethostbyname(params->getIP());
+    server = gethostbyname(params->getIP().data());
     if (server == NULL) {
         fprintf(stderr, "ERROR, no such host\n");
         exit(0);
@@ -44,7 +45,7 @@ void* clientThread(void* arg) {
     */
     while (true) {
         if (params->getInstruction() != "") {
-            n = write(sockfd, params->getInstruction(), strlen(buffer));
+            n = write(sockfd, params->getInstruction().data(), strlen(buffer));
             params->setInstruction("");
             /* Send message to the server */
             if (n < 0) {
@@ -55,7 +56,7 @@ void* clientThread(void* arg) {
     }
 }
 
-int ConnectCommand:: doCommand(vector<string> x){
+int ConnectCommand:: doCommand(vector<string> &x){
 
         int num0 , num1;
         vector<string> ve = split(x.at(0), '.');
@@ -78,10 +79,10 @@ int ConnectCommand:: doCommand(vector<string> x){
             throw "illegal arguments";
         }
         const char *p_data  = x.at(0).data();
-        params->setIp(p_data);
-        params->setPort(num1);
+        clientParams->setIp(p_data);
+        clientParams->setPort(num1);
         pthread_t trid;
-        pthread_create(&trid, nullptr, clientThread, &params);
+        pthread_create(&trid, nullptr, clientThread, &clientParams);
 
         return 2;
 

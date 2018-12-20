@@ -16,13 +16,13 @@
 #include <netinet/in.h>
 #include <vector>
 #include <cstring>
-#include "ClientThread.h"
+#include "Maps.h"
 
 class ConnectCommand: public Command{
 
 
 public:
-    int doCommand(vector<string> x) override;
+    int doCommand(vector<string> &x) override;
     const vector<string> split(const string& s, const char& c);
 
 };
