@@ -1,6 +1,4 @@
-//
-// Created by michal on 12/16/18.
-//
+
 
 #ifndef UNTITLED9_INTERPRETER_H
 #define UNTITLED9_INTERPRETER_H

@@ -1,6 +1,4 @@
-//
-// Created by michal on 12/12/18.
-//
+
 
 #include "OpenServerCommand.h"
 vector<double> explode1(string &s, const char &c)  {

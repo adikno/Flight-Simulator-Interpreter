@@ -1,6 +1,4 @@
-//
-// Created by michal on 12/17/18.
-//
+
 #include <string>
 #include <string.h>
 #include "Expression.h"

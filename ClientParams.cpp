@@ -1,6 +1,3 @@
-//
-// Created by michal on 12/12/18.
-//
 
 #include <thread>
 #include <sys/socket.h>

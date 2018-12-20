@@ -1,6 +1,4 @@
-//
-// Created by michal on 12/16/18.
-//
+
 
 #include <cstring>
 #include "Command.h"

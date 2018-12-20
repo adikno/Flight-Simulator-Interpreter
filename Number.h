@@ -1,6 +1,4 @@
-//
-// Created by michal on 12/13/18.
-//
+
 
 #ifndef UNTITLED9_NUMBET_H
 #define UNTITLED9_NUMBET_H

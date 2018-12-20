@@ -1,6 +1,4 @@
-//
-// Created by michal on 12/13/18.
-//
+
 #include "Expression.h"
 #include "BinaryExpression.h"
 
