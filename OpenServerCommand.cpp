@@ -122,7 +122,7 @@ int OpenServerCommand::doCommand(vector<string> &x){
     serverParams->setRate(num1);
     pthread_t trid;
     pthread_create(&trid, nullptr, serverThread, &serverParams);
-    pthread_join(trid, nullptr);
+   //pthread_join(trid, nullptr);
     return 2;
 
 }

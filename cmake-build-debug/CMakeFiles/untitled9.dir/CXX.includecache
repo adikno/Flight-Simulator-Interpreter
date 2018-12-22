@@ -54,8 +54,6 @@ vector
 thread
 -
 
-/home/michal/CLionProjects/untitled9/CommandExpression.cpp
-
 /home/michal/CLionProjects/untitled9/ConditionParser.h
 BooleanExpression.cpp
 /home/michal/CLionProjects/untitled9/BooleanExpression.cpp
@@ -89,10 +87,6 @@ list
 -
 ParamsCommand.cpp
 /home/michal/CLionProjects/untitled9/ParamsCommand.cpp
-
-/home/michal/CLionProjects/untitled9/ConnectCommand.cpp
-ConnectCommand.h
-/home/michal/CLionProjects/untitled9/ConnectCommand.h
 
 /home/michal/CLionProjects/untitled9/ConnectCommand.h
 Command.h
@@ -130,10 +124,6 @@ BinaryExpression.h
 iostream
 -
 
-/home/michal/CLionProjects/untitled9/EqualsCommand.cpp
-EqualsCommand.h
-/home/michal/CLionProjects/untitled9/EqualsCommand.h
-
 /home/michal/CLionProjects/untitled9/EqualsCommand.h
 map
 -
@@ -151,22 +141,6 @@ ShuntingYard.h
 /home/michal/CLionProjects/untitled9/IfCommand.cpp
 ConditionParser.h
 /home/michal/CLionProjects/untitled9/ConditionParser.h
-
-/home/michal/CLionProjects/untitled9/Interpreter.cpp
-stack
--
-string.h
--
-Expression.h
-/home/michal/CLionProjects/untitled9/Expression.h
-map
--
-Command.h
-/home/michal/CLionProjects/untitled9/Command.h
-ConditionParser.h
-/home/michal/CLionProjects/untitled9/ConditionParser.h
-Interpreter.h
-/home/michal/CLionProjects/untitled9/Interpreter.h
 
 /home/michal/CLionProjects/untitled9/Interpreter.h
 iostream
@@ -242,10 +216,6 @@ BinaryExpression.h
 Expression.h
 /home/michal/CLionProjects/untitled9/Expression.h
 
-/home/michal/CLionProjects/untitled9/OpenServerCommand.cpp
-OpenServerCommand.h
-/home/michal/CLionProjects/untitled9/OpenServerCommand.h
-
 /home/michal/CLionProjects/untitled9/OpenServerCommand.h
 Command.h
 /home/michal/CLionProjects/untitled9/Command.h
@@ -277,12 +247,6 @@ ShuntingYard.h
 /home/michal/CLionProjects/untitled9/ShuntingYard.h
 
 /home/michal/CLionProjects/untitled9/SereverParams.h
-
-/home/michal/CLionProjects/untitled9/ShuntingYard.cpp
-cstring
--
-ShuntingYard.h
-/home/michal/CLionProjects/untitled9/ShuntingYard.h
 
 /home/michal/CLionProjects/untitled9/ShuntingYard.h
 Expression.h

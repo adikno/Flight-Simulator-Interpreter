@@ -12,16 +12,22 @@ queue<string>ShuntingYard::shuntingYard(string x) {
     vector1 = explode(x, '+','-','(',')','*','/','-');
     for (auto &token1: vector1) {
         try {
-            int num = stoi(token1);
+            double num;
+            if(token1[0] == '-' && token1.size() > 1){
+                token1.erase(0,1);
+                num = stod(token1);
+                token1 = "-" + token1;
+            } else{
+                num = stod(token1);
+            }
             queue1.push(token1);
             continue;
         } catch (invalid_argument &e) {}
         if ((token1.size() == 1) && (token1.compare("+") == 0 || token1.compare("-") == 0 )) {
-            if (stack1.top().compare("*") == 0 || stack1.top().compare("/") == 0) {
+            if ((!stack1.empty()) &&(stack1.top().compare("*") == 0 || stack1.top().compare("/") == 0)) {
                 string temp = stack1.top();
                 stack1.pop();
                 queue1.push(temp);
-                continue;
             }
             stack1.push(token1);
             continue;
@@ -58,14 +64,22 @@ const vector<string> ShuntingYard:: explode(const string& s, const char& a,const
             buff += n;
         }
         else {
-            v.push_back(buff);
+            if (n == '-'&& buff == "" && (v.empty()||v.back() == "/" ||v.back() == "-"||v.back() == "+" || v.back() == "*"|| v.back() == "(" )){
+                buff += n;
+                continue;
+            }
+            if(buff != ""){
+                v.push_back(buff);
+            }
             string a ="";
             a = a + n;
             v.push_back(a);
             buff="";
         }
     }
-    v.push_back(buff);
+    if(buff!= ""){
+        v.push_back(buff);
+    }
     return v;
 }
 Expression* ShuntingYard::postfixEvaluate(queue<string> que) {
@@ -78,7 +92,14 @@ Expression* ShuntingYard::postfixEvaluate(queue<string> que) {
             continue;
         }
         try {
-            int num = stoi(que.front());
+            double num;
+            if(que.front().at(0) == '-' && que.front().size() >1){
+                que.front().erase(0,1);
+                num=  -1 *stod(que.front());
+
+            } else{
+                num = stod(que.front());
+            }
             Expression *number = new Number(num);
             stack1.push(number);
             que.pop();
@@ -144,17 +165,22 @@ string ShuntingYard::removeSpaces(string x) {
         if (x[i] == ' ') {
             if (i == 0) {
                 x = x.substr(i + 1, x.length() - 1);
+                if((x[i] == '-' ||x[i] == '+' )){
+                    x = '0' + x;
+                }
             } else {
-                x = x.substr(0, i) + x.substr(i + 1, x.length());
+                x = x.substr(0, i) + x.substr(i + 1, x.length()-i);
             }
-        }
-        if (x[i] == '-' && (i != 0 && (x[i - 1] == '+'  || x[i - 1] == '/'  || x[i - 1] == '*' || x[i - 1] == '(' || x[i - 1] == ')'))) {
-            x = x.substr(0, i) + '0' + x.substr(i, x.length());
-        } else if (i == 0 && x[i] == '-') {
+        }else if (i == 0 && (x[i] == '-' ||x[i] == '+' )){
             x = '0' + x;
         }
+        if (x[i] == '+' && (i != 0 && (x[i - 1] == '-'  || x[i - 1] == '+' || x[i - 1] == '/' || x[i - 1] == '*'))) {
+            x = x.substr(0, i) + x.substr(i+1, x.length() - i);
+        }
+        //} else if((x[i] == '-' || x[i] == '+' ) && (i != 0 && (x[i - 1] == '*'  || x[i - 1] == '/'  || x[i - 1] == '/'))){
+          //  x = x.substr(0, i) + '(' + '0'+ x.substr(i, x.length()-i) + ')';
+        //}
     }
-
 
     return x;
 }
