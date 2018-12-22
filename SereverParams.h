@@ -8,6 +8,7 @@ class ServerParams {
     int rate;
 public:
     ServerParams(){
+
     }
 
     int getPort() {
