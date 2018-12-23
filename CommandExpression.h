@@ -7,17 +7,23 @@
 
 #include "Expression.h"
 #include "Command.h"
-class CommandExpression: public Expression{
+class CommandExpression: public Expression {
+protected:
     Command* command;
-    string* arr;
+    vector<string> arr;
 public:
 
-    CommandExpression(Command *a , string x[]){
+
+    CommandExpression(Command *a) {
         this->command = a;
-        this->arr = x;
     }
-    double Calculate(){
+
+    double calculate(){
         command->doCommand(arr);
+    }
+
+    void setArr(vector<string> x){
+        this->arr = x;
     }
 
 };

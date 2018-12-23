@@ -7,7 +7,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/untitled9.dir/Minus.cpp.o"
   "CMakeFiles/untitled9.dir/Div.cpp.o"
   "CMakeFiles/untitled9.dir/Mult.cpp.o"
-  "CMakeFiles/untitled9.dir/CommandExpression.cpp.o"
   "CMakeFiles/untitled9.dir/Interpreter.cpp.o"
   "CMakeFiles/untitled9.dir/LoopCommand.cpp.o"
   "CMakeFiles/untitled9.dir/IfCommand.cpp.o"
@@ -17,6 +16,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/untitled9.dir/EqualsCommand.cpp.o"
   "CMakeFiles/untitled9.dir/BooleanExpression.cpp.o"
   "CMakeFiles/untitled9.dir/ParamsCommand.cpp.o"
+  "CMakeFiles/untitled9.dir/EntercCommand.cpp.o"
   "untitled9.pdb"
   "untitled9"
 )

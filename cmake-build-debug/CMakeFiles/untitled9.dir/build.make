@@ -161,22 +161,9 @@ CMakeFiles/untitled9.dir/Mult.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/untitled9.dir/Mult.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/michal/CLionProjects/untitled9/Mult.cpp -o CMakeFiles/untitled9.dir/Mult.cpp.s
 
-CMakeFiles/untitled9.dir/CommandExpression.cpp.o: CMakeFiles/untitled9.dir/flags.make
-CMakeFiles/untitled9.dir/CommandExpression.cpp.o: ../CommandExpression.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/michal/CLionProjects/untitled9/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/untitled9.dir/CommandExpression.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/untitled9.dir/CommandExpression.cpp.o -c /home/michal/CLionProjects/untitled9/CommandExpression.cpp
-
-CMakeFiles/untitled9.dir/CommandExpression.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/untitled9.dir/CommandExpression.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/michal/CLionProjects/untitled9/CommandExpression.cpp > CMakeFiles/untitled9.dir/CommandExpression.cpp.i
-
-CMakeFiles/untitled9.dir/CommandExpression.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/untitled9.dir/CommandExpression.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/michal/CLionProjects/untitled9/CommandExpression.cpp -o CMakeFiles/untitled9.dir/CommandExpression.cpp.s
-
 CMakeFiles/untitled9.dir/Interpreter.cpp.o: CMakeFiles/untitled9.dir/flags.make
 CMakeFiles/untitled9.dir/Interpreter.cpp.o: ../Interpreter.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/michal/CLionProjects/untitled9/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/untitled9.dir/Interpreter.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/michal/CLionProjects/untitled9/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/untitled9.dir/Interpreter.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/untitled9.dir/Interpreter.cpp.o -c /home/michal/CLionProjects/untitled9/Interpreter.cpp
 
 CMakeFiles/untitled9.dir/Interpreter.cpp.i: cmake_force
@@ -189,7 +176,7 @@ CMakeFiles/untitled9.dir/Interpreter.cpp.s: cmake_force
 
 CMakeFiles/untitled9.dir/LoopCommand.cpp.o: CMakeFiles/untitled9.dir/flags.make
 CMakeFiles/untitled9.dir/LoopCommand.cpp.o: ../LoopCommand.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/michal/CLionProjects/untitled9/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/untitled9.dir/LoopCommand.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/michal/CLionProjects/untitled9/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/untitled9.dir/LoopCommand.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/untitled9.dir/LoopCommand.cpp.o -c /home/michal/CLionProjects/untitled9/LoopCommand.cpp
 
 CMakeFiles/untitled9.dir/LoopCommand.cpp.i: cmake_force
@@ -202,7 +189,7 @@ CMakeFiles/untitled9.dir/LoopCommand.cpp.s: cmake_force
 
 CMakeFiles/untitled9.dir/IfCommand.cpp.o: CMakeFiles/untitled9.dir/flags.make
 CMakeFiles/untitled9.dir/IfCommand.cpp.o: ../IfCommand.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/michal/CLionProjects/untitled9/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/untitled9.dir/IfCommand.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/michal/CLionProjects/untitled9/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/untitled9.dir/IfCommand.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/untitled9.dir/IfCommand.cpp.o -c /home/michal/CLionProjects/untitled9/IfCommand.cpp
 
 CMakeFiles/untitled9.dir/IfCommand.cpp.i: cmake_force
@@ -215,7 +202,7 @@ CMakeFiles/untitled9.dir/IfCommand.cpp.s: cmake_force
 
 CMakeFiles/untitled9.dir/PrintCommand.cpp.o: CMakeFiles/untitled9.dir/flags.make
 CMakeFiles/untitled9.dir/PrintCommand.cpp.o: ../PrintCommand.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/michal/CLionProjects/untitled9/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/untitled9.dir/PrintCommand.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/michal/CLionProjects/untitled9/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/untitled9.dir/PrintCommand.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/untitled9.dir/PrintCommand.cpp.o -c /home/michal/CLionProjects/untitled9/PrintCommand.cpp
 
 CMakeFiles/untitled9.dir/PrintCommand.cpp.i: cmake_force
@@ -228,7 +215,7 @@ CMakeFiles/untitled9.dir/PrintCommand.cpp.s: cmake_force
 
 CMakeFiles/untitled9.dir/ShuntingYard.cpp.o: CMakeFiles/untitled9.dir/flags.make
 CMakeFiles/untitled9.dir/ShuntingYard.cpp.o: ../ShuntingYard.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/michal/CLionProjects/untitled9/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/untitled9.dir/ShuntingYard.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/michal/CLionProjects/untitled9/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/untitled9.dir/ShuntingYard.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/untitled9.dir/ShuntingYard.cpp.o -c /home/michal/CLionProjects/untitled9/ShuntingYard.cpp
 
 CMakeFiles/untitled9.dir/ShuntingYard.cpp.i: cmake_force
@@ -241,7 +228,7 @@ CMakeFiles/untitled9.dir/ShuntingYard.cpp.s: cmake_force
 
 CMakeFiles/untitled9.dir/SleepCommand.cpp.o: CMakeFiles/untitled9.dir/flags.make
 CMakeFiles/untitled9.dir/SleepCommand.cpp.o: ../SleepCommand.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/michal/CLionProjects/untitled9/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/untitled9.dir/SleepCommand.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/michal/CLionProjects/untitled9/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/untitled9.dir/SleepCommand.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/untitled9.dir/SleepCommand.cpp.o -c /home/michal/CLionProjects/untitled9/SleepCommand.cpp
 
 CMakeFiles/untitled9.dir/SleepCommand.cpp.i: cmake_force
@@ -254,7 +241,7 @@ CMakeFiles/untitled9.dir/SleepCommand.cpp.s: cmake_force
 
 CMakeFiles/untitled9.dir/EqualsCommand.cpp.o: CMakeFiles/untitled9.dir/flags.make
 CMakeFiles/untitled9.dir/EqualsCommand.cpp.o: ../EqualsCommand.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/michal/CLionProjects/untitled9/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/untitled9.dir/EqualsCommand.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/michal/CLionProjects/untitled9/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/untitled9.dir/EqualsCommand.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/untitled9.dir/EqualsCommand.cpp.o -c /home/michal/CLionProjects/untitled9/EqualsCommand.cpp
 
 CMakeFiles/untitled9.dir/EqualsCommand.cpp.i: cmake_force
@@ -267,7 +254,7 @@ CMakeFiles/untitled9.dir/EqualsCommand.cpp.s: cmake_force
 
 CMakeFiles/untitled9.dir/BooleanExpression.cpp.o: CMakeFiles/untitled9.dir/flags.make
 CMakeFiles/untitled9.dir/BooleanExpression.cpp.o: ../BooleanExpression.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/michal/CLionProjects/untitled9/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/untitled9.dir/BooleanExpression.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/michal/CLionProjects/untitled9/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/untitled9.dir/BooleanExpression.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/untitled9.dir/BooleanExpression.cpp.o -c /home/michal/CLionProjects/untitled9/BooleanExpression.cpp
 
 CMakeFiles/untitled9.dir/BooleanExpression.cpp.i: cmake_force
@@ -280,7 +267,7 @@ CMakeFiles/untitled9.dir/BooleanExpression.cpp.s: cmake_force
 
 CMakeFiles/untitled9.dir/ParamsCommand.cpp.o: CMakeFiles/untitled9.dir/flags.make
 CMakeFiles/untitled9.dir/ParamsCommand.cpp.o: ../ParamsCommand.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/michal/CLionProjects/untitled9/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/untitled9.dir/ParamsCommand.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/michal/CLionProjects/untitled9/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/untitled9.dir/ParamsCommand.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/untitled9.dir/ParamsCommand.cpp.o -c /home/michal/CLionProjects/untitled9/ParamsCommand.cpp
 
 CMakeFiles/untitled9.dir/ParamsCommand.cpp.i: cmake_force
@@ -290,6 +277,19 @@ CMakeFiles/untitled9.dir/ParamsCommand.cpp.i: cmake_force
 CMakeFiles/untitled9.dir/ParamsCommand.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/untitled9.dir/ParamsCommand.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/michal/CLionProjects/untitled9/ParamsCommand.cpp -o CMakeFiles/untitled9.dir/ParamsCommand.cpp.s
+
+CMakeFiles/untitled9.dir/EntercCommand.cpp.o: CMakeFiles/untitled9.dir/flags.make
+CMakeFiles/untitled9.dir/EntercCommand.cpp.o: ../EntercCommand.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/michal/CLionProjects/untitled9/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/untitled9.dir/EntercCommand.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/untitled9.dir/EntercCommand.cpp.o -c /home/michal/CLionProjects/untitled9/EntercCommand.cpp
+
+CMakeFiles/untitled9.dir/EntercCommand.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/untitled9.dir/EntercCommand.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/michal/CLionProjects/untitled9/EntercCommand.cpp > CMakeFiles/untitled9.dir/EntercCommand.cpp.i
+
+CMakeFiles/untitled9.dir/EntercCommand.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/untitled9.dir/EntercCommand.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/michal/CLionProjects/untitled9/EntercCommand.cpp -o CMakeFiles/untitled9.dir/EntercCommand.cpp.s
 
 # Object files for target untitled9
 untitled9_OBJECTS = \
@@ -301,7 +301,6 @@ untitled9_OBJECTS = \
 "CMakeFiles/untitled9.dir/Minus.cpp.o" \
 "CMakeFiles/untitled9.dir/Div.cpp.o" \
 "CMakeFiles/untitled9.dir/Mult.cpp.o" \
-"CMakeFiles/untitled9.dir/CommandExpression.cpp.o" \
 "CMakeFiles/untitled9.dir/Interpreter.cpp.o" \
 "CMakeFiles/untitled9.dir/LoopCommand.cpp.o" \
 "CMakeFiles/untitled9.dir/IfCommand.cpp.o" \
@@ -310,7 +309,8 @@ untitled9_OBJECTS = \
 "CMakeFiles/untitled9.dir/SleepCommand.cpp.o" \
 "CMakeFiles/untitled9.dir/EqualsCommand.cpp.o" \
 "CMakeFiles/untitled9.dir/BooleanExpression.cpp.o" \
-"CMakeFiles/untitled9.dir/ParamsCommand.cpp.o"
+"CMakeFiles/untitled9.dir/ParamsCommand.cpp.o" \
+"CMakeFiles/untitled9.dir/EntercCommand.cpp.o"
 
 # External object files for target untitled9
 untitled9_EXTERNAL_OBJECTS =
@@ -323,7 +323,6 @@ untitled9: CMakeFiles/untitled9.dir/Plus.cpp.o
 untitled9: CMakeFiles/untitled9.dir/Minus.cpp.o
 untitled9: CMakeFiles/untitled9.dir/Div.cpp.o
 untitled9: CMakeFiles/untitled9.dir/Mult.cpp.o
-untitled9: CMakeFiles/untitled9.dir/CommandExpression.cpp.o
 untitled9: CMakeFiles/untitled9.dir/Interpreter.cpp.o
 untitled9: CMakeFiles/untitled9.dir/LoopCommand.cpp.o
 untitled9: CMakeFiles/untitled9.dir/IfCommand.cpp.o
@@ -333,6 +332,7 @@ untitled9: CMakeFiles/untitled9.dir/SleepCommand.cpp.o
 untitled9: CMakeFiles/untitled9.dir/EqualsCommand.cpp.o
 untitled9: CMakeFiles/untitled9.dir/BooleanExpression.cpp.o
 untitled9: CMakeFiles/untitled9.dir/ParamsCommand.cpp.o
+untitled9: CMakeFiles/untitled9.dir/EntercCommand.cpp.o
 untitled9: CMakeFiles/untitled9.dir/build.make
 untitled9: CMakeFiles/untitled9.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/michal/CLionProjects/untitled9/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Linking CXX executable untitled9"

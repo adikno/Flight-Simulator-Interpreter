@@ -23,6 +23,7 @@
 #include "LoopCommand.cpp"
 #include "PrintCommand.cpp"
 #include "SleepCommand.cpp"
+#include "EntercCommand.cpp"
 
 #include <list>
 
@@ -30,14 +31,15 @@ using namespace std;
 
 class Interpreter {
 
-    map<string, Command*> commands;
+    map<string, CommandExpression*> commands;
 public:
     Interpreter(){
-        commands["openDataServer"] = new OpenServerCommand();
-        commands["connect"] = new ConnectCommand();
-        commands["equals"] = new EqualsCommand();
-        commands["print"] = new PrintCommand();
-        commands["sleep"] = new SleepCommand();
+        commands["openDataServer"] = new CommandExpression(new OpenServerCommand());
+        commands["connect"] = new CommandExpression(new ConnectCommand());
+        commands["equals"] = new CommandExpression(new EqualsCommand());
+        commands["print"] = new CommandExpression(new PrintCommand());
+        commands["sleep"] = new CommandExpression(new SleepCommand());
+        commands["Enterc"] = new CommandExpression(new EntercCommand());
     }
     void lexer(string fileName);
 

@@ -19,9 +19,10 @@ void Interpreter::lexer(string fileName) {
                 v.erase(v.begin());
                 list<ParamsCommand*> block = ParagraphLexer(myFile, condition, v);
                 for (auto &command: block) {
-                    Command *command1 = command->getCommand();
+                    CommandExpression *command1 = command->getCommand();
                     vector<string> temp = command->getParams();
-                    command1->doCommand(temp);
+                    command1->setArr(temp);
+                    command1->calculate();
                 }
             } else {
                 v = explode(line, ' ', ',');
@@ -63,19 +64,19 @@ list<ParamsCommand*> Interpreter::ParagraphLexer(ifstream &file, string conditio
             key = vector.at(0);
             vector.erase(vector.begin());
         }
-        Command *command = commands[key];
+        CommandExpression *command = commands[key];
         ParamsCommand *paramsCommand = new ParamsCommand(command, vector);
         commandMap.push_back(paramsCommand);
         getline(file, line);
     }
     if (condition == "if") {
-        Command *conditionParser = new IfCommand(commands, commandMap);
+        auto *conditionParser = new CommandExpression(new IfCommand(commands, commandMap));
         commandMap.clear();
         ParamsCommand *paramsCommand = new ParamsCommand(conditionParser, args);
         commandMap.push_back(paramsCommand);
         return commandMap;
     } else {
-        Command *conditionParser = new LoopCommand(commands, commandMap);
+        auto *conditionParser = new CommandExpression(new LoopCommand(commands, commandMap));
         commandMap.clear();
         ParamsCommand *paramsCommand = new ParamsCommand(conditionParser, args);
         commandMap.push_back(paramsCommand);
@@ -97,6 +98,12 @@ const vector<string> Interpreter::explode(const string &s, const char &c1, const
         }
         if (s[i] == '=' && buff != "") {
             v.push_back(buff);
+            buff = "=";
+            v.push_back(buff);
+            buff = "";
+            continue;
+        }
+        if (s[i] == '=') {
             buff = "=";
             v.push_back(buff);
             buff = "";
@@ -142,8 +149,9 @@ void Interpreter::parser(vector<string> vector) {
         key = vector.at(0);
         vector.erase(vector.begin());
     }
-    Command *command = commands[key];
-    command->doCommand(vector);
+    CommandExpression *command = commands[key];
+    command->setArr(vector);
+    command->calculate();
 }
 
 

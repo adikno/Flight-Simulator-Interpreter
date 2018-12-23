@@ -4,14 +4,14 @@
 
 
 void* clientThread(void* arg) {
-    ClientParams* params = (ClientParams*) arg;
+    int portno = clientParams.port;
+    string ip = clientParams.ip;
 
-    int sockfd, portno, n;
+    cout << "client" << endl;
+
+    int sockfd, n;
     struct sockaddr_in serv_addr;
     struct hostent *server;
-
-    char buffer[256];
-    portno = params->getPort();
 
     /* Create a socket point */
     sockfd = socket(AF_INET, SOCK_STREAM, 0);
@@ -21,7 +21,7 @@ void* clientThread(void* arg) {
         exit(1);
     }
 
-    server = gethostbyname(params->getIP().data());
+    server = gethostbyname(ip.data());
     if (server == NULL) {
         fprintf(stderr, "ERROR, no such host\n");
         exit(0);
@@ -36,19 +36,21 @@ void* clientThread(void* arg) {
         perror("ERROR connecting");
         exit(1);
     }
-
+    cout << "connected to simulator" << endl;
     /* Now ask for a message from the user, this message
        * will be read by server
     */
     while (true) {
-        if (params->getInstruction() != "") {
-            n = write(sockfd, params->getInstruction().data(), strlen(buffer));
-            params->setInstruction("");
+        if (clientParams.instruction != "") {
+            pthread_mutex_lock(&mutex);
+            n = write(sockfd, clientParams.instruction.data(), strlen(clientParams.instruction.data()));
+            clientParams.instruction = "";
             /* Send message to the server */
             if (n < 0) {
                 perror("ERROR writing to socket");
                 exit(1);
             }
+            pthread_mutex_unlock(&mutex);
         }
     }
 }
@@ -65,7 +67,7 @@ int ConnectCommand:: doCommand(vector<string> &x){
         try {
             for (int i = 0; i <4 ; ++i) {
                 num0 = stoi(ve[i]);
-                if(!(num0 <=0 && num0 <= 255)){
+                if(!(num0 >=0 && num0 <= 255)){
                     throw 1;
                 }
             }
@@ -75,14 +77,11 @@ int ConnectCommand:: doCommand(vector<string> &x){
         } catch (int x){
             throw "illegal arguments";
         }
-        const char *p_data  = x.at(0).data();
-        clientParams->setIp(p_data);
-        clientParams->setPort(num1);
+        clientParams.ip =  x.at(0);
+        clientParams.port = num1;
         pthread_t trid;
-        pthread_create(&trid, nullptr, clientThread, &clientParams);
-
+        pthread_create(&trid, nullptr, clientThread, nullptr);
         return 2;
-
 }
 const vector<string> ConnectCommand:: split(const string& s, const char& c) {
     string buff{""};
@@ -96,6 +95,7 @@ const vector<string> ConnectCommand:: split(const string& s, const char& c) {
             buff="";
         }
     }
+    v.push_back(buff);
     return v;
 }
 

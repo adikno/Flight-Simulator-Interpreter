@@ -3,10 +3,10 @@
 #ifndef UNTITLED9_SEREVERPARAMS_H
 #define UNTITLED9_SEREVERPARAMS_H
 
-class ServerParams {
+struct ServerParams {
     int port;
     int rate;
-public:
+/*public:
     ServerParams(){
 
     }
@@ -23,7 +23,7 @@ public:
     }
     void setRate(int x){
         this->rate = x;
-    }
+    }*/
 };
 
 #endif //UNTITLED9_SEREVERPARAMS_H

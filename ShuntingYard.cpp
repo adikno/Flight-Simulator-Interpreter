@@ -22,7 +22,7 @@ queue<string>ShuntingYard::shuntingYard(string x) {
             }
             queue1.push(token1);
             continue;
-        } catch (invalid_argument &e) {}
+        } catch (exception &e) {}
         if ((token1.size() == 1) && (token1.compare("+") == 0 || token1.compare("-") == 0 )) {
             if ((!stack1.empty()) &&(stack1.top().compare("*") == 0 || stack1.top().compare("/") == 0)) {
                 string temp = stack1.top();
@@ -83,6 +83,7 @@ const vector<string> ShuntingYard:: explode(const string& s, const char& a,const
     return v;
 }
 Expression* ShuntingYard::postfixEvaluate(queue<string> que) {
+
     stack<Expression*> stack1;
     while (!que.empty()) {
         // If the scanned character is an operand (number here),
@@ -104,7 +105,7 @@ Expression* ShuntingYard::postfixEvaluate(queue<string> que) {
             stack1.push(number);
             que.pop();
             continue;
-        } catch (invalid_argument &e) {}
+        } catch (exception &e) {}
         // If the scanned character is an operator, pop two
         // elements from stack apply the operator
 
@@ -144,7 +145,11 @@ Expression* ShuntingYard::postfixEvaluate(queue<string> que) {
             value = xmlTable.at(path);
             symbolTable.at(que.front()) =  value;
         } catch (out_of_range &e) {
-            throw "No matching variable";
+            try {
+                value = symbolTable.at(que.front());
+            } catch (exception &e) {
+                throw "Illegal variable";
+            }
         }
         Expression *number = new Number(value);
         stack1.push(number);

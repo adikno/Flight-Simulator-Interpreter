@@ -177,33 +177,6 @@ ClientParams.cpp.s:
 	$(MAKE) -f CMakeFiles/untitled9.dir/build.make CMakeFiles/untitled9.dir/ClientParams.cpp.s
 .PHONY : ClientParams.cpp.s
 
-CommandExpression.o: CommandExpression.cpp.o
-
-.PHONY : CommandExpression.o
-
-# target to build an object file
-CommandExpression.cpp.o:
-	$(MAKE) -f CMakeFiles/untitled9.dir/build.make CMakeFiles/untitled9.dir/CommandExpression.cpp.o
-.PHONY : CommandExpression.cpp.o
-
-CommandExpression.i: CommandExpression.cpp.i
-
-.PHONY : CommandExpression.i
-
-# target to preprocess a source file
-CommandExpression.cpp.i:
-	$(MAKE) -f CMakeFiles/untitled9.dir/build.make CMakeFiles/untitled9.dir/CommandExpression.cpp.i
-.PHONY : CommandExpression.cpp.i
-
-CommandExpression.s: CommandExpression.cpp.s
-
-.PHONY : CommandExpression.s
-
-# target to generate assembly for a file
-CommandExpression.cpp.s:
-	$(MAKE) -f CMakeFiles/untitled9.dir/build.make CMakeFiles/untitled9.dir/CommandExpression.cpp.s
-.PHONY : CommandExpression.cpp.s
-
 ConnectCommand.o: ConnectCommand.cpp.o
 
 .PHONY : ConnectCommand.o
@@ -257,6 +230,33 @@ Div.s: Div.cpp.s
 Div.cpp.s:
 	$(MAKE) -f CMakeFiles/untitled9.dir/build.make CMakeFiles/untitled9.dir/Div.cpp.s
 .PHONY : Div.cpp.s
+
+EntercCommand.o: EntercCommand.cpp.o
+
+.PHONY : EntercCommand.o
+
+# target to build an object file
+EntercCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/untitled9.dir/build.make CMakeFiles/untitled9.dir/EntercCommand.cpp.o
+.PHONY : EntercCommand.cpp.o
+
+EntercCommand.i: EntercCommand.cpp.i
+
+.PHONY : EntercCommand.i
+
+# target to preprocess a source file
+EntercCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/untitled9.dir/build.make CMakeFiles/untitled9.dir/EntercCommand.cpp.i
+.PHONY : EntercCommand.cpp.i
+
+EntercCommand.s: EntercCommand.cpp.s
+
+.PHONY : EntercCommand.s
+
+# target to generate assembly for a file
+EntercCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/untitled9.dir/build.make CMakeFiles/untitled9.dir/EntercCommand.cpp.s
+.PHONY : EntercCommand.cpp.s
 
 EqualsCommand.o: EqualsCommand.cpp.o
 
@@ -624,15 +624,15 @@ help:
 	@echo "... ClientParams.o"
 	@echo "... ClientParams.i"
 	@echo "... ClientParams.s"
-	@echo "... CommandExpression.o"
-	@echo "... CommandExpression.i"
-	@echo "... CommandExpression.s"
 	@echo "... ConnectCommand.o"
 	@echo "... ConnectCommand.i"
 	@echo "... ConnectCommand.s"
 	@echo "... Div.o"
 	@echo "... Div.i"
 	@echo "... Div.s"
+	@echo "... EntercCommand.o"
+	@echo "... EntercCommand.i"
+	@echo "... EntercCommand.s"
 	@echo "... EqualsCommand.o"
 	@echo "... EqualsCommand.i"
 	@echo "... EqualsCommand.s"
