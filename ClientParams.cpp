@@ -13,11 +13,11 @@
 
 using namespace std;
 
-class ClientParams {
+struct ClientParams {
     int port;
     string ip;
     string instruction;
-public:
+/*public:
     ClientParams() {
         this->instruction = "";
     }
@@ -44,5 +44,5 @@ public:
 
     string getInstruction() const {
         return this->instruction;
-    }
+    }*/
 };

@@ -96,9 +96,6 @@
 		<Unit filename="/home/michal/CLionProjects/untitled9/Command.h">
 			<Option target="untitled9"/>
 		</Unit>
-		<Unit filename="/home/michal/CLionProjects/untitled9/CommandExpression.cpp">
-			<Option target="untitled9"/>
-		</Unit>
 		<Unit filename="/home/michal/CLionProjects/untitled9/CommandExpression.h">
 			<Option target="untitled9"/>
 		</Unit>
@@ -112,6 +109,9 @@
 			<Option target="untitled9"/>
 		</Unit>
 		<Unit filename="/home/michal/CLionProjects/untitled9/Div.cpp">
+			<Option target="untitled9"/>
+		</Unit>
+		<Unit filename="/home/michal/CLionProjects/untitled9/EntercCommand.cpp">
 			<Option target="untitled9"/>
 		</Unit>
 		<Unit filename="/home/michal/CLionProjects/untitled9/EqualsCommand.cpp">

@@ -28,11 +28,11 @@ class ConditionParser: public Command {
 private:
     Command *command;
 protected:
-    map<string,Command*> commands;
+    map<string,CommandExpression*> commands;
     list<ParamsCommand*> innerCommands;
 
 public:
-     ConditionParser(map<string,Command*> &commands, list<ParamsCommand*> &innerCommands) :
+     ConditionParser(map<string,CommandExpression*> &commands, list<ParamsCommand*> &innerCommands) :
      commands(commands), innerCommands(innerCommands){}
 
      int doCommand(vector<string> &x) {

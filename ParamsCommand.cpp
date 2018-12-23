@@ -1,15 +1,16 @@
+#include "CommandExpression.h"
 #include "Command.h"
 
 struct ParamsCommand {
-    Command *command;
+    CommandExpression *command;
     vector<string> params;
 public:
-    ParamsCommand(Command *command, vector<string> params) {
+    ParamsCommand(CommandExpression *command, vector<string> params) {
         this->command = command;
         this->params = params;
     }
 
-    Command* getCommand() {
+    CommandExpression* getCommand() {
         return this->command;
     }
 

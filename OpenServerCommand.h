@@ -10,6 +10,8 @@
 
 class OpenServerCommand : public Command{
 
+public:
+    OpenServerCommand(){}
     int doCommand(vector<string> &x) override;
 
 };

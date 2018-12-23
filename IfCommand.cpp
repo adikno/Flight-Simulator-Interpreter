@@ -5,7 +5,7 @@
 class IfCommand: public ConditionParser {
 
 public:
-    IfCommand(map<string,Command*> &commands, list<ParamsCommand*> &innerCommands) :
+    IfCommand(map<string,CommandExpression*> &commands, list<ParamsCommand*> &innerCommands) :
             ConditionParser(commands, innerCommands) {
 
     }
@@ -15,9 +15,10 @@ public:
             Expression *boolean = new BooleanExpression(x);
             if (boolean->calculate()) {
                 for (auto &command: innerCommands) {
-                    Command *command1 = command->getCommand();
+                    CommandExpression *command1 = command->getCommand();
                     vector<string> temp = command->getParams();
-                    command1->doCommand(temp);
+                    command1->setArr(temp);
+                    command1->calculate();
                 }
             }
         } catch (string &str){

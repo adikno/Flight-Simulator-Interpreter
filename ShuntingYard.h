@@ -22,9 +22,13 @@
 #include "Mult.cpp"
 
 
+extern map<string, string> pathTable;
 
 class ShuntingYard {
 public:
+    ShuntingYard() {
+        map<string, string> pathTable;
+    }
     queue<string> shuntingYard(string x);
 
     Expression* postfixEvaluate(queue<string> que);
