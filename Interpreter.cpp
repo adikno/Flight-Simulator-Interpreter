@@ -7,6 +7,10 @@
 #include "ConditionParser.h"
 #include "Interpreter.h"
 
+/**
+ * the function split the script to command
+ * @param fileName - the script
+ */
 void Interpreter::lexer(string fileName) {
     vector<string> v;
     string line;
@@ -31,7 +35,13 @@ void Interpreter::lexer(string fileName) {
         }
     }
 }
-
+/**
+ * this function is a lexer for Condition and loop command - it is a recursive function that make list of command
+ * @param file -ifstrem of the script
+ * @param condition - string of the kind of the condition
+ * @param args - vector  ofthe arg of the command
+ * @return list of struct of  ParmasCommad that hold command and vector of args
+ */
 list<ParamsCommand*> Interpreter::ParagraphLexer(ifstream &file, string condition, vector<string> args) {
     list<ParamsCommand*> commandMap;
     vector<string> vector;
@@ -83,7 +93,13 @@ list<ParamsCommand*> Interpreter::ParagraphLexer(ifstream &file, string conditio
         return commandMap;
     }
 }
-
+/**
+ * the function split string line by space and ,
+ * @param s - the line
+ * @param c1 - space char
+ * @param c2 , char
+ * @return vector of string
+ */
 const vector<string> Interpreter::explode(const string &s, const char &c1, const char &c2) {
     string buff{s[0]};
     vector<string> v;
@@ -135,7 +151,10 @@ const vector<string> Interpreter::explode(const string &s, const char &c1, const
     v.push_back(buff);
     return v;
 }
-
+/**
+ * the parser set of the commamd
+ * @param vector of the args of the command
+ */
 void Interpreter::parser(vector<string> vector) {
     bool flag = false;
     string key;

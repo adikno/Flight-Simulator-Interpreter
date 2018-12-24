@@ -17,8 +17,8 @@ vector<double> explode1(string &s, const char &c)  {
     return v;
 }
 void* serverThread(void *arg) {
-    int port = ((ServerParams *) arg)->port;
-    int rate = ((ServerParams *) arg)->rate;
+    int port = serverParams.port;
+    int rate = serverParams.rate;
     cout << "here2" << endl;
 
     xmlTable["/instrumentation/airspeed-indicator/indicated-speed-kt"];
@@ -119,13 +119,12 @@ int OpenServerCommand::doCommand(vector<string> &x){
         throw "illegal arguments";
     }
 
-    ServerParams params;
-    params.port = num0;
-    params.rate = num1;
+    //ServerParams params;
+    serverParams.port = num0;
+    serverParams.rate = num1;
 
     pthread_t trid;
-    pthread_create(&trid, nullptr, serverThread, (void *)&params);
-    //pthread_join(trid, nullptr);
+    pthread_create(&trid, nullptr, serverThread, nullptr);
     return 2;
 
 }

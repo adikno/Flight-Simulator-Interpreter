@@ -14,6 +14,7 @@ public:
         try {
             Expression *boolean = new BooleanExpression(x);
             if (boolean->calculate()) {
+                //do all the command in the list
                 for (auto &command: innerCommands) {
                     CommandExpression *command1 = command->getCommand();
                     vector<string> temp = command->getParams();

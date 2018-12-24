@@ -2,7 +2,11 @@
 #include "ConnectCommand.h"
 
 
-
+/**
+ * this function in charge of open socket and bind to the flight simulator
+ * @param arg  - holding port num and string of IP
+ *
+ */
 void* clientThread(void* arg) {
     int portno = clientParams.port;
     string ip = clientParams.ip;
@@ -83,6 +87,12 @@ int ConnectCommand:: doCommand(vector<string> &x){
         pthread_create(&trid, nullptr, clientThread, nullptr);
         return 2;
 }
+/**
+ * this function split the line of the IP
+ * @param s - the IP string
+ * @param c char of .
+ * @return vector of string
+ */
 const vector<string> ConnectCommand:: split(const string& s, const char& c) {
     string buff{""};
     vector<string> v;

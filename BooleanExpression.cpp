@@ -12,6 +12,7 @@ class BooleanExpression: public Expression {
     string oper;
 public:
     BooleanExpression(vector<string> &x) {
+        //erase the sigh { from the line
         if (x.at(x.size() - 1) == "{") {
             x.erase(x.begin() + x.size() - 1);
         }
@@ -25,13 +26,16 @@ public:
         strcpy(data, x.at(0).data());
         ShuntingYard *shuntingYard = new ShuntingYard();
         queue<string> queue1 = shuntingYard->shuntingYard(data);
+        //evaluate the  left string
         first = shuntingYard->postfixEvaluate(queue1);
         data[x.at(2).size()];
         strcpy(data, x.at(2).data());
         queue1 = shuntingYard->shuntingYard(data);
+        //evaluate the  right string
         second = shuntingYard->postfixEvaluate(queue1);
         oper = x.at(1);
     }
+
 
     double calculate() {
         if (oper == "<") {
