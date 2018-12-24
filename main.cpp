@@ -17,6 +17,7 @@ map<string, double> symbolTable;
 map<string, string> pathTable;
 map<string, double> xmlTable;
 ClientParams clientParams;
+ServerParams serverParams;
 pthread_mutex_t mutex;
 
 using namespace std;
@@ -28,11 +29,10 @@ int main() {
      map<string, double> symbolTable;
 
      map<string, double> xmlTable;
-     clientParams;
      Interpreter *interpreter = new Interpreter();
      interpreter->lexer(file_name);
 
-     pthread_mutex_destroy(&mutex);
+     //pthread_mutex_destroy(&mutex);
      pthread_exit(nullptr);
     /*while (true){}*/
     return 0;

@@ -1,6 +1,9 @@
 #include "CommandExpression.h"
 #include "Command.h"
-
+/**
+ * struct which hold command Expression and vector of string with the params of the command
+ * this struct use for the list of the CommandExprssion in the condition commands
+ */
 struct ParamsCommand {
     CommandExpression *command;
     vector<string> params;
