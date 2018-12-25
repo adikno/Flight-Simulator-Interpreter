@@ -14,6 +14,7 @@
 void Interpreter::lexer(string fileName) {
     vector<string> v;
     string line;
+
     ifstream myFile(fileName);
     if (myFile.is_open()) {
         while (getline(myFile, line)) {
@@ -34,6 +35,8 @@ void Interpreter::lexer(string fileName) {
             }
         }
     }
+    clientParams.instruction = "quit";
+    serverParams.move = false;
 }
 /**
  * this function is a lexer for Condition and loop command - it is a recursive function that make list of command
@@ -168,6 +171,7 @@ void Interpreter::parser(vector<string> vector) {
         key = vector.at(0);
         vector.erase(vector.begin());
     }
+
     CommandExpression *command = commands[key];
     command->setArr(vector);
     command->calculate();

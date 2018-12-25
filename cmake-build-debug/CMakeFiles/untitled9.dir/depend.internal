@@ -13,7 +13,7 @@ CMakeFiles/untitled9.dir/BooleanExpression.cpp.o
  /home/michal/CLionProjects/untitled9/Mult.cpp
  /home/michal/CLionProjects/untitled9/Number.h
  /home/michal/CLionProjects/untitled9/Plus.cpp
- /home/michal/CLionProjects/untitled9/SereverParams.h
+ /home/michal/CLionProjects/untitled9/ServerParams.h
  /home/michal/CLionProjects/untitled9/ShuntingYard.h
 CMakeFiles/untitled9.dir/ClientParams.cpp.o
  /home/michal/CLionProjects/untitled9/ClientParams.cpp
@@ -25,7 +25,7 @@ CMakeFiles/untitled9.dir/ConnectCommand.cpp.o
  /home/michal/CLionProjects/untitled9/ConnectCommand.h
  /home/michal/CLionProjects/untitled9/Expression.h
  /home/michal/CLionProjects/untitled9/Maps.h
- /home/michal/CLionProjects/untitled9/SereverParams.h
+ /home/michal/CLionProjects/untitled9/ServerParams.h
 CMakeFiles/untitled9.dir/Div.cpp.o
  /home/michal/CLionProjects/untitled9/BinaryExpression.h
  /home/michal/CLionProjects/untitled9/Div.cpp
@@ -46,7 +46,7 @@ CMakeFiles/untitled9.dir/EqualsCommand.cpp.o
  /home/michal/CLionProjects/untitled9/Mult.cpp
  /home/michal/CLionProjects/untitled9/Number.h
  /home/michal/CLionProjects/untitled9/Plus.cpp
- /home/michal/CLionProjects/untitled9/SereverParams.h
+ /home/michal/CLionProjects/untitled9/ServerParams.h
  /home/michal/CLionProjects/untitled9/ShuntingYard.h
 CMakeFiles/untitled9.dir/IfCommand.cpp.o
  /home/michal/CLionProjects/untitled9/BinaryExpression.h
@@ -64,7 +64,7 @@ CMakeFiles/untitled9.dir/IfCommand.cpp.o
  /home/michal/CLionProjects/untitled9/Number.h
  /home/michal/CLionProjects/untitled9/ParamsCommand.cpp
  /home/michal/CLionProjects/untitled9/Plus.cpp
- /home/michal/CLionProjects/untitled9/SereverParams.h
+ /home/michal/CLionProjects/untitled9/ServerParams.h
  /home/michal/CLionProjects/untitled9/ShuntingYard.h
 CMakeFiles/untitled9.dir/Interpreter.cpp.o
  /home/michal/CLionProjects/untitled9/BinaryExpression.h
@@ -90,7 +90,7 @@ CMakeFiles/untitled9.dir/Interpreter.cpp.o
  /home/michal/CLionProjects/untitled9/ParamsCommand.cpp
  /home/michal/CLionProjects/untitled9/Plus.cpp
  /home/michal/CLionProjects/untitled9/PrintCommand.cpp
- /home/michal/CLionProjects/untitled9/SereverParams.h
+ /home/michal/CLionProjects/untitled9/ServerParams.h
  /home/michal/CLionProjects/untitled9/ShuntingYard.h
  /home/michal/CLionProjects/untitled9/SleepCommand.cpp
 CMakeFiles/untitled9.dir/LoopCommand.cpp.o
@@ -109,7 +109,7 @@ CMakeFiles/untitled9.dir/LoopCommand.cpp.o
  /home/michal/CLionProjects/untitled9/Number.h
  /home/michal/CLionProjects/untitled9/ParamsCommand.cpp
  /home/michal/CLionProjects/untitled9/Plus.cpp
- /home/michal/CLionProjects/untitled9/SereverParams.h
+ /home/michal/CLionProjects/untitled9/ServerParams.h
  /home/michal/CLionProjects/untitled9/ShuntingYard.h
 CMakeFiles/untitled9.dir/Minus.cpp.o
  /home/michal/CLionProjects/untitled9/BinaryExpression.h
@@ -125,7 +125,7 @@ CMakeFiles/untitled9.dir/OpenServerCommand.cpp.o
  /home/michal/CLionProjects/untitled9/Maps.h
  /home/michal/CLionProjects/untitled9/OpenServerCommand.cpp
  /home/michal/CLionProjects/untitled9/OpenServerCommand.h
- /home/michal/CLionProjects/untitled9/SereverParams.h
+ /home/michal/CLionProjects/untitled9/ServerParams.h
 CMakeFiles/untitled9.dir/ParamsCommand.cpp.o
  /home/michal/CLionProjects/untitled9/Command.h
  /home/michal/CLionProjects/untitled9/CommandExpression.h
@@ -147,7 +147,7 @@ CMakeFiles/untitled9.dir/PrintCommand.cpp.o
  /home/michal/CLionProjects/untitled9/Number.h
  /home/michal/CLionProjects/untitled9/Plus.cpp
  /home/michal/CLionProjects/untitled9/PrintCommand.cpp
- /home/michal/CLionProjects/untitled9/SereverParams.h
+ /home/michal/CLionProjects/untitled9/ServerParams.h
  /home/michal/CLionProjects/untitled9/ShuntingYard.h
 CMakeFiles/untitled9.dir/ShuntingYard.cpp.o
  /home/michal/CLionProjects/untitled9/BinaryExpression.h
@@ -160,7 +160,7 @@ CMakeFiles/untitled9.dir/ShuntingYard.cpp.o
  /home/michal/CLionProjects/untitled9/Mult.cpp
  /home/michal/CLionProjects/untitled9/Number.h
  /home/michal/CLionProjects/untitled9/Plus.cpp
- /home/michal/CLionProjects/untitled9/SereverParams.h
+ /home/michal/CLionProjects/untitled9/ServerParams.h
  /home/michal/CLionProjects/untitled9/ShuntingYard.cpp
  /home/michal/CLionProjects/untitled9/ShuntingYard.h
 CMakeFiles/untitled9.dir/SleepCommand.cpp.o
@@ -174,7 +174,7 @@ CMakeFiles/untitled9.dir/SleepCommand.cpp.o
  /home/michal/CLionProjects/untitled9/Mult.cpp
  /home/michal/CLionProjects/untitled9/Number.h
  /home/michal/CLionProjects/untitled9/Plus.cpp
- /home/michal/CLionProjects/untitled9/SereverParams.h
+ /home/michal/CLionProjects/untitled9/ServerParams.h
  /home/michal/CLionProjects/untitled9/ShuntingYard.h
  /home/michal/CLionProjects/untitled9/SleepCommand.cpp
 CMakeFiles/untitled9.dir/main.cpp.o
@@ -200,7 +200,7 @@ CMakeFiles/untitled9.dir/main.cpp.o
  /home/michal/CLionProjects/untitled9/ParamsCommand.cpp
  /home/michal/CLionProjects/untitled9/Plus.cpp
  /home/michal/CLionProjects/untitled9/PrintCommand.cpp
- /home/michal/CLionProjects/untitled9/SereverParams.h
+ /home/michal/CLionProjects/untitled9/ServerParams.h
  /home/michal/CLionProjects/untitled9/ShuntingYard.h
  /home/michal/CLionProjects/untitled9/SleepCommand.cpp
  /home/michal/CLionProjects/untitled9/main.cpp

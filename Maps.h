@@ -4,20 +4,22 @@
 #define UNTITLED9_MAPS_H
 
 #include <string>
+#include <unordered_map>
 #include <map>
 #include "Command.h"
 #include "ClientParams.cpp"
-#include "SereverParams.h"
+#include "ServerParams.h"
 
 using namespace std;
 /**
  * lass that hold all the global variables
  */
 extern map<string, double> symbolTable;
-extern map<string, double> xmlTable;
+extern unordered_map<string, double> xmlTable;
 extern ClientParams clientParams;
 extern ServerParams serverParams;
-extern pthread_mutex_t mutex;
+extern pthread_mutex_t mutexXml;
+extern pthread_mutex_t mutexIns;
 
 class Maps{
 

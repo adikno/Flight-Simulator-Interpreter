@@ -46,17 +46,21 @@ void* clientThread(void* arg) {
     */
     while (true) {
         if (clientParams.instruction != "") {
-            pthread_mutex_lock(&mutex);
-            n = write(sockfd, clientParams.instruction.data(), strlen(clientParams.instruction.data()));
-            clientParams.instruction = "";
-            /* Send message to the server */
-            if (n < 0) {
+            if(clientParams.instruction == "quit"){
+                close(sockfd);
+                pthread_exit(nullptr);
+            }
+            pthread_mutex_lock(&mutexIns);
+            if(::send(sockfd, clientParams.instruction.data(), strlen(clientParams.instruction.data()),0) <0){
                 perror("ERROR writing to socket");
                 exit(1);
             }
-            pthread_mutex_unlock(&mutex);
+            //n = write(sockfd, clientParams.instruction.data(), strlen(clientParams.instruction.data()));
+            clientParams.instruction = "";
+            pthread_mutex_unlock(&mutexIns);
         }
     }
+
 }
 
 int ConnectCommand:: doCommand(vector<string> &x){
