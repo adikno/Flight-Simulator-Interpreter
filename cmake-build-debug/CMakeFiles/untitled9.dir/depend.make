@@ -12,7 +12,7 @@ CMakeFiles/untitled9.dir/BooleanExpression.cpp.o: ../Minus.cpp
 CMakeFiles/untitled9.dir/BooleanExpression.cpp.o: ../Mult.cpp
 CMakeFiles/untitled9.dir/BooleanExpression.cpp.o: ../Number.h
 CMakeFiles/untitled9.dir/BooleanExpression.cpp.o: ../Plus.cpp
-CMakeFiles/untitled9.dir/BooleanExpression.cpp.o: ../SereverParams.h
+CMakeFiles/untitled9.dir/BooleanExpression.cpp.o: ../ServerParams.h
 CMakeFiles/untitled9.dir/BooleanExpression.cpp.o: ../ShuntingYard.h
 
 CMakeFiles/untitled9.dir/ClientParams.cpp.o: ../ClientParams.cpp
@@ -24,7 +24,7 @@ CMakeFiles/untitled9.dir/ConnectCommand.cpp.o: ../ConnectCommand.cpp
 CMakeFiles/untitled9.dir/ConnectCommand.cpp.o: ../ConnectCommand.h
 CMakeFiles/untitled9.dir/ConnectCommand.cpp.o: ../Expression.h
 CMakeFiles/untitled9.dir/ConnectCommand.cpp.o: ../Maps.h
-CMakeFiles/untitled9.dir/ConnectCommand.cpp.o: ../SereverParams.h
+CMakeFiles/untitled9.dir/ConnectCommand.cpp.o: ../ServerParams.h
 
 CMakeFiles/untitled9.dir/Div.cpp.o: ../BinaryExpression.h
 CMakeFiles/untitled9.dir/Div.cpp.o: ../Div.cpp
@@ -45,7 +45,7 @@ CMakeFiles/untitled9.dir/EqualsCommand.cpp.o: ../Minus.cpp
 CMakeFiles/untitled9.dir/EqualsCommand.cpp.o: ../Mult.cpp
 CMakeFiles/untitled9.dir/EqualsCommand.cpp.o: ../Number.h
 CMakeFiles/untitled9.dir/EqualsCommand.cpp.o: ../Plus.cpp
-CMakeFiles/untitled9.dir/EqualsCommand.cpp.o: ../SereverParams.h
+CMakeFiles/untitled9.dir/EqualsCommand.cpp.o: ../ServerParams.h
 CMakeFiles/untitled9.dir/EqualsCommand.cpp.o: ../ShuntingYard.h
 
 CMakeFiles/untitled9.dir/IfCommand.cpp.o: ../BinaryExpression.h
@@ -63,7 +63,7 @@ CMakeFiles/untitled9.dir/IfCommand.cpp.o: ../Mult.cpp
 CMakeFiles/untitled9.dir/IfCommand.cpp.o: ../Number.h
 CMakeFiles/untitled9.dir/IfCommand.cpp.o: ../ParamsCommand.cpp
 CMakeFiles/untitled9.dir/IfCommand.cpp.o: ../Plus.cpp
-CMakeFiles/untitled9.dir/IfCommand.cpp.o: ../SereverParams.h
+CMakeFiles/untitled9.dir/IfCommand.cpp.o: ../ServerParams.h
 CMakeFiles/untitled9.dir/IfCommand.cpp.o: ../ShuntingYard.h
 
 CMakeFiles/untitled9.dir/Interpreter.cpp.o: ../BinaryExpression.h
@@ -89,7 +89,7 @@ CMakeFiles/untitled9.dir/Interpreter.cpp.o: ../OpenServerCommand.h
 CMakeFiles/untitled9.dir/Interpreter.cpp.o: ../ParamsCommand.cpp
 CMakeFiles/untitled9.dir/Interpreter.cpp.o: ../Plus.cpp
 CMakeFiles/untitled9.dir/Interpreter.cpp.o: ../PrintCommand.cpp
-CMakeFiles/untitled9.dir/Interpreter.cpp.o: ../SereverParams.h
+CMakeFiles/untitled9.dir/Interpreter.cpp.o: ../ServerParams.h
 CMakeFiles/untitled9.dir/Interpreter.cpp.o: ../ShuntingYard.h
 CMakeFiles/untitled9.dir/Interpreter.cpp.o: ../SleepCommand.cpp
 
@@ -108,7 +108,7 @@ CMakeFiles/untitled9.dir/LoopCommand.cpp.o: ../Mult.cpp
 CMakeFiles/untitled9.dir/LoopCommand.cpp.o: ../Number.h
 CMakeFiles/untitled9.dir/LoopCommand.cpp.o: ../ParamsCommand.cpp
 CMakeFiles/untitled9.dir/LoopCommand.cpp.o: ../Plus.cpp
-CMakeFiles/untitled9.dir/LoopCommand.cpp.o: ../SereverParams.h
+CMakeFiles/untitled9.dir/LoopCommand.cpp.o: ../ServerParams.h
 CMakeFiles/untitled9.dir/LoopCommand.cpp.o: ../ShuntingYard.h
 
 CMakeFiles/untitled9.dir/Minus.cpp.o: ../BinaryExpression.h
@@ -124,7 +124,7 @@ CMakeFiles/untitled9.dir/OpenServerCommand.cpp.o: ../Command.h
 CMakeFiles/untitled9.dir/OpenServerCommand.cpp.o: ../Maps.h
 CMakeFiles/untitled9.dir/OpenServerCommand.cpp.o: ../OpenServerCommand.cpp
 CMakeFiles/untitled9.dir/OpenServerCommand.cpp.o: ../OpenServerCommand.h
-CMakeFiles/untitled9.dir/OpenServerCommand.cpp.o: ../SereverParams.h
+CMakeFiles/untitled9.dir/OpenServerCommand.cpp.o: ../ServerParams.h
 
 CMakeFiles/untitled9.dir/ParamsCommand.cpp.o: ../Command.h
 CMakeFiles/untitled9.dir/ParamsCommand.cpp.o: ../CommandExpression.h
@@ -146,7 +146,7 @@ CMakeFiles/untitled9.dir/PrintCommand.cpp.o: ../Mult.cpp
 CMakeFiles/untitled9.dir/PrintCommand.cpp.o: ../Number.h
 CMakeFiles/untitled9.dir/PrintCommand.cpp.o: ../Plus.cpp
 CMakeFiles/untitled9.dir/PrintCommand.cpp.o: ../PrintCommand.cpp
-CMakeFiles/untitled9.dir/PrintCommand.cpp.o: ../SereverParams.h
+CMakeFiles/untitled9.dir/PrintCommand.cpp.o: ../ServerParams.h
 CMakeFiles/untitled9.dir/PrintCommand.cpp.o: ../ShuntingYard.h
 
 CMakeFiles/untitled9.dir/ShuntingYard.cpp.o: ../BinaryExpression.h
@@ -159,7 +159,7 @@ CMakeFiles/untitled9.dir/ShuntingYard.cpp.o: ../Minus.cpp
 CMakeFiles/untitled9.dir/ShuntingYard.cpp.o: ../Mult.cpp
 CMakeFiles/untitled9.dir/ShuntingYard.cpp.o: ../Number.h
 CMakeFiles/untitled9.dir/ShuntingYard.cpp.o: ../Plus.cpp
-CMakeFiles/untitled9.dir/ShuntingYard.cpp.o: ../SereverParams.h
+CMakeFiles/untitled9.dir/ShuntingYard.cpp.o: ../ServerParams.h
 CMakeFiles/untitled9.dir/ShuntingYard.cpp.o: ../ShuntingYard.cpp
 CMakeFiles/untitled9.dir/ShuntingYard.cpp.o: ../ShuntingYard.h
 
@@ -173,7 +173,7 @@ CMakeFiles/untitled9.dir/SleepCommand.cpp.o: ../Minus.cpp
 CMakeFiles/untitled9.dir/SleepCommand.cpp.o: ../Mult.cpp
 CMakeFiles/untitled9.dir/SleepCommand.cpp.o: ../Number.h
 CMakeFiles/untitled9.dir/SleepCommand.cpp.o: ../Plus.cpp
-CMakeFiles/untitled9.dir/SleepCommand.cpp.o: ../SereverParams.h
+CMakeFiles/untitled9.dir/SleepCommand.cpp.o: ../ServerParams.h
 CMakeFiles/untitled9.dir/SleepCommand.cpp.o: ../ShuntingYard.h
 CMakeFiles/untitled9.dir/SleepCommand.cpp.o: ../SleepCommand.cpp
 
@@ -199,7 +199,7 @@ CMakeFiles/untitled9.dir/main.cpp.o: ../OpenServerCommand.h
 CMakeFiles/untitled9.dir/main.cpp.o: ../ParamsCommand.cpp
 CMakeFiles/untitled9.dir/main.cpp.o: ../Plus.cpp
 CMakeFiles/untitled9.dir/main.cpp.o: ../PrintCommand.cpp
-CMakeFiles/untitled9.dir/main.cpp.o: ../SereverParams.h
+CMakeFiles/untitled9.dir/main.cpp.o: ../ServerParams.h
 CMakeFiles/untitled9.dir/main.cpp.o: ../ShuntingYard.h
 CMakeFiles/untitled9.dir/main.cpp.o: ../SleepCommand.cpp
 CMakeFiles/untitled9.dir/main.cpp.o: ../main.cpp

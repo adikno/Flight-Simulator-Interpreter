@@ -3,8 +3,10 @@
 #include "EqualsCommand.h"
 
 int EqualsCommand::doCommand(vector<string> &x) {
+
     //if its a bind command
     if (x.size() >= 4 && x.at(3) == "bind") {
+        pthread_mutex_lock(&mutexXml);
         //bind with path
         if (x.at(4)[0] == '\"') {
             pathTable[x.at(1)] = x.at(4).substr(1, x.at(4).length() - 2);
@@ -14,6 +16,7 @@ int EqualsCommand::doCommand(vector<string> &x) {
                 //if the path is not at the xml
                 symbolTable[x.at(1)] = 0;
             }
+            pthread_mutex_unlock(&mutexXml);
             return 0;
             //bins with specific var
         } else {
@@ -26,6 +29,7 @@ int EqualsCommand::doCommand(vector<string> &x) {
                 //if the path is not at the xml
                 symbolTable[x.at(1)] = symbolTable[x.at(4)];
             }
+            pthread_mutex_unlock(&mutexXml);
             return 0;
         }
     }
@@ -47,7 +51,9 @@ int EqualsCommand::doCommand(vector<string> &x) {
         instruction = instruction + " " + value;
         instruction = "set " + instruction + "\r\n";
         //set instruction to the client
+        pthread_mutex_lock(&mutexIns);
         clientParams.instruction = instruction;
+        pthread_mutex_unlock(&mutexIns);
         return 0;
     }
     //assignment operation by given name of another var - making change in the simulator
@@ -67,5 +73,7 @@ int EqualsCommand::doCommand(vector<string> &x) {
     instruction = instruction + " " + value;
     instruction = "set " + instruction + "\r\n";
     //set instruction to the client
+    pthread_mutex_lock(&mutexIns);
     clientParams.instruction =instruction;
+    pthread_mutex_unlock(&mutexIns);
 }

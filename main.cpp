@@ -15,15 +15,18 @@
 
 map<string, double> symbolTable;
 map<string, string> pathTable;
-map<string, double> xmlTable;
+unordered_map<string, double> xmlTable;
 ClientParams clientParams;
 ServerParams serverParams;
-pthread_mutex_t mutex;
+pthread_mutex_t mutexXml;
+pthread_mutex_t mutexIns;
 
 using namespace std;
 int main() {
 
-    pthread_mutex_init(&mutex, nullptr);
+    pthread_mutex_init(&mutexXml, nullptr);
+    pthread_mutex_init(&mutexIns, nullptr);
+    
     string file_name = "FILE.txt";
 
      map<string, double> symbolTable;
@@ -31,8 +34,7 @@ int main() {
      map<string, double> xmlTable;
      Interpreter *interpreter = new Interpreter();
      interpreter->lexer(file_name);
-
-     //pthread_mutex_destroy(&mutex);
+     
      pthread_exit(nullptr);
     /*while (true){}*/
     return 0;

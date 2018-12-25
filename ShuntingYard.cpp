@@ -174,15 +174,19 @@ Expression* ShuntingYard::postfixEvaluate(queue<string> que) {
         try {
             // If the scanned character is an var, get the value of the var from the xml table
             string path = pathTable.at(que.front());
+            pthread_mutex_lock(&mutexXml);
             value = xmlTable.at(path);
+            pthread_mutex_unlock(&mutexXml);
             symbolTable.at(que.front()) =  value;
-        } catch (out_of_range &e) {
+        } catch (exception &e) {
             try {
                 // if the var isnt on the xml table get the value from the symbol table
                 value = symbolTable.at(que.front());
             } catch (exception &e) {
+                pthread_mutex_unlock(&mutexXml);
                 throw "Illegal variable";
             }
+            pthread_mutex_unlock(&mutexXml);
         }
         //push the value to the stack
         Expression *number = new Number(value);
