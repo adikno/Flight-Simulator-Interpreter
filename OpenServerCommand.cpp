@@ -56,7 +56,6 @@ vector<string> initXmlTable() {
 void* serverThread(void *arg) {
     int port = serverParams.port;
     int rate = serverParams.rate;
-    cout << "here2" << endl;
     vector<string> xmlVal = initXmlTable();
     vector<double> ve;
     int sockfd, newsockfd, clilen;
@@ -96,7 +95,6 @@ void* serverThread(void *arg) {
         exit(1);
     }
     serverParams.move = true;
-    cout << "connected" << endl;
     //If connection is established then start communicating
     int i =0;
     while (serverParams.move) {
@@ -124,9 +122,7 @@ void* serverThread(void *arg) {
         for (int i = 0; i <size ; ++i) {
             try {
                 xmlTable[xmlVal.at(i)] = ve.at(i);
-            } catch (exception &e) {
-                cout << ve.size() << endl;
-            }
+            } catch (exception &e) {}
         }
         i++;
         buf = "";

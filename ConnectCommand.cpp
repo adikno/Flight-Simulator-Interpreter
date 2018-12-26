@@ -11,8 +11,6 @@ void* clientThread(void* arg) {
     int portno = clientParams.port;
     string ip = clientParams.ip;
 
-    cout << "client" << endl;
-
     int sockfd, n;
     struct sockaddr_in serv_addr;
     struct hostent *server;
@@ -40,7 +38,6 @@ void* clientThread(void* arg) {
         perror("ERROR connecting");
         exit(1);
     }
-    cout << "connected to simulator" << endl;
     /* Now ask for a message from the user, this message
        * will be read by server
     */
