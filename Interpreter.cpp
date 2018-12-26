@@ -27,7 +27,11 @@ void Interpreter::lexer(string fileName) {
                     CommandExpression *command1 = command->getCommand();
                     vector<string> temp = command->getParams();
                     command1->setArr(temp);
-                    command1->calculate();
+                    try {
+                        command1->calculate();
+                    } catch (exception &e) {
+                        throw e;
+                    }
                 }
             } else {
                 v = explode(line, ' ', ',');
