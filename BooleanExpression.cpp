@@ -24,7 +24,7 @@ public:
         }
         char data[x.at(0).size()];
         strcpy(data, x.at(0).data());
-        ShuntingYard *shuntingYard = new ShuntingYard();
+        auto *shuntingYard = new ShuntingYard();
         queue<string> queue1 = shuntingYard->shuntingYard(data);
         //evaluate the  left string
         first = shuntingYard->postfixEvaluate(queue1);
@@ -34,6 +34,7 @@ public:
         //evaluate the  right string
         second = shuntingYard->postfixEvaluate(queue1);
         oper = x.at(1);
+        delete shuntingYard;
     }
 
 
@@ -56,5 +57,10 @@ public:
         if (oper == "!=") {
             return first->calculate() != second->calculate();
         }
+    }
+
+    ~BooleanExpression() {
+        delete first;
+        delete second;
     }
 };

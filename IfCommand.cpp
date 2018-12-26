@@ -22,11 +22,10 @@ public:
                     command1->calculate();
                 }
             }
+            delete boolean;
         } catch (string &str){
             throw "Illegal condition";
         }
     }
-
-
 
 };

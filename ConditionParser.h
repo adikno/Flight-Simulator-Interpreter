@@ -39,6 +39,16 @@ public:
          command->doCommand(x);
      }
 
+    ~ConditionParser() override {
+        delete command;
+        for (auto &it: commands) {
+            delete it.second;
+        }
+        for (auto & it: innerCommands) {
+            delete it;
+        }
+     }
+
 
 };
 #endif //UNTITLED9_CONDITIONPARSER_H

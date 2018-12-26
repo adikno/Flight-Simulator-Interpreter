@@ -13,6 +13,7 @@ class Command {
 
 public:
     virtual int doCommand(vector<string> &x) = 0;
+    virtual ~Command() {};
 };
 
 

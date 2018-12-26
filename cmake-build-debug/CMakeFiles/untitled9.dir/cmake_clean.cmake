@@ -16,7 +16,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/untitled9.dir/EqualsCommand.cpp.o"
   "CMakeFiles/untitled9.dir/BooleanExpression.cpp.o"
   "CMakeFiles/untitled9.dir/ParamsCommand.cpp.o"
-  "CMakeFiles/untitled9.dir/EntercCommand.cpp.o"
   "untitled9.pdb"
   "untitled9"
 )

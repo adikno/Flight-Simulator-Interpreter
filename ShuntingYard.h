@@ -9,6 +9,7 @@
 #include "queue"
 #include <map>
 #include <iostream>
+#include <memory>
 #include <string>
 #include <vector>
 #include <fstream>
@@ -36,6 +37,8 @@ public:
     string removeSpaces(string x);
     const vector<string> explode(const string& s, const char& a,const char& b,const char& c,const char& d,const char& e,
                                                 const char& f, const char& g);
+
+    ~ShuntingYard() = default;
 };
 
 #endif //UNTITLED9_SHUNTINGYARD_H

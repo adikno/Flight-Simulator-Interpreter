@@ -17,12 +17,22 @@ class PrintCommand: public Command{
             char data[x.at(i).size()];
             strcpy(data, x.at(i).data());
             ShuntingYard *shuntingYard = new ShuntingYard();
-            queue<string> queue1 = shuntingYard->shuntingYard(data);
-            Expression *exp = shuntingYard->postfixEvaluate(queue1);
-            cout << exp->calculate();
+            try {
+                queue<string> queue1 = shuntingYard->shuntingYard(data);
+
+                Expression *exp = shuntingYard->postfixEvaluate(queue1);
+                cout << exp->calculate();
+                delete exp;
+                delete shuntingYard;
+            } catch (exception &e) {
+                delete shuntingYard;
+                throw e;
+            }
         }
         cout << endl;
     }
+    ~PrintCommand() = default;
 
 
 };
+

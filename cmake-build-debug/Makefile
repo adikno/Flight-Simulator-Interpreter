@@ -231,33 +231,6 @@ Div.cpp.s:
 	$(MAKE) -f CMakeFiles/untitled9.dir/build.make CMakeFiles/untitled9.dir/Div.cpp.s
 .PHONY : Div.cpp.s
 
-EntercCommand.o: EntercCommand.cpp.o
-
-.PHONY : EntercCommand.o
-
-# target to build an object file
-EntercCommand.cpp.o:
-	$(MAKE) -f CMakeFiles/untitled9.dir/build.make CMakeFiles/untitled9.dir/EntercCommand.cpp.o
-.PHONY : EntercCommand.cpp.o
-
-EntercCommand.i: EntercCommand.cpp.i
-
-.PHONY : EntercCommand.i
-
-# target to preprocess a source file
-EntercCommand.cpp.i:
-	$(MAKE) -f CMakeFiles/untitled9.dir/build.make CMakeFiles/untitled9.dir/EntercCommand.cpp.i
-.PHONY : EntercCommand.cpp.i
-
-EntercCommand.s: EntercCommand.cpp.s
-
-.PHONY : EntercCommand.s
-
-# target to generate assembly for a file
-EntercCommand.cpp.s:
-	$(MAKE) -f CMakeFiles/untitled9.dir/build.make CMakeFiles/untitled9.dir/EntercCommand.cpp.s
-.PHONY : EntercCommand.cpp.s
-
 EqualsCommand.o: EqualsCommand.cpp.o
 
 .PHONY : EqualsCommand.o
@@ -630,9 +603,6 @@ help:
 	@echo "... Div.o"
 	@echo "... Div.i"
 	@echo "... Div.s"
-	@echo "... EntercCommand.o"
-	@echo "... EntercCommand.i"
-	@echo "... EntercCommand.s"
 	@echo "... EqualsCommand.o"
 	@echo "... EqualsCommand.i"
 	@echo "... EqualsCommand.s"

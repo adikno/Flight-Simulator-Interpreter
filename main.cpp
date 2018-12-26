@@ -33,7 +33,13 @@ int main() {
 
      map<string, double> xmlTable;
      Interpreter *interpreter = new Interpreter();
-     interpreter->lexer(file_name);
+    try {
+        interpreter->lexer(file_name);
+        delete interpreter;
+    } catch (exception &e) {
+        delete interpreter;
+        throw e;
+    }
      
      pthread_exit(nullptr);
     /*while (true){}*/

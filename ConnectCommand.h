@@ -18,12 +18,15 @@
 #include "CommandExpression.h"
 
 class ConnectCommand: public Command {
-
+    pthread_t trid;
 public:
 
     int doCommand(vector<string> &x) override;
 
     const vector<string> split(const string& s, const char& c);
 
+    ~ConnectCommand() {
+        pthread_join(trid, nullptr);
+    }
 };
 #endif //UNTITLED9_CONNECTCOMMAND_H

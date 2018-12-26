@@ -16,5 +16,10 @@ public:
         this->right = b;
     }
 
+    ~BinaryExpression() override {
+        delete left;
+        delete right;
+    }
+
 };
 #endif //UNTITLED9_BINARYEXPRESSION_H

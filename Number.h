@@ -13,6 +13,9 @@ public:
     double calculate(){
         return this->num;
     }
+    ~Number() override {
+
+    }
 
 
 

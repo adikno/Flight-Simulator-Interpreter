@@ -2,6 +2,7 @@
 
 #include <cstring>
 #include "ShuntingYard.h"
+#include <memory>
 /**
  * this function get a string of expression and turn it to postfix  expression
  * @param x string of expression
@@ -121,7 +122,7 @@ Expression* ShuntingYard::postfixEvaluate(queue<string> que) {
     while (!que.empty()) {
         // If the scanned character is an operand (number here),
         // push it to the stack.
-        if (que.front() == ""){
+        if (que.front().empty()){
             que.pop();
             continue;
         }
@@ -138,7 +139,9 @@ Expression* ShuntingYard::postfixEvaluate(queue<string> que) {
             stack1.push(number);
             que.pop();
             continue;
-        } catch (exception &e) {}
+        } catch (exception &e) {
+
+        }
         // If the scanned character is an operator, pop two
         // elements from stack apply the operator
         if (que.front().compare("+") == 0 || que.front().compare("*") == 0 || que.front().compare("-") == 0
@@ -150,23 +153,21 @@ Expression* ShuntingYard::postfixEvaluate(queue<string> que) {
             stack1.pop();
             string a = que.front();
             que.pop();
-            Expression *exp;
             switch (a.at(0)) {
                 case '+':
-                    exp = new Plus(val2, val1);
-                    stack1.push(exp);
+                    stack1.push(new Plus(val2, val1));
                     break;
                 case '-':
-                    exp = new Minus(val2, val1);
-                    stack1.push(exp);
+                    stack1.push(new Minus(val2, val1));
                     break;
                 case '*':
-                    exp = new Mult(val2, val1);
-                    stack1.push(exp);
+                    stack1.push(new Mult(val2, val1));
                     break;
                 case '/':
-                    exp = new Div(val2, val1);
-                    stack1.push(exp);
+                    stack1.push(new Div(val2, val1));
+                    break;
+
+                // TODO default
             }
             continue;
         }
@@ -192,10 +193,8 @@ Expression* ShuntingYard::postfixEvaluate(queue<string> que) {
         Expression *number = new Number(value);
         stack1.push(number);
         que.pop();
-
-
-
     }
+
     Expression *final = stack1.top();
     return final;
 

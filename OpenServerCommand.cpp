@@ -1,5 +1,3 @@
-
-
 #include "OpenServerCommand.h"
 vector<double> explode1(string &s, const char &c)
 {
@@ -16,13 +14,18 @@ vector<double> explode1(string &s, const char &c)
             buff = "";
         }
     }
+    if (buff[buff.length() - 1] == '\n') {
+        buff = buff.substr(0, buff.length() - 1);
+    }
+    double num;
+    if (buff != "" && buff != "-" && buff[buff.length() - 1] != '.') {
+        num = stod(buff);
+        v.push_back(num);
+    }
     return v;
 }
 
-void* serverThread(void *arg) {
-    int port = serverParams.port;
-    int rate = serverParams.rate;
-    cout << "here2" << endl;
+vector<string> initXmlTable() {
     vector<string> xmlVal;
     xmlVal.push_back("/instrumentation/airspeed-indicator/indicated-speed-kt");
     xmlVal.push_back("/instrumentation/altimeter/indicated-altitude-ft");
@@ -35,18 +38,25 @@ void* serverThread(void *arg) {
     xmlVal.push_back("/instrumentation/encoder/pressure-alt-ft");
     xmlVal.push_back("/instrumentation/gps/indicated-altitude-ft");
     xmlVal.push_back("/instrumentation/gps/indicated-ground-speed-kt");
-    xmlVal.push_back("/instrumentation/gps/indicated-vertical-speed</node>");
+    xmlVal.push_back("/instrumentation/gps/indicated-vertical-speed");
     xmlVal.push_back("/instrumentation/heading-indicator/indicated-heading-deg");
     xmlVal.push_back("/instrumentation/magnetic-compass/indicated-heading-deg");
     xmlVal.push_back("/instrumentation/slip-skid-ball/indicated-slip-skid");
     xmlVal.push_back("/instrumentation/turn-indicator/indicated-turn-rate");
     xmlVal.push_back("/instrumentation/vertical-speed-indicator/indicated-speed-fpm");
     xmlVal.push_back("/controls/flight/aileron");
-    xmlVal.push_back("controls/flight/rudder");
-    xmlVal.push_back("controls/flight/flaps");
-    xmlVal.push_back("controls/engines/current-engine/throttle");
+    xmlVal.push_back("/controls/flight/elevator");
+    xmlVal.push_back("/controls/flight/rudder");
+    xmlVal.push_back("/controls/flight/flaps");
+    xmlVal.push_back("/controls/engines/current-engine/throttle");
     xmlVal.push_back("/engines/engine/rpm");
+    return xmlVal;
+}
 
+void* serverThread(void *arg) {
+    int port = serverParams.port;
+    int rate = serverParams.rate;
+    vector<string> xmlVal = initXmlTable();
     vector<double> ve;
     int sockfd, newsockfd, clilen;
     char buffer[1024];
@@ -71,7 +81,7 @@ void* serverThread(void *arg) {
     }
 
     // Now start listening for the clients, here process will
-     //  go in sleep mode and will wait for the incoming connection
+    //  go in sleep mode and will wait for the incoming connection
 
 
     listen(sockfd, 5);
@@ -85,8 +95,8 @@ void* serverThread(void *arg) {
         exit(1);
     }
     serverParams.move = true;
-    cout << "connected" << endl;
     //If connection is established then start communicating
+    int i =0;
     while (serverParams.move) {
         pthread_mutex_lock(&mutexXml);
         clock_t time_start;
@@ -101,19 +111,21 @@ void* serverThread(void *arg) {
         string buf = buffer;
         ve = explode1(buf, ',');
         if(ve.size() > 23){
-            int i = 0;
             int size = buf.find("\n");
-            buf.erase(0,size +1);
+            buf.erase(0,size + 1);
             size =  buf.find("\n");
-            buf.erase(size,buf.size() +1);
+            buf.erase(size,buf.size());
             ve = explode1(buf, ',');
         }
+
         int size = xmlVal.size();
         for (int i = 0; i <size ; ++i) {
-            xmlTable[xmlVal.at(i)] = ve.at(i);
+            try {
+                xmlTable[xmlVal.at(i)] = ve.at(i);
+            } catch (exception &e) {}
         }
+        i++;
         buf = "";
-
         /*
         for (auto it = xmlTable.begin(); it != xmlTable.end(); ++it) {
             it.operator*().second = ve.at(i);
@@ -121,7 +133,7 @@ void* serverThread(void *arg) {
         }*/
         clock_t time_end;
         time_end = time_start + 10 * rate * CLOCKS_PER_SEC / 1000;
-       pthread_mutex_unlock(&mutexXml);
+        pthread_mutex_unlock(&mutexXml);
         while (clock() < time_end) {}
 
     }
@@ -145,7 +157,6 @@ int OpenServerCommand::doCommand(vector<string> &x){
     serverParams.port = num0;
     serverParams.rate = num1;
 
-    pthread_t trid;
     pthread_create(&trid, nullptr, serverThread, nullptr);
 
     while (!serverParams.move) {}
@@ -153,7 +164,4 @@ int OpenServerCommand::doCommand(vector<string> &x){
     return 2;
 
 }
-
-
-
 

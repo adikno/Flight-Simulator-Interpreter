@@ -15,6 +15,7 @@ class EqualsCommand : public Command {
 public:
 
     int doCommand(vector<string> &x);
+    ~EqualsCommand() override = default;
 
 };
 

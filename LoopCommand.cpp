@@ -19,6 +19,7 @@ public:
                     command1->setArr(temp);
                     command1->calculate();
                 }
+                boolean = new BooleanExpression(x);
             }
         } catch (string &str){
             throw "Illegal condition";
