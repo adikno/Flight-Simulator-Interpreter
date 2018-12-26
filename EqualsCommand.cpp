@@ -84,4 +84,5 @@ int EqualsCommand::doCommand(vector<string> &x){
     }catch (exception &e){
         throw  e;
     }
+    return 0;
 }

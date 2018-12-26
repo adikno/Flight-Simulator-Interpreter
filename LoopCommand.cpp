@@ -21,9 +21,11 @@ public:
                 }
                 boolean = new BooleanExpression(x);
             }
+            return 0;
         } catch (string &str){
             throw "Illegal condition";
         }
+
     }
 
 

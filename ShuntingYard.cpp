@@ -19,13 +19,12 @@ queue<string>ShuntingYard::shuntingYard(string x) {
     for (auto &token1: vector1) {
         try {
             //check if the string is a number
-            double num;
             if(token1[0] == '-' && token1.size() > 1){
                 token1.erase(0,1);
-                num = stod(token1);
+                stod(token1);
                 token1 = "-" + token1;
             } else{
-                num = stod(token1);
+                stod(token1);
             }
             //push the number to the queue
             queue1.push(token1);
@@ -207,7 +206,7 @@ Expression* ShuntingYard::postfixEvaluate(queue<string> que) {
  */
 string ShuntingYard::removeSpaces(string x) {
 
-    for (int i = 0; i < x.length(); i ++) {
+    for (unsigned long i = 0; i < x.length(); i ++) {
         if (x[i] == ' ') {
             if (i == 0) {
                 x = x.substr(i + 1, x.length() - 1);

@@ -111,15 +111,22 @@ void* serverThread(void *arg) {
         string buf = buffer;
         ve = explode1(buf, ',');
         if(ve.size() > 23){
-            int size = buf.find("\n");
-            buf.erase(0,size + 1);
-            size =  buf.find("\n");
-            buf.erase(size,buf.size());
+            unsigned long  size1 = buf.find("\n");
+            buf.erase(0,size1 + 1);
+            unsigned long size2 =  buf.find("\n");
+            if(size2 != string::npos){
+                buf.erase(size2,buf.size());
+            }
+            ve = explode1(buf, ',');
+            if(ve.size() < 23){
+                buf=  buffer;
+                buf.erase(size1,buf.size());
+
+            }
             ve = explode1(buf, ',');
         }
-
-        int size = xmlVal.size();
-        for (int i = 0; i <size ; ++i) {
+        unsigned long size = xmlVal.size();
+        for (unsigned long i = 0; i <size ; ++i) {
             try {
                 xmlTable[xmlVal.at(i)] = ve.at(i);
             } catch (exception &e) {}

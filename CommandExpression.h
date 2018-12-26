@@ -19,7 +19,7 @@ public:
     }
 
     double calculate(){
-        command->doCommand(arr);
+        return command->doCommand(arr);
     }
 
     void setArr(vector<string> x){

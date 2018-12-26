@@ -26,6 +26,8 @@ public:
         } catch (string &str){
             throw "Illegal condition";
         }
+        return 0;
     }
+
 
 };
