@@ -11,7 +11,7 @@ void* clientThread(void* arg) {
     int portno = clientParams.port;
     string ip = clientParams.ip;
 
-    int sockfd, n;
+    int sockfd;
     struct sockaddr_in serv_addr;
     struct hostent *server;
 

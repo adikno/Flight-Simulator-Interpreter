@@ -36,7 +36,7 @@ public:
      commands(commands), innerCommands(innerCommands){}
 
      int doCommand(vector<string> &x) {
-         command->doCommand(x);
+         return  command->doCommand(x);
      }
 
     ~ConditionParser() override {

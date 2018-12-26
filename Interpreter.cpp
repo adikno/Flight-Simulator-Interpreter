@@ -122,7 +122,7 @@ list<ParamsCommand*> Interpreter::ParagraphLexer(ifstream &file, string conditio
 const vector<string> Interpreter::explode(const string &s, const char &c1, const char &c2) {
     string buff{s[0]};
     vector<string> v;
-    for (int i = 1; i < s.length(); i++) {
+    for (unsigned long i = 1; i < s.length(); i++) {
         if ((s[i] == '!' || s[i] == '<' || s[i] == '>' || s[i] == '=') && buff == "" && (s[i + 1] == '=')) {
             buff = s[i];
             buff += s[i + 1];

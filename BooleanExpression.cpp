@@ -53,8 +53,7 @@ public:
         }
         if (oper == "==") {
             return first->calculate() == second->calculate();
-        }
-        if (oper == "!=") {
+        } else {
             return first->calculate() != second->calculate();
         }
     }

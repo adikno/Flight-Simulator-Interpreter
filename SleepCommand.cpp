@@ -8,20 +8,22 @@ class SleepCommand: public Command {
 
     int doCommand(vector<string> &x) {
         if (x.size() != 1) {
-            throw "Illegal time";
+            throw "Illegal argument";
         }
-        int milliseconds;
         try {
-            milliseconds = stoi(x.at(0));
+            auto *shuntingYard = new ShuntingYard();
+            //evaluate the expression
+            queue<string> queue1 = shuntingYard->shuntingYard(x.at(0));
+            Expression *exp = shuntingYard->postfixEvaluate(queue1);
+            double milliseconds = exp->calculate();
+            auto ms = (useconds_t)milliseconds;
+            usleep(1000 * ms);
+            delete exp;
+            delete shuntingYard;
+            return 0;
         } catch (out_of_range &e) {
-            throw "Illegal time";
+            throw "Illegal argument";
         }
-        clock_t time_end;
-        time_end = clock() + milliseconds * CLOCKS_PER_SEC/1000;
-        while (clock() < time_end)
-        {
-        }
-
     }
     ~SleepCommand(){
 

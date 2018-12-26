@@ -22,12 +22,16 @@ pthread_mutex_t mutexXml;
 pthread_mutex_t mutexIns;
 
 using namespace std;
-int main() {
+
+int main(int argc,char *argv[]) {
 
     pthread_mutex_init(&mutexXml, nullptr);
     pthread_mutex_init(&mutexIns, nullptr);
-    
-    string file_name = "FILE.txt";
+    string file_name;
+    if (argc > 1) {
+        file_name = argv[1];
+    }
+
 
      map<string, double> symbolTable;
 
