@@ -19,14 +19,20 @@ class PrintCommand: public Command{
             ShuntingYard *shuntingYard = new ShuntingYard();
             try {
                 queue<string> queue1 = shuntingYard->shuntingYard(data);
+
                 Expression *exp = shuntingYard->postfixEvaluate(queue1);
                 cout << exp->calculate();
+                delete exp;
+                delete shuntingYard;
             } catch (exception &e) {
+                delete shuntingYard;
                 throw e;
             }
         }
         cout << endl;
     }
+    ~PrintCommand() = default;
 
 
 };
+

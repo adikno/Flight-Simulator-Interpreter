@@ -30,9 +30,6 @@ CMakeFiles/untitled9.dir/Div.cpp.o: ../BinaryExpression.h
 CMakeFiles/untitled9.dir/Div.cpp.o: ../Div.cpp
 CMakeFiles/untitled9.dir/Div.cpp.o: ../Expression.h
 
-CMakeFiles/untitled9.dir/EntercCommand.cpp.o: ../Command.h
-CMakeFiles/untitled9.dir/EntercCommand.cpp.o: ../EntercCommand.cpp
-
 CMakeFiles/untitled9.dir/EqualsCommand.cpp.o: ../BinaryExpression.h
 CMakeFiles/untitled9.dir/EqualsCommand.cpp.o: ../ClientParams.cpp
 CMakeFiles/untitled9.dir/EqualsCommand.cpp.o: ../Command.h
@@ -74,7 +71,6 @@ CMakeFiles/untitled9.dir/Interpreter.cpp.o: ../CommandExpression.h
 CMakeFiles/untitled9.dir/Interpreter.cpp.o: ../ConditionParser.h
 CMakeFiles/untitled9.dir/Interpreter.cpp.o: ../ConnectCommand.h
 CMakeFiles/untitled9.dir/Interpreter.cpp.o: ../Div.cpp
-CMakeFiles/untitled9.dir/Interpreter.cpp.o: ../EntercCommand.cpp
 CMakeFiles/untitled9.dir/Interpreter.cpp.o: ../EqualsCommand.h
 CMakeFiles/untitled9.dir/Interpreter.cpp.o: ../Expression.h
 CMakeFiles/untitled9.dir/Interpreter.cpp.o: ../IfCommand.cpp
@@ -185,7 +181,6 @@ CMakeFiles/untitled9.dir/main.cpp.o: ../CommandExpression.h
 CMakeFiles/untitled9.dir/main.cpp.o: ../ConditionParser.h
 CMakeFiles/untitled9.dir/main.cpp.o: ../ConnectCommand.h
 CMakeFiles/untitled9.dir/main.cpp.o: ../Div.cpp
-CMakeFiles/untitled9.dir/main.cpp.o: ../EntercCommand.cpp
 CMakeFiles/untitled9.dir/main.cpp.o: ../EqualsCommand.h
 CMakeFiles/untitled9.dir/main.cpp.o: ../Expression.h
 CMakeFiles/untitled9.dir/main.cpp.o: ../IfCommand.cpp

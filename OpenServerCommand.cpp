@@ -119,12 +119,14 @@ void* serverThread(void *arg) {
             buf.erase(size,buf.size());
             ve = explode1(buf, ',');
         }
+
         int size = xmlVal.size();
         for (int i = 0; i <size ; ++i) {
-            xmlTable[xmlVal.at(i)] = ve.at(i);
-        }
-        if (i == 46) {
-            cout << "breakPoint" << endl;
+            try {
+                xmlTable[xmlVal.at(i)] = ve.at(i);
+            } catch (exception &e) {
+                cout << ve.size() << endl;
+            }
         }
         i++;
         buf = "";
@@ -144,8 +146,6 @@ void* serverThread(void *arg) {
     close(sockfd);
 }
 
-
-
 int OpenServerCommand::doCommand(vector<string> &x){
     int num0 = 0;
     int num1 = 0;
@@ -161,11 +161,9 @@ int OpenServerCommand::doCommand(vector<string> &x){
     serverParams.port = num0;
     serverParams.rate = num1;
 
-    pthread_t trid;
     pthread_create(&trid, nullptr, serverThread, nullptr);
 
     while (!serverParams.move) {}
-    sleep(70);
 
     return 2;
 

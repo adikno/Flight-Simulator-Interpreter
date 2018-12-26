@@ -58,4 +58,9 @@ public:
             return first->calculate() != second->calculate();
         }
     }
+
+    ~BooleanExpression() {
+        delete first;
+        delete second;
+    }
 };

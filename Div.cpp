@@ -14,7 +14,6 @@ public:
 
     double calculate(){
         return (this->left->calculate() / this->right->calculate());
-
-
     }
+
 };

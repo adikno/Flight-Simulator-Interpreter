@@ -20,4 +20,8 @@ public:
     vector<string> getParams() {
         return  this->params;
     }
+
+    ~ParamsCommand() {
+        delete command;
+    }
 };

@@ -87,7 +87,7 @@ int ConnectCommand:: doCommand(vector<string> &x){
         }
         clientParams.ip =  x.at(0);
         clientParams.port = num1;
-        pthread_t trid;
+
         pthread_create(&trid, nullptr, clientThread, nullptr);
         return 2;
 }

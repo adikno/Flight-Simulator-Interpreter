@@ -130,10 +130,6 @@ BinaryExpression.h
 iostream
 -
 
-/home/michal/CLionProjects/untitled9/EntercCommand.cpp
-Command.h
-/home/michal/CLionProjects/untitled9/Command.h
-
 /home/michal/CLionProjects/untitled9/EqualsCommand.h
 map
 -
@@ -207,8 +203,6 @@ PrintCommand.cpp
 /home/michal/CLionProjects/untitled9/PrintCommand.cpp
 SleepCommand.cpp
 /home/michal/CLionProjects/untitled9/SleepCommand.cpp
-EntercCommand.cpp
-/home/michal/CLionProjects/untitled9/EntercCommand.cpp
 list
 -
 
@@ -293,6 +287,8 @@ map
 -
 iostream
 -
+memory
+-
 string
 -
 vector
@@ -323,32 +319,4 @@ ShuntingYard.h
 /home/michal/CLionProjects/untitled9/ShuntingYard.h
 time.h
 -
-
-/home/michal/CLionProjects/untitled9/main.cpp
-iostream
--
-string
--
-vector
--
-fstream
--
-string
--
-queue
--
-stack
--
-string.h
--
-Expression.h
-/home/michal/CLionProjects/untitled9/Expression.h
-map
--
-Command.h
-/home/michal/CLionProjects/untitled9/Command.h
-ShuntingYard.h
-/home/michal/CLionProjects/untitled9/ShuntingYard.h
-Interpreter.h
-/home/michal/CLionProjects/untitled9/Interpreter.h
 

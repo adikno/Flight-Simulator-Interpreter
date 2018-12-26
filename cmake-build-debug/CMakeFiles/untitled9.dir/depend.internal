@@ -30,9 +30,6 @@ CMakeFiles/untitled9.dir/Div.cpp.o
  /home/michal/CLionProjects/untitled9/BinaryExpression.h
  /home/michal/CLionProjects/untitled9/Div.cpp
  /home/michal/CLionProjects/untitled9/Expression.h
-CMakeFiles/untitled9.dir/EntercCommand.cpp.o
- /home/michal/CLionProjects/untitled9/Command.h
- /home/michal/CLionProjects/untitled9/EntercCommand.cpp
 CMakeFiles/untitled9.dir/EqualsCommand.cpp.o
  /home/michal/CLionProjects/untitled9/BinaryExpression.h
  /home/michal/CLionProjects/untitled9/ClientParams.cpp
@@ -75,7 +72,6 @@ CMakeFiles/untitled9.dir/Interpreter.cpp.o
  /home/michal/CLionProjects/untitled9/ConditionParser.h
  /home/michal/CLionProjects/untitled9/ConnectCommand.h
  /home/michal/CLionProjects/untitled9/Div.cpp
- /home/michal/CLionProjects/untitled9/EntercCommand.cpp
  /home/michal/CLionProjects/untitled9/EqualsCommand.h
  /home/michal/CLionProjects/untitled9/Expression.h
  /home/michal/CLionProjects/untitled9/IfCommand.cpp
@@ -186,7 +182,6 @@ CMakeFiles/untitled9.dir/main.cpp.o
  /home/michal/CLionProjects/untitled9/ConditionParser.h
  /home/michal/CLionProjects/untitled9/ConnectCommand.h
  /home/michal/CLionProjects/untitled9/Div.cpp
- /home/michal/CLionProjects/untitled9/EntercCommand.cpp
  /home/michal/CLionProjects/untitled9/EqualsCommand.h
  /home/michal/CLionProjects/untitled9/Expression.h
  /home/michal/CLionProjects/untitled9/IfCommand.cpp

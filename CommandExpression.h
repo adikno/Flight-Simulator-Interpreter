@@ -26,5 +26,9 @@ public:
         this->arr = x;
     }
 
+    ~CommandExpression() override {
+        delete command;
+    }
+
 };
 #endif //UNTITLED9_COMMANDEXPRESSION_H

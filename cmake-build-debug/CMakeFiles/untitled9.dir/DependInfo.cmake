@@ -8,7 +8,6 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/michal/CLionProjects/untitled9/ClientParams.cpp" "/home/michal/CLionProjects/untitled9/cmake-build-debug/CMakeFiles/untitled9.dir/ClientParams.cpp.o"
   "/home/michal/CLionProjects/untitled9/ConnectCommand.cpp" "/home/michal/CLionProjects/untitled9/cmake-build-debug/CMakeFiles/untitled9.dir/ConnectCommand.cpp.o"
   "/home/michal/CLionProjects/untitled9/Div.cpp" "/home/michal/CLionProjects/untitled9/cmake-build-debug/CMakeFiles/untitled9.dir/Div.cpp.o"
-  "/home/michal/CLionProjects/untitled9/EntercCommand.cpp" "/home/michal/CLionProjects/untitled9/cmake-build-debug/CMakeFiles/untitled9.dir/EntercCommand.cpp.o"
   "/home/michal/CLionProjects/untitled9/EqualsCommand.cpp" "/home/michal/CLionProjects/untitled9/cmake-build-debug/CMakeFiles/untitled9.dir/EqualsCommand.cpp.o"
   "/home/michal/CLionProjects/untitled9/IfCommand.cpp" "/home/michal/CLionProjects/untitled9/cmake-build-debug/CMakeFiles/untitled9.dir/IfCommand.cpp.o"
   "/home/michal/CLionProjects/untitled9/Interpreter.cpp" "/home/michal/CLionProjects/untitled9/cmake-build-debug/CMakeFiles/untitled9.dir/Interpreter.cpp.o"

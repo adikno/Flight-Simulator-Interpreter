@@ -23,7 +23,6 @@
 #include "LoopCommand.cpp"
 #include "PrintCommand.cpp"
 #include "SleepCommand.cpp"
-#include "EntercCommand.cpp"
 
 #include <list>
 
@@ -39,13 +38,18 @@ public:
         commands["equals"] = new CommandExpression(new EqualsCommand());
         commands["print"] = new CommandExpression(new PrintCommand());
         commands["sleep"] = new CommandExpression(new SleepCommand());
-        commands["Enterc"] = new CommandExpression(new EntercCommand());
     }
     void lexer(string fileName);
 
     const vector<string> explode(const string& s, const char& c1, const char& c2);
     void parser(vector<string> vector);
     list<ParamsCommand*> ParagraphLexer(ifstream &file, string condition, vector<string> args);
+
+    ~Interpreter() {
+        for (auto &it: commands) {
+            delete it.second;
+        }
+    }
 };
 
 

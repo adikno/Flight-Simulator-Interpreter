@@ -35,7 +35,9 @@ int main() {
      Interpreter *interpreter = new Interpreter();
     try {
         interpreter->lexer(file_name);
+        delete interpreter;
     } catch (exception &e) {
+        delete interpreter;
         throw e;
     }
      

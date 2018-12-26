@@ -40,6 +40,7 @@ int EqualsCommand::doCommand(vector<string> &x){
             Expression *exp = shuntingYard->postfixEvaluate(queue1);
             //evaluate the string and set it in the symbol table
             symbolTable[x.at(1)] = exp->calculate();
+            delete exp;
             //get the path of the var
             string instruction = pathTable[x.at(1)];
             ostringstream os;
@@ -54,6 +55,7 @@ int EqualsCommand::doCommand(vector<string> &x){
             pthread_mutex_lock(&mutexIns);
             clientParams.instruction = instruction;
             pthread_mutex_unlock(&mutexIns);
+            delete shuntingYard;
             return 0;
         }
 
@@ -63,6 +65,7 @@ int EqualsCommand::doCommand(vector<string> &x){
         queue<string> queue1 = shuntingYard->shuntingYard(x.at(2));
         Expression *exp = shuntingYard->postfixEvaluate(queue1);
         symbolTable[x.at(0)] = exp->calculate();
+        delete exp;
         //get the path of the var
         string instruction = pathTable[x.at(0)];
         ostringstream os;
@@ -77,6 +80,7 @@ int EqualsCommand::doCommand(vector<string> &x){
         pthread_mutex_lock(&mutexIns);
         clientParams.instruction = instruction;
         pthread_mutex_unlock(&mutexIns);
+        delete shuntingYard;
     }catch (exception &e){
         throw  e;
     }

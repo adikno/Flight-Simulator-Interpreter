@@ -18,6 +18,9 @@ void Interpreter::lexer(string fileName) {
     ifstream myFile(fileName);
     if (myFile.is_open()) {
         while (getline(myFile, line)) {
+            while (line == "") {
+                getline(myFile, line);
+            }
             if (line[line.length() - 1] == '{') {
                 v = explode(line, ' ', ',');
                 string condition = v.at(0);
@@ -54,6 +57,9 @@ list<ParamsCommand*> Interpreter::ParagraphLexer(ifstream &file, string conditio
     vector<string> vector;
     string line;
     getline(file, line);
+    while (line == "") {
+        getline(file, line);
+    }
     while (line[line.length() - 1] != '}') {
         //inner block
         if (line[line.length() - 1] == '{') {
@@ -65,6 +71,9 @@ list<ParamsCommand*> Interpreter::ParagraphLexer(ifstream &file, string conditio
                 commandMap.push_back(node);
             }
             getline(file, line);
+            while (line == "") {
+                getline(file, line);
+            }
             continue;
         }
         //inner commands
@@ -85,6 +94,9 @@ list<ParamsCommand*> Interpreter::ParagraphLexer(ifstream &file, string conditio
         ParamsCommand *paramsCommand = new ParamsCommand(command, vector);
         commandMap.push_back(paramsCommand);
         getline(file, line);
+        while (line == "") {
+            getline(file, line);
+        }
     }
     if (condition == "if") {
         auto *conditionParser = new CommandExpression(new IfCommand(commands, commandMap));
@@ -111,7 +123,7 @@ const vector<string> Interpreter::explode(const string &s, const char &c1, const
     string buff{s[0]};
     vector<string> v;
     for (int i = 1; i < s.length(); i++) {
-        if ((s[i] == '<' || s[i] == '>' || s[i] == '=') && buff == "" && (s[i + 1] == '=')) {
+        if ((s[i] == '!' || s[i] == '<' || s[i] == '>' || s[i] == '=') && buff == "" && (s[i + 1] == '=')) {
             buff = s[i];
             buff += s[i + 1];
             v.push_back(buff);
