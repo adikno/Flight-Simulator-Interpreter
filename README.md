@@ -2,9 +2,9 @@
 
 In order to activate the program you should do the following:
 - [ ] Implement two arguments in the flightGear's setting:
-* --generic=socket,out,10,XXX.XXX.XXX.XXX,5400,tcp,generic_small
+1. --generic=socket,out,10,XXX.XXX.XXX.XXX,5400,tcp,generic_small
 (when XXXX refers to the IP of the computer that runs the interpreter)
-* --telnet=socket,in,10,XXX.XXX.XXX.XXX,5402,tcp
+2. --telnet=socket,in,10,XXX.XXX.XXX.XXX,5402,tcp
 (when XXXX refers to the IP of the computer that runs the simulator)
 
 - [ ] Put the included "generic_small.xml" file inside the FlightGear installation folder "data/Protocol".
