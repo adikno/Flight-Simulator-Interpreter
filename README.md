@@ -13,7 +13,7 @@ Then, you will be able to run the program and the simulator, in this order.
 
 The interpreter supports both command-line input and file input.
 
-The interpreter will run until "exit" command is sent.
+The interpreter will run until the "exit" command is sent.
 
-The interpreter lexes the input, then parses it. In case the command and parameters are valid (according to the flightGear), they will be executed immediately
-test.txt contains valid script for flying the plane.
+The interpreter lexes the input, then parses it. If the command and parameters are valid (according to the flightGear), they will be executed immediately.
+test.txt contains a valid script for flying the plane.
